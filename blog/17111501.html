@@ -7,9 +7,9 @@
     <meta name="description" content="通过babel-polyfill解决一些低版本的浏览器对es6新语法并不支持">
     <link rel="icon" href="/favicon.ico">
   <meta name="author" content="tolking">
-  <meta name="keywords" content="雨无声,tolking,前端技巧">
+  <meta name="keywords" content="ououe,雨无声,tolking,前端技巧,前端总结,前端分享,ououe.com">
     <meta name="keywords" content="vue webpack es6 es5 babel-polyfill">
-    <link rel="preload" href="/assets/css/6.styles.2c6f6a7d.css" as="style"><link rel="preload" href="/assets/js/app.657f992e.js" as="script"><link rel="preload" href="/assets/js/1.3ebdfbff.js" as="script"><link rel="prefetch" href="/assets/js/3.120c7baa.js"><link rel="prefetch" href="/assets/js/0.96e001d1.js"><link rel="prefetch" href="/assets/js/2.047877f2.js"><link rel="prefetch" href="/assets/js/4.42c14640.js"><link rel="prefetch" href="/assets/js/5.75c43d2c.js">
+    <link rel="preload" href="/assets/css/6.styles.2c6f6a7d.css" as="style"><link rel="preload" href="/assets/js/app.53fdf909.js" as="script"><link rel="preload" href="/assets/js/1.0fd30997.js" as="script"><link rel="prefetch" href="/assets/js/3.0a3c453b.js"><link rel="prefetch" href="/assets/js/0.bfffebfb.js"><link rel="prefetch" href="/assets/js/2.ab23fbd4.js"><link rel="prefetch" href="/assets/js/4.42c14640.js"><link rel="prefetch" href="/assets/js/5.75c43d2c.js">
     <link rel="stylesheet" href="/assets/css/6.styles.2c6f6a7d.css">
   </head>
   <body>
@@ -21,7 +21,7 @@
 </code></pre><h3 id="在你的入口文件main-js中引入babel-polyfill"><a href="#在你的入口文件main-js中引入babel-polyfill" aria-hidden="true" class="header-anchor">#</a> 在你的入口文件main.js中引入babel-polyfill</h3><h4 id="src-main-js"><a href="#src-main-js" aria-hidden="true" class="header-anchor">#</a> src -&gt; main.js</h4><pre class="language-js"><code><span class="token keyword">import</span> <span class="token string">'babel-polyfill'</span>
 </code></pre><h3 id="修改webpack的配置文件"><a href="#修改webpack的配置文件" aria-hidden="true" class="header-anchor">#</a> 修改webpack的配置文件</h3><h4 id="build-webpack-base-conf-js"><a href="#build-webpack-base-conf-js" aria-hidden="true" class="header-anchor">#</a> build -&gt; webpack.base.conf.js</h4><pre class="language-js"><code>entry<span class="token punctuation">:</span> <span class="token punctuation">{</span>
   <span class="token comment">// app: './src/main.js'</span>
-  app<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'babel-polyfill'</span><span class="token punctuation">,</span><span class="token string">'./src/main.js'</span><span class="token punctuation">]</span>
+  app<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'babel-polyfill'</span><span class="token punctuation">,</span> <span class="token string">'./src/main.js'</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
 </code></pre><h3 id="测试你的项目，如果低版本浏览器能够打开就不用继续下面步骤。如果编译错误，可以测试下面方法"><a href="#测试你的项目，如果低版本浏览器能够打开就不用继续下面步骤。如果编译错误，可以测试下面方法" aria-hidden="true" class="header-anchor">#</a> 测试你的项目，如果低版本浏览器能够打开就不用继续下面步骤。如果编译错误，可以测试下面方法</h3><h3 id="继续修改配置文件"><a href="#继续修改配置文件" aria-hidden="true" class="header-anchor">#</a> 继续修改配置文件</h3><h4 id="build-webpack-base-conf-js-2"><a href="#build-webpack-base-conf-js-2" aria-hidden="true" class="header-anchor">#</a> build -&gt; webpack.base.conf.js</h4><pre class="language-js"><code>rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
   <span class="token comment">// {</span>
@@ -32,7 +32,7 @@
   <span class="token punctuation">{</span>
     test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
     use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> loader<span class="token punctuation">:</span> <span class="token string">'babel-loader'</span><span class="token punctuation">,</span> options<span class="token punctuation">:</span> <span class="token punctuation">{</span> cacheDirectory<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules(?!\/webpack-dev-server)/</span><span class="token punctuation">,</span>
+    exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules(?!\/webpack-dev-server)/</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">]</span>
 </code></pre><h3 id="将webpack-dev-server的版本回退到2-7-1"><a href="#将webpack-dev-server的版本回退到2-7-1" aria-hidden="true" class="header-anchor">#</a> 将webpack-dev-server的版本回退到2.7.1</h3><h3 id="先卸载webpack-dev-server"><a href="#先卸载webpack-dev-server" aria-hidden="true" class="header-anchor">#</a> 先卸载webpack-dev-server</h3><pre class="language-text"><code>npm uninstall webpack-dev-server
@@ -44,6 +44,6 @@
           js中隐性类型转换
         </a> →
       </span></p></div></div><!----></div><div class="tool-group"><!----></div></div></div><div class="background-mask" style="background:#f6f6f6;"></div></div></div>
-    <script src="/assets/js/1.3ebdfbff.js" defer></script><script src="/assets/js/app.657f992e.js" defer></script>
+    <script src="/assets/js/1.0fd30997.js" defer></script><script src="/assets/js/app.53fdf909.js" defer></script>
   </body>
 </html>
