@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>雨无声 | ES6 Map | ES6 Map</title>
+    <meta name="description" content="Map 类似于对象，但是“键”的范围不限于字符串，各种类型的值(包括对象)都可以当作键">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="author" content="tolking">
+  <meta name="keywords" content="ououe, 雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com">
+    <meta name="keywords" content="js ES6 es6 语法 Map map">
+    <link rel="preload" href="/assets/css/13.styles.f018c738.css" as="style"><link rel="preload" href="/assets/js/app.34dbc9b2.js" as="script"><link rel="preload" href="/assets/js/1.e95a346d.js" as="script"><link rel="prefetch" href="/assets/js/7.40582762.js"><link rel="prefetch" href="/assets/js/0.178508aa.js"><link rel="prefetch" href="/assets/js/2.b7a8f466.js"><link rel="prefetch" href="/assets/js/3.b608898c.js"><link rel="prefetch" href="/assets/js/4.d6faff84.js"><link rel="prefetch" href="/assets/js/5.aade1f43.js"><link rel="prefetch" href="/assets/js/6.f10815a7.js"><link rel="prefetch" href="/assets/js/8.9ed2f3d6.js"><link rel="prefetch" href="/assets/js/9.ac607cff.js"><link rel="prefetch" href="/assets/js/10.6eeece44.js"><link rel="prefetch" href="/assets/js/11.f29c5224.js"><link rel="prefetch" href="/assets/js/12.f260ac21.js">
+    <link rel="stylesheet" href="/assets/css/13.styles.f018c738.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="wrap"><div class="theme-container container no-sidebar"><header class="navbar"><div class="nav-header"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+        雨无声
+      </span></a><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/about/" class="nav-link">ABOUT</a></div><div class="nav-item"><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="nav-link">GITHUB</a></div><!----></nav><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div></div></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/about/" class="nav-link">ABOUT</a></div><div class="nav-item"><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="nav-link">GITHUB</a></div><!----></nav><!----></div><div class="page-container"><div class="page card"><h1 class="page-title" style="color:#ac3e40;">
+    ES6 Map
+  </h1><div class="content"><h3 id="map-类似于对象，但是“键”的范围不限于字符串，各种类型的值-包括对象-都可以当作键"><a href="#map-类似于对象，但是“键”的范围不限于字符串，各种类型的值-包括对象-都可以当作键" aria-hidden="true" class="header-anchor">#</a> Map 类似于对象，但是“键”的范围不限于字符串，各种类型的值(包括对象)都可以当作键</h3><ul><li>Map构造函数接受数组(任何具有 Iterator 接口、且每个成员都是一个双元素的数组的数据结构)作为参数</li></ul><pre class="language-js"><code><span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+map<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'bar'</span><span class="token punctuation">)</span>  <span class="token comment">// 2</span>
+</code></pre><ul><li>Set 和 Map 都可以用来生成新的 Map</li></ul><pre class="language-js"><code><span class="token keyword">const</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> m1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token keyword">set</span><span class="token punctuation">)</span>
+m1<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span>  <span class="token comment">// 1</span>
+
+<span class="token keyword">const</span> m2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'baz'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> m3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span>m2<span class="token punctuation">)</span>
+m3<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'baz'</span><span class="token punctuation">)</span>  <span class="token comment">// 3</span>
+</code></pre><h3 id="map-属性和方法"><a href="#map-属性和方法" aria-hidden="true" class="header-anchor">#</a> Map 属性和方法</h3><ul><li>size 属性返回 Map 结构的成员总数</li><li>set 方法设置键名key对应的键值为value，然后返回整个 Map 结构</li><li>get 方法读取key对应的键值，如果找不到key，返回undefined</li><li>has 方法返回一个布尔值，表示某个键是否在当前 Map 对象之中</li><li>delete 方法删除某个键，返回true。如果删除失败，返回false</li><li>clear方法清除所有成员，没有返回值</li></ul><pre class="language-js"><code><span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+map<span class="token punctuation">.</span>size <span class="token comment">// 2</span>
+map<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'value'</span><span class="token punctuation">)</span>  <span class="token comment">// Map {&quot;foo&quot; =&gt; 1, &quot;bar&quot; =&gt; 2, 2 =&gt; &quot;value&quot;}</span>
+map<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment">// &quot;value&quot;</span>
+map<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment">// false</span>
+map<span class="token punctuation">.</span><span class="token keyword">delete</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment">// true</span>
+map<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+map  <span class="token comment">// Map {}</span>
+</code></pre><h3 id="map-遍历"><a href="#map-遍历" aria-hidden="true" class="header-anchor">#</a> Map 遍历</h3><ul><li>Map 的遍历顺序就是插入顺序</li></ul><ul><li>keys()：返回键名的遍历器</li><li>values()：返回键值的遍历器</li><li>entries()：返回键值对的遍历器</li><li>forEach()：遍历 Map 的所有成员</li></ul><pre class="language-js"><code><span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'F'</span><span class="token punctuation">,</span> <span class="token string">'no'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'T'</span><span class="token punctuation">,</span>  <span class="token string">'yes'</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">of</span> map<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// &quot;F&quot;</span>
+<span class="token comment">// &quot;T&quot;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> value <span class="token keyword">of</span> map<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// &quot;no&quot;</span>
+<span class="token comment">// &quot;yes&quot;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> item <span class="token keyword">of</span> map<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> item<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// &quot;F&quot; &quot;no&quot;</span>
+<span class="token comment">// &quot;T&quot; &quot;yes&quot;</span>
+
+<span class="token comment">// 或者</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span> <span class="token keyword">of</span> map<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// &quot;F&quot; &quot;no&quot;</span>
+<span class="token comment">// &quot;T&quot; &quot;yes&quot;</span>
+
+<span class="token comment">// 等同于使用map.entries()</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span> <span class="token keyword">of</span> map<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// &quot;F&quot; &quot;no&quot;</span>
+<span class="token comment">// &quot;T&quot; &quot;yes&quot;</span>
+
+map<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> key<span class="token punctuation">,</span> map<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Key: %s, Value: %s&quot;</span><span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><ul><li>使用扩展运算符(...)转为数组结构</li></ul><pre class="language-js"><code><span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'one'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'two'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'three'</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">[</span><span class="token operator">...</span>map<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment">// [1, 2, 3]</span>
+<span class="token punctuation">[</span><span class="token operator">...</span>map<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment">// ['one', 'two', 'three']</span>
+<span class="token punctuation">[</span><span class="token operator">...</span>map<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment">// [[1,'one'], [2, 'two'], [3, 'three']]</span>
+<span class="token punctuation">[</span><span class="token operator">...</span>map<span class="token punctuation">]</span>  <span class="token comment">// [[1,'one'], [2, 'two'], [3, 'three']]</span>
+</code></pre></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/blog/18040101.html" class="prev">
+          ES6 Module (模块)
+        </a></span><span class="next"><a href="/blog/18022201.html">
+          ES6 Set
+        </a> →
+      </span></p></div></div><!----></div><div class="tool-group"><!----></div></div></div><div class="background-mask" style="background:#f6f6f6;"></div></div></div>
+    <script src="/assets/js/1.e95a346d.js" defer></script><script src="/assets/js/app.34dbc9b2.js" defer></script>
+  </body>
+</html>

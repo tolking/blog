@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>雨无声 | ES6 Set | ES6 Set</title>
+    <meta name="description" content="Set 类似于数组，但是成员的值都是唯一的，没有重复的值">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="author" content="tolking">
+  <meta name="keywords" content="ououe, 雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com">
+    <meta name="keywords" content="js ES6 es6 语法 Set set">
+    <link rel="preload" href="/assets/css/13.styles.f018c738.css" as="style"><link rel="preload" href="/assets/js/app.34dbc9b2.js" as="script"><link rel="preload" href="/assets/js/2.b7a8f466.js" as="script"><link rel="prefetch" href="/assets/js/7.40582762.js"><link rel="prefetch" href="/assets/js/0.178508aa.js"><link rel="prefetch" href="/assets/js/1.e95a346d.js"><link rel="prefetch" href="/assets/js/3.b608898c.js"><link rel="prefetch" href="/assets/js/4.d6faff84.js"><link rel="prefetch" href="/assets/js/5.aade1f43.js"><link rel="prefetch" href="/assets/js/6.f10815a7.js"><link rel="prefetch" href="/assets/js/8.9ed2f3d6.js"><link rel="prefetch" href="/assets/js/9.ac607cff.js"><link rel="prefetch" href="/assets/js/10.6eeece44.js"><link rel="prefetch" href="/assets/js/11.f29c5224.js"><link rel="prefetch" href="/assets/js/12.f260ac21.js">
+    <link rel="stylesheet" href="/assets/css/13.styles.f018c738.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="wrap"><div class="theme-container container no-sidebar"><header class="navbar"><div class="nav-header"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+        雨无声
+      </span></a><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/about/" class="nav-link">ABOUT</a></div><div class="nav-item"><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="nav-link">GITHUB</a></div><!----></nav><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div></div></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/about/" class="nav-link">ABOUT</a></div><div class="nav-item"><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="nav-link">GITHUB</a></div><!----></nav><!----></div><div class="page-container"><div class="page card"><h1 class="page-title" style="color:#ac3e40;">
+    ES6 Set
+  </h1><div class="content"><h3 id="set-类似于数组，但是成员的值都是唯一的，没有重复的值"><a href="#set-类似于数组，但是成员的值都是唯一的，没有重复的值" aria-hidden="true" class="header-anchor">#</a> Set 类似于数组，但是成员的值都是唯一的，没有重复的值</h3><ul><li>Set 是一个构造函数，用来生成 Set 数据结构</li><li>Set 函数可以接受一个数组(或者具有 iterable 接口的其他数据结构)作为参数</li></ul><pre class="language-js"><code><span class="token keyword">var</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">set</span>  <span class="token comment">// Set {1, 2, 3, 4}</span>
+<span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">set</span><span class="token punctuation">]</span>  <span class="token comment">// [1, 2, 3, 4]  ( [...new Set(array)] 去除数组的重复成员)</span>
+</code></pre><ul><li>向Set加入值的时候，不会发生类型转换，所以5和&quot;5&quot;是两个不同的值</li><li>在Set内部，两个NaN是相等</li></ul><pre class="language-js"><code><span class="token keyword">let</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">NaN</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">NaN</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+<span class="token keyword">set</span>  <span class="token comment">// Set {NaN}</span>
+</code></pre><ul><li>两个对象总是不相等的</li></ul><pre class="language-js"><code><span class="token keyword">let</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span>size  <span class="token comment">// 1</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span>size  <span class="token comment">// 2</span>
+</code></pre><h3 id="set-方法"><a href="#set-方法" aria-hidden="true" class="header-anchor">#</a> Set 方法</h3><ul><li>add(): 添加某个值，返回 Set 结构本身</li><li>has(): 返回一个布尔值，表示该值是否为Set的成员</li><li>delete(): 删除某个值，返回一个布尔值，表示删除是否成功</li><li>clear(): 清除所有成员，没有返回值</li></ul><pre class="language-js"><code><span class="token keyword">let</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'2'</span><span class="token punctuation">)</span>  <span class="token comment">// Set {1, 2, &quot;2&quot;}</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token keyword">delete</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment">// true</span>
+<span class="token keyword">set</span>  <span class="token comment">// Set {1, &quot;2&quot;}</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment">// false</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">set</span>  <span class="token comment">// Set {}</span>
+</code></pre><ul><li>Array.from 方法可以将 Set 结构转为数组</li></ul><pre class="language-js"><code><span class="token keyword">const</span> items <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> array <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span>
+</code></pre><h3 id="set-遍历"><a href="#set-遍历" aria-hidden="true" class="header-anchor">#</a> Set 遍历</h3><ul><li>Set 的遍历顺序就是插入顺序</li></ul><ul><li><p>keys()：返回键名的遍历器</p></li><li><p>values()：返回键值的遍历器</p></li><li><p>entries()：返回键值对的遍历器</p></li><li><p>forEach()：使用回调函数遍历每个成员</p></li><li><p>keys方法、values方法、entries方法返回的都是遍历器对象</p></li><li><p>由于 Set 结构没有键名，只有键值(或者说键名和键值是同一个值)，所以keys方法和values方法的行为完全一致</p></li></ul><pre class="language-js"><code><span class="token keyword">let</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'red'</span><span class="token punctuation">,</span> <span class="token string">'green'</span><span class="token punctuation">,</span> <span class="token string">'blue'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> item <span class="token keyword">of</span> <span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// red</span>
+<span class="token comment">// green</span>
+<span class="token comment">// blue</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> item <span class="token keyword">of</span> <span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// red</span>
+<span class="token comment">// green</span>
+<span class="token comment">// blue</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> item <span class="token keyword">of</span> <span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// [&quot;red&quot;, &quot;red&quot;]</span>
+<span class="token comment">// [&quot;green&quot;, &quot;green&quot;]</span>
+<span class="token comment">// [&quot;blue&quot;, &quot;blue&quot;]</span>
+</code></pre><ul><li>Set 结构的实例与数组一样，也拥有forEach方法，用于对每个成员执行某种操作，没有返回值</li></ul><pre class="language-js"><code><span class="token keyword">let</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> key<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key <span class="token operator">+</span> <span class="token string">' : '</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">// 1 : 1</span>
+<span class="token comment">// 4 : 4</span>
+<span class="token comment">// 9 : 9</span>
+</code></pre></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/blog/18022501.html" class="prev">
+          ES6 Map
+        </a></span><span class="next"><a href="/blog/18022001.html">
+          ES6 class
+        </a> →
+      </span></p></div></div><!----></div><div class="tool-group"><!----></div></div></div><div class="background-mask" style="background:#f6f6f6;"></div></div></div>
+    <script src="/assets/js/2.b7a8f466.js" defer></script><script src="/assets/js/app.34dbc9b2.js" defer></script>
+  </body>
+</html>

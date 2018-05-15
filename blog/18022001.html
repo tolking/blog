@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>雨无声 | ES6 class | ES6 class</title>
+    <meta name="description" content="Class基本语法">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="author" content="tolking">
+  <meta name="keywords" content="ououe, 雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com">
+    <meta name="keywords" content="js ES6 es6 语法 class">
+    <link rel="preload" href="/assets/css/13.styles.f018c738.css" as="style"><link rel="preload" href="/assets/js/app.34dbc9b2.js" as="script"><link rel="preload" href="/assets/js/3.b608898c.js" as="script"><link rel="prefetch" href="/assets/js/7.40582762.js"><link rel="prefetch" href="/assets/js/0.178508aa.js"><link rel="prefetch" href="/assets/js/1.e95a346d.js"><link rel="prefetch" href="/assets/js/2.b7a8f466.js"><link rel="prefetch" href="/assets/js/4.d6faff84.js"><link rel="prefetch" href="/assets/js/5.aade1f43.js"><link rel="prefetch" href="/assets/js/6.f10815a7.js"><link rel="prefetch" href="/assets/js/8.9ed2f3d6.js"><link rel="prefetch" href="/assets/js/9.ac607cff.js"><link rel="prefetch" href="/assets/js/10.6eeece44.js"><link rel="prefetch" href="/assets/js/11.f29c5224.js"><link rel="prefetch" href="/assets/js/12.f260ac21.js">
+    <link rel="stylesheet" href="/assets/css/13.styles.f018c738.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="wrap"><div class="theme-container container no-sidebar"><header class="navbar"><div class="nav-header"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+        雨无声
+      </span></a><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/about/" class="nav-link">ABOUT</a></div><div class="nav-item"><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="nav-link">GITHUB</a></div><!----></nav><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div></div></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/about/" class="nav-link">ABOUT</a></div><div class="nav-item"><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="nav-link">GITHUB</a></div><!----></nav><!----></div><div class="page-container"><div class="page card"><h1 class="page-title" style="color:#ac3e40;">
+    ES6 class
+  </h1><div class="content"><h3 id="class基本语法"><a href="#class基本语法" aria-hidden="true" class="header-anchor">#</a> Class基本语法</h3><ul><li>通过 class 定义类</li></ul><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">name</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ... some code</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> className <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">name</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ... some code</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 例子</span>
+<span class="token keyword">class</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">=</span> x
+    <span class="token keyword">this</span><span class="token punctuation">.</span>y <span class="token operator">=</span> y
+  <span class="token punctuation">}</span>
+  <span class="token function">toString</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'('</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>x <span class="token operator">+</span> <span class="token string">', '</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>y <span class="token operator">+</span> <span class="token string">')'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><ul><li>使用 new 调用，不然会报错</li></ul><pre class="language-js"><code><span class="token keyword">var</span> point <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+</code></pre><ul><li>所有实例共享一个原型对象</li></ul><pre class="language-js"><code><span class="token keyword">var</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+p1<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> p2<span class="token punctuation">.</span>__proto__  <span class="token comment">//true</span>
+</code></pre><ul><li>Class不存在变量提升</li><li>通过 extends 关键字实现继承</li><li>子类没有自己的this对象，必须在constructor方法中调用super方法，新建父类的this对象</li></ul><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">ColorPoint</span> <span class="token keyword">extends</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> color<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>  <span class="token comment">// 调用父类的constructor(x, y)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>color <span class="token operator">=</span> color
+  <span class="token punctuation">}</span>
+  <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>color <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 调用父类的toString()</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="constructor方法"><a href="#constructor方法" aria-hidden="true" class="header-anchor">#</a> constructor方法</h3><ul><li>constructor方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加</li><li>constructor方法默认返回实例对象（即this），完全可以指定返回另外一个对象</li></ul><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">instanceof</span> <span class="token class-name">Foo</span>  <span class="token comment">// false (constructor函数返回一个全新的对象，结果导致实例对象不是Foo类的实例)</span>
+</code></pre><h3 id="class的静态方法"><a href="#class的静态方法" aria-hidden="true" class="header-anchor">#</a> Class的静态方法</h3><ul><li>类相当于实例的原型，所有在类中定义的方法，都会被实例继承</li><li>加上static关键字，就表示该方法不会被实例继承，而是直接通过类来调用</li><li>父类的静态方法，可以被子类继承</li></ul><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token function">classMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'hello'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+Foo<span class="token punctuation">.</span><span class="token function">classMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 'hello'</span>
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+foo<span class="token punctuation">.</span><span class="token function">classMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// TypeError: foo.classMethod is not a function</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Bar</span> <span class="token keyword">extends</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+Bar<span class="token punctuation">.</span><span class="token function">classMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 'hello'</span>
+</code></pre></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/blog/18022201.html" class="prev">
+          ES6 Set
+        </a></span><span class="next"><a href="/blog/18021501.html">
+          ES6 Promise对象
+        </a> →
+      </span></p></div></div><!----></div><div class="tool-group"><!----></div></div></div><div class="background-mask" style="background:#f6f6f6;"></div></div></div>
+    <script src="/assets/js/3.b608898c.js" defer></script><script src="/assets/js/app.34dbc9b2.js" defer></script>
+  </body>
+</html>
