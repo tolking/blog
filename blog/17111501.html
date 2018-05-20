@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>雨无声 | babel-polyfill的引用和使用 | babel-polyfill的引用和使用</title>
+    <title>雨无声 | babel-polyfill的引用和使用</title>
     <meta name="description" content="通过babel-polyfill解决一些低版本的浏览器对es6新语法并不支持">
     <link rel="icon" href="/favicon.ico">
   <meta name="author" content="tolking">
   <meta name="keywords" content="ououe, 雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com">
     <meta name="keywords" content="vue webpack es6 es5 babel-polyfill">
-    <link rel="preload" href="/assets/css/13.styles.f018c738.css" as="style"><link rel="preload" href="/assets/js/app.34dbc9b2.js" as="script"><link rel="preload" href="/assets/js/8.9ed2f3d6.js" as="script"><link rel="prefetch" href="/assets/js/7.40582762.js"><link rel="prefetch" href="/assets/js/0.178508aa.js"><link rel="prefetch" href="/assets/js/1.e95a346d.js"><link rel="prefetch" href="/assets/js/2.b7a8f466.js"><link rel="prefetch" href="/assets/js/3.b608898c.js"><link rel="prefetch" href="/assets/js/4.d6faff84.js"><link rel="prefetch" href="/assets/js/5.aade1f43.js"><link rel="prefetch" href="/assets/js/6.f10815a7.js"><link rel="prefetch" href="/assets/js/9.ac607cff.js"><link rel="prefetch" href="/assets/js/10.6eeece44.js"><link rel="prefetch" href="/assets/js/11.f29c5224.js"><link rel="prefetch" href="/assets/js/12.f260ac21.js">
-    <link rel="stylesheet" href="/assets/css/13.styles.f018c738.css">
+    <link rel="preload" href="/assets/css/13.styles.d51fe9a4.css" as="style"><link rel="preload" href="/assets/js/app.5b996fb4.js" as="script"><link rel="preload" href="/assets/js/8.4277c68e.js" as="script"><link rel="prefetch" href="/assets/js/7.590f3ba8.js"><link rel="prefetch" href="/assets/js/0.b3a8d2af.js"><link rel="prefetch" href="/assets/js/1.44a60dae.js"><link rel="prefetch" href="/assets/js/2.6287423e.js"><link rel="prefetch" href="/assets/js/3.6621e1e9.js"><link rel="prefetch" href="/assets/js/4.a3c003f1.js"><link rel="prefetch" href="/assets/js/5.cec4e3ff.js"><link rel="prefetch" href="/assets/js/6.f0ba84da.js"><link rel="prefetch" href="/assets/js/9.7b8d2039.js"><link rel="prefetch" href="/assets/js/10.5882a4bb.js"><link rel="prefetch" href="/assets/js/11.ea4c7d3b.js"><link rel="prefetch" href="/assets/js/12.f0fb687d.js">
+    <link rel="stylesheet" href="/assets/css/13.styles.d51fe9a4.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div><div class="wrap"><div class="theme-container container no-sidebar"><header class="navbar"><div class="nav-header"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
         雨无声
       </span></a><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/about/" class="nav-link">ABOUT</a></div><div class="nav-item"><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="nav-link">GITHUB</a></div><!----></nav><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div></div></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/about/" class="nav-link">ABOUT</a></div><div class="nav-item"><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="nav-link">GITHUB</a></div><!----></nav><!----></div><div class="page-container"><div class="page card"><h1 class="page-title" style="color:#ac3e40;">
     babel-polyfill的引用和使用
-  </h1><div class="content"><h3 id="通过babel-polyfill解决一些低版本的浏览器对es6新语法并不支持"><a href="#通过babel-polyfill解决一些低版本的浏览器对es6新语法并不支持" aria-hidden="true" class="header-anchor">#</a> 通过babel-polyfill解决一些低版本的浏览器对es6新语法并不支持</h3><h3 id="对于通过vue-cli构建的项目"><a href="#对于通过vue-cli构建的项目" aria-hidden="true" class="header-anchor">#</a> 对于通过vue-cli构建的项目</h3><h3 id="引入babel-polyfill到你的项目中"><a href="#引入babel-polyfill到你的项目中" aria-hidden="true" class="header-anchor">#</a> 引入babel-polyfill到你的项目中</h3><pre class="language-text"><code>npm install --save-dev babel-polyfill
+  </h1><span class="page-timestamp"></span><div class="content"><h3 id="通过babel-polyfill解决一些低版本的浏览器对es6新语法并不支持"><a href="#通过babel-polyfill解决一些低版本的浏览器对es6新语法并不支持" aria-hidden="true" class="header-anchor">#</a> 通过babel-polyfill解决一些低版本的浏览器对es6新语法并不支持</h3><h3 id="对于通过vue-cli构建的项目"><a href="#对于通过vue-cli构建的项目" aria-hidden="true" class="header-anchor">#</a> 对于通过vue-cli构建的项目</h3><h3 id="引入babel-polyfill到你的项目中"><a href="#引入babel-polyfill到你的项目中" aria-hidden="true" class="header-anchor">#</a> 引入babel-polyfill到你的项目中</h3><pre class="language-text"><code>npm install --save-dev babel-polyfill
 </code></pre><h3 id="在你的入口文件main-js中引入babel-polyfill"><a href="#在你的入口文件main-js中引入babel-polyfill" aria-hidden="true" class="header-anchor">#</a> 在你的入口文件main.js中引入babel-polyfill</h3><h4 id="src-main-js"><a href="#src-main-js" aria-hidden="true" class="header-anchor">#</a> src -&gt; main.js</h4><pre class="language-js"><code><span class="token keyword">import</span> <span class="token string">'babel-polyfill'</span>
 </code></pre><h3 id="修改webpack的配置文件"><a href="#修改webpack的配置文件" aria-hidden="true" class="header-anchor">#</a> 修改webpack的配置文件</h3><h4 id="build-webpack-base-conf-js"><a href="#build-webpack-base-conf-js" aria-hidden="true" class="header-anchor">#</a> build -&gt; webpack.base.conf.js</h4><pre class="language-js"><code>entry<span class="token punctuation">:</span> <span class="token punctuation">{</span>
   <span class="token comment">// app: './src/main.js'</span>
@@ -44,6 +44,6 @@
           js中隐性类型转换
         </a> →
       </span></p></div></div><!----></div><div class="tool-group"><!----></div></div></div><div class="background-mask" style="background:#f6f6f6;"></div></div></div>
-    <script src="/assets/js/8.9ed2f3d6.js" defer></script><script src="/assets/js/app.34dbc9b2.js" defer></script>
+    <script src="/assets/js/8.4277c68e.js" defer></script><script src="/assets/js/app.5b996fb4.js" defer></script>
   </body>
 </html>
