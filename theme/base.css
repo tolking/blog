@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+img{
+  border:0;
+}
+ol, ul ,li{
+  list-style: none;
+}
+html{
+  font-size: 20px;
+}
+body{
+  background: #f6f6f6;
+}
+#content{
+  max-width: 40rem;
+  margin: 0rem auto;
+  padding: 3rem 2rem 5rem;
+  background: #fff;
+  text-align: center;
+}
+.design{
+  margin: 6rem 0rem 0rem;
+}
+img{
+  margin-bottom: 1rem;
+  width: 25rem;
+  height: auto;
+}
+h1,h2,p,span,a{
+  font-family: 微软雅黑;
+  color: #393939;
+}
+h1{
+  font-size: 1.6rem;
+}
+p{
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+a{
+  font-size: .8rem;
+  text-decoration: none;
+}
+span{
+  font-weight: 700;
+  margin-left: 1rem;
+}
