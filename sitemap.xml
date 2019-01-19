@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ououe.com/</loc>
-    <lastmod>2019-01-05</lastmod>
+    <lastmod>2019-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://ououe.com/tags/</loc>
-    <lastmod>2019-01-05</lastmod>
+    <lastmod>2019-01-19</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -43,22 +43,27 @@
   </url>
   <url>
     <loc>https://ououe.com/tags/html/</loc>
-    <lastmod>2019-01-05</lastmod>
+    <lastmod>2019-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ououe.com/tags/dailylife/</loc>
+    <lastmod>2019-01-19</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ououe.com/postcss-propro/</loc>
-    <lastmod>2019-01-05</lastmod>
+    <lastmod>2019-01-19</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ououe.com/m-less/</loc>
-    <lastmod>2019-01-05</lastmod>
+    <lastmod>2019-01-19</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ououe.com/posts/</loc>
-    <lastmod>2019-01-05</lastmod>
+    <lastmod>2019-01-19</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -158,7 +163,17 @@
   </url>
   <url>
     <loc>https://ououe.com/posts/18122001.html</loc>
-    <lastmod>2019-01-05</lastmod>
+    <lastmod>2019-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ououe.com/posts/19011201.html</loc>
+    <lastmod>2019-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ououe.com/posts/19011701.html</loc>
+    <lastmod>2019-01-19</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
