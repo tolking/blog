@@ -1,0 +1,24 @@
+{
+  "name": "my_blog",
+  "version": "2.0.0",
+  "description": "use vuepress",
+  "author": "tolking <tolking@gmail.com>",
+  "scripts": {
+    "dev": "vuepress dev blog",
+    "build": "vuepress build blog --dest dist/",
+    "push": "deploy.sh"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.0.11",
+    "release-it": "^7.6.3",
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.39",
+    "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
+    "@vuepress/plugin-last-updated": "^1.0.0-alpha.39",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.39",
+    "@vuepress/plugin-search": "^1.0.0-alpha.39",
+    "vuepress": "^1.0.0-alpha.39",
+    "postcss-propro": "^1.0.2",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0"
+  }
+}
