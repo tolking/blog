@@ -21,6 +21,10 @@ module.exports = {
   themeConfig: {
     cover: '/img/cover.jpg',
     logo: '/img/logo.png',
+    postTime: {
+      createTime: '创建时间',
+      lastUpdated: '最后修改'
+    },
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Blog', link: '/posts/' },
