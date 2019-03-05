@@ -17,7 +17,8 @@ module.exports = {
       require('autoprefixer')
     ]
   },
-  theme: '',
+  dest: 'dist/',
+  theme: 'ououe',
   themeConfig: {
     cover: '/img/cover.jpg',
     logo: '/img/logo.png',

@@ -1,50 +1,11 @@
-# vuepress-theme-blog-template
+# My Blog
 
-## Parameters
+[WebSite](https://ououe.com)
 
-```
----
-title: blog
-lang: en-US
-layout: Page
-display: home
-image: ...
-date: 2019-02-22
-meta:
-  - name: description
-    content: description
---- 
-```
+Theme by [vuepress-theme-ououe](https://github.com/tolking/vuepress-theme-ououe)
 
-The post intro uses the `<!-- more -->` tag
+Uses [vuepress-theme-ououe-template](https://github.com/tolking/vuepress-theme-ououe-template) to starter
 
-The post uses `display: home` to show in the home page
+[Documentation](https://ououe.com/lib/vuepress-theme-ououe.html)
 
-**Default**
-
-index.md -- layout: Layout
-
-XXX.md -- layout: Page
-
-Use layout to change default
-
-...
-
-```
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:8010
-$ npm run dev
-
-# build for production
-$ npm run build
-```
-
-## License
-[MIT](http://opensource.org/licenses/MIT)
-
-
-## Keywords
-
-vue vuepress vuepress-theme-blog blog
+Power by [vuepress](https://github.com/vuejs/vuepress)

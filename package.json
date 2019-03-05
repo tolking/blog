@@ -1,16 +1,17 @@
 {
   "name": "my_blog",
   "version": "2.0.0",
-  "description": "use vuepress",
+  "description": "power by vuepress",
   "author": "tolking <tolking@gmail.com>",
   "scripts": {
     "dev": "vuepress dev blog",
-    "build": "vuepress build blog --dest dist/",
+    "build": "vuepress build blog",
     "push": "deploy.sh"
   },
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.11",
     "release-it": "^7.6.3",
+    "vuepress-theme-ououe": "^1.0.1",
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.39",
     "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
     "@vuepress/plugin-last-updated": "^1.0.0-alpha.39",
