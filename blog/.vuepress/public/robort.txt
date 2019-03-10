@@ -1,0 +1,4 @@
+# robots.txt for ououe.com
+User-agent: *
+Disallow: 
+Sitemap: https://ououe.com/sitemap.xml

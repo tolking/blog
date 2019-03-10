@@ -13,4 +13,9 @@ layout: Page
 - 邮箱：qw13131wang@gmail.com 或 qw13131wang@qq.com
 - Github：[@tolking](https://github.com/tolking)
 
-<!-- [theme](https://github.com/alexander-heimbuch/vuepress-theme-casper) -->
+
+Theme by [vuepress-theme-ououe](https://github.com/tolking/vuepress-theme-ououe)
+
+Uses [vuepress-theme-ououe-template](https://github.com/tolking/vuepress-theme-ououe-template) to starter
+
+Power by [vuepress](https://github.com/vuejs/vuepress)

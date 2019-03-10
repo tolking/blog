@@ -11,7 +11,8 @@
   "devDependencies": {
     "conventional-changelog-cli": "^2.0.11",
     "release-it": "^7.6.3",
-    "vuepress-theme-ououe": "^1.0.1",
+    "vuepress-theme-ououe": "^1.1.0",
+    "vuepress-plugin-blog-multidir": "^1.0.2",
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.39",
     "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
     "@vuepress/plugin-last-updated": "^1.0.0-alpha.39",
