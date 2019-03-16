@@ -9,18 +9,20 @@
     "push": "deploy.sh"
   },
   "devDependencies": {
-    "conventional-changelog-cli": "^2.0.11",
-    "release-it": "^7.6.3",
-    "vuepress-theme-ououe": "^1.1.0",
-    "vuepress-plugin-blog-multidir": "^1.0.2",
+    "@vssue/vuepress-plugin-vssue": "^0.7.5",
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.39",
-    "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
     "@vuepress/plugin-last-updated": "^1.0.0-alpha.39",
     "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.39",
+    "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
     "@vuepress/plugin-search": "^1.0.0-alpha.39",
-    "vuepress": "^1.0.0-alpha.39",
-    "postcss-propro": "^1.0.2",
+    "conventional-changelog-cli": "^2.0.11",
     "less": "^3.9.0",
-    "less-loader": "^4.1.0"
+    "less-loader": "^4.1.0",
+    "postcss-propro": "^1.0.2",
+    "release-it": "^7.6.3",
+    "vuepress": "^1.0.0-alpha.39",
+    "vuepress-plugin-blog-multidir": "^1.0.4",
+    "vuepress-plugin-sitemap": "^2.0.0-alpha.0",
+    "vuepress-theme-ououe": "^1.1.1"
   }
 }

@@ -1,30 +1,36 @@
 ---
 title: postcss-propro
-lang: en
+lang: en-US
 image: https://picsum.photos/1920/1080/?random&date=2018-12-07
 date: 2018-12-07
-meta:
-  - name: description
-    content: postcss-propro documentation
-  - name: keywords
-    content: postcss-propro, postcss, ououe, 雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com
+tags:
+  - postcss
+  - postcss-propro
+categories:
+  - documentation
 ---
 
-#### Options
+## Options
+
+example
+``` js
+'postcss-propro': {
+  backgroundColor: '#39cccc',
+  lineColor: '#ff851b'
+}
+```
+
 | parameter | default | work |
 | :- | :- | :- |
 | backgroundColor | #0074d9 | btn |
 | lineColor | #ccc | arrow spread |
 
-example
-``` js
-  'postcss-propro': {
-    backgroundColor: '#39cccc',
-    lineColor: '#ff851b'
-  }
-```
+---
 
-#### arrow
+## Use
+
+### arrow
+
 | parameter | value | default |
 | :- | :- | :- |
 | type | top | * |
@@ -51,7 +57,8 @@ example
 effect
 <Arrow/>
 
-#### box min-box max-box
+### box min-box max-box
+
 | parameter | value | default |
 | :- | :- | :- |
 | width | (min/max)width | * |
@@ -66,7 +73,8 @@ example
 }
 ```
 
-#### btn
+### btn
+
 | parameter | value | default |
 | :- | :- | :- |
 | width | width | * |
@@ -88,7 +96,8 @@ example
 effect
 <Btn/>
 
-#### font-cc
+### font-cc
+
 | parameter | value | default |
 | :- | :- | :- |
 | height | line-height | * |
@@ -100,7 +109,8 @@ example
 }
 ```
 
-#### font-hidden
+### font-hidden
+
 | parameter | value | default |
 | :- | :- | :- |
 | row | number | * |
@@ -120,7 +130,8 @@ example
 effect
 <FontHidden/>
 
-#### position
+### position
+
 | parameter | value | default |
 | :- | :- | :- |
 | position | absolute | * |
@@ -138,7 +149,8 @@ example
 }
 ```
 
-#### position-cc
+### position-cc
+
 | parameter | value | default |
 | :- | :- | :- |
 | null |  | (by transform) |
@@ -155,7 +167,8 @@ example
 }
 ```
 
-#### spread
+### spread
+
 | parameter | value | default |
 | :- | :- | :- |
 | type | top | * |

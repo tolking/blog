@@ -4,11 +4,11 @@ lang: zh-CN
 image: https://picsum.photos/1920/1080/?random&date=2018-02-13
 date: 2018-02-13
 tags:
-  - javascript
+  - js
   - es6
 categories:
-  - futurama
-readingTime: 1 Minutes
+  - learn
+  - summary
 meta:
   - name: description
     content: ES6允许按照一定模式，从数组、对象或字符串中提取值，对变量进行赋值，这被称为解构（Destructuring）

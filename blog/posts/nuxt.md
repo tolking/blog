@@ -8,8 +8,7 @@ tags:
   - vue
   - nuxt
 categories:
-  - futurama
-readingTime: 2 Minutes
+  - summary
 meta:
   - name: description
     content: 为了实现更好的 seo，不得不考虑将之前的 vue 单页面程序托到服务器上渲染​，看了官方的 ssr 和 nuxt，最后选择通过 nuxt 实现
@@ -62,4 +61,20 @@ meta: [
   ],
   __dangerouslyDisableSanitizers: ['script']
 ]
+```
+
+8. 正确引入搜索引擎的认证`meta`标签
+- 在根目录建立 `app.html`
+
+``` html
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head>
+    <meta name="..." content="..."/>
+    {{ HEAD }}
+  </head>
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+  </body>
+</html>
 ```

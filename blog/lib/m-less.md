@@ -3,11 +3,10 @@ title: m-less 参数介绍
 lang: zh-CN
 image: https://picsum.photos/1920/1080/?random&date=2018-10-20
 date: 2018-10-20
-meta:
-  - name: description
-    content: m-less包含一套常用mixins文件, 分享整理css简写 flex 特殊样式等等
-  - name: keywords
-    content: m-less, less, mixins, 常用 mixins 文件, mixins 总结, mixins 整理, less 总结整理, less 技巧, css 简写, ououe, 雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com
+tags:
+  - less
+categories:
+  - documentation
 ---
 
 ``` html
@@ -22,9 +21,11 @@ meta:
 }
 ```
 **效果**
+
 <Btn/> 
 
-#### 简介
+## 简介
+
 - 自用的less文件  [github](https://github.com/tolking/m-less)
 - 包含常用属性简写、常用的 mixins、常用的 flex 类名、颜色及字体定义、清除浏览器默认样式
 - 默认只对少数几个属性进行了浏览器前缀处理，建议使用 Autoprefixer 处理浏览器前缀兼容
@@ -33,30 +34,47 @@ meta:
 - 如果属性的所有的参数都有默认值，可以省略()，否则需要传人所需参数
 - 如果一个默认值为空，说明当没有当前参数时，只触发前面的属性，当前及后面的属性
 
+::: tip
 手动引入 -old
 **仅对内置属性处理**
 - 将 mixins.less 里面的 @import "alias"; 改为 @import "alias-old";
 - 将 styles.less 里面的 @import "flex"; 改为 @import "flex-old";
+:::
 
-#### 目录结构
+## 目录结构
+
 ```
 +- less
+  +- mixins
+    +- animation.less
+    +- arrow.less
+    +- bg.less
+    +- box.less
+    +- btn.less
+    +- filter.less
+    +- font.less
+    +- mixitem.less
+    +- position.less
+    +- reflect.less
+    +- spread.less
+    +- transform.less
   +- alias-old.less 属性简写，浏览器前缀兼容
   +- alias.less 属性简写（默认）
   +- base.less 清除浏览器默认样式
   +- flex-old.less flex 类名，浏览器前缀兼容
   +- flex.less flex 类名（默认）
   +- mixins.less 输出 mixins 文件
-  +- mixitem.less 常用属性值简写
   +- styles.less 输出文件
   +- svg.less 整理的简单 svg 图片（未来可能有较大变动）
   +- variable.less 变量文件
 ```
 
-#### 默认字体列表
+## 默认字体列表
+
 @f-base: -apple-system,BlinkMacSystemFont,Microsoft YaHei,Segoe UI,Roboto,Source Han Sans SC,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neu,sans-serif
 
-#### 默认颜色
+## 默认颜色
+
 必须颜色，只能够修改，不可删除
 
 - @c-text: @c-gray; // 字体默认颜色
@@ -68,7 +86,8 @@ meta:
 参考颜色
 <DefaultsColor/>
 
-#### flex 类名
+## flex 类名
+
 直接在 class 里面增加
 ``` html
 <div class="flex-cc">center</div>
@@ -77,10 +96,13 @@ meta:
 
 <Flex/>
 
+::: tip
 - 拉动上方右下角，可以改变主体大小
 - 根据内部元素数量，效果可能不同，增加或减少数量查看
+:::
 
-#### 属性简写
+## 属性简写
+
 ``` less
 /* 例如 */
 width: 100px;
@@ -190,8 +212,11 @@ width: 100px;
 | content |	.con | content |  |  |
 | user-select |	.us |	user-select |	none |  |
 
-#### 处理前缀
+## 处理前缀
+
+::: warning
 通过下面方法可以增加特定属性的前缀 需要传入完整属性名，不可简写
+:::
 
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
@@ -199,7 +224,8 @@ width: 100px;
 | .prew | property, value | -webkit-, property |
 | .prewm | property, value | -webkit-, -ms-, property |
 
-常用简写
+## 常用简写
+
 | 简写 | 说明 |
 | :-- | :-- |
 | .cur-p | cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; |
@@ -220,7 +246,8 @@ width: 100px;
 | .res-w | resize: horizontal; overflow: auto |
 | .res-h | resize: vertical; overflow: auto |
 
-#### Mixins 混合
+## Mixins 混合
+
 可以通过下面方法简写
 ``` less
 .box(5rem, 2rem);
@@ -232,7 +259,7 @@ width: 100px;
 .shadow;
 ```
 
-##### box
+### box
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .box | width, height | auto, auto |
@@ -246,7 +273,7 @@ width: 100px;
 | .box>.border>.right | weight, color, style, width, height | 1px, @c-line, solid, , auto |
 | .box>.radius | radius, width, height | , , width |
 
-##### font
+### font
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .font | size, color | 1rem, @c-text	|
@@ -258,6 +285,7 @@ width: 100px;
 | .font>.style | style, size, color |	italic, , @c-text |
 | .font | size, color, family	|  |  |
 
+::: warning
 如果 .font 后面带了三个参数，后面接着的 font 里面的内容不能改简写
 ``` less
  .test {
@@ -270,24 +298,25 @@ width: 100px;
  }
  ```
 由于 box 与 font 中都有 shadow，简写 shadow 容易出错，合理运用
+:::
 
-##### font-cc 文字居中
+### font-cc 文字居中
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .font-cc | line-height |  |  |
 
-##### font-hidden 文本隐藏
+### font-hidden 文本隐藏
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .font-hidden>.nowrap |  | 	|	单行生效 |
 | .font-hidden>.wrap | n |  | 指定在行隐藏（仅对部分 -webkit- 生效，建议配合 max-heigh 使用） |
 
-##### font-column 文本分列
+### font-column 文本分列
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .font-column | count, column-gap, width, color, style |	, , 1px, @c-line, solid |	列数, 之间距离, 分割线样式 |
 
-##### position
+### position
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .position | position, z-index, top, right, bottom, left | absolute, 1, 0, top, top, right |	方位的输入与 margin padding 差不多 |
@@ -300,7 +329,7 @@ width: 100px;
 | .position>.bottom-left | position, z-index, bottom, left | absolute, 1, 0, 0 |  |
 | .position>.bottom-right | position, z-index, bottom, right | absolute, 1, 0, 0 |  |
 
-##### fixed
+### fixed
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .fixed | z-index, top, right, bottom, left | 1, 0, top, top, right |	方位的输入与 margin padding 差不多 |
@@ -313,7 +342,7 @@ width: 100px;
 | .fixed>.bottom-left | z-index, bottom, left | 1, 0, 0 |  |
 | .fixed>.bottom-right | z-index, bottom, right | 1, 0, 0 |  |
 
-##### absolute
+### absolute
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .absolute | z-index, top, right, bottom, left | absolute, 1, 0, top, top, right |	方位的输入与 margin padding 差不多 |
@@ -326,7 +355,7 @@ width: 100px;
 | .absolute>.bottom-left | z-index, bottom, left | 1, 0, 0 |  |
 | .absolute>.bottom-right | z-index, bottom, right | 1, 0, 0 |  |
 
-##### relative
+### relative
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .relative | z-index, top, right, bottom, left | 1, 0, top, top, right |	方位的输入与 margin padding 差不多 |
@@ -339,19 +368,19 @@ width: 100px;
 | .relative>.bottom-left | z-index, bottom, left | 1, 0, 0 |  |
 | .relative>.bottom-right | z-index, bottom, right | 1, 0, 0 |  |
 
-##### position-cc
+### position-cc
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .position-cc | z-index	| 1 | 基于 translate 居中 |
 | .position-cc | z-index, width, height |	1, , width | 基于 margin 居中 |
 
-##### matrix
+### matrix
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .matrix |	a1 ~ a6 | 0 ~ 0 | 需要6个点 |
 | .matrix>.matrix3d |	a1 ~ a16 | 0 ~ 0 | 需要16个点 |
 
-##### translate
+### translate
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .translate | x, y |	0, 0 |  |
@@ -360,7 +389,7 @@ width: 100px;
 | .translate>.z | z |	0 |  |
 | .translate>.translate3d | x, y, z |	0, 0, 0 |  |
 
-##### scale
+### scale
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .scale | x, y |	0, 0 |  |
@@ -369,7 +398,7 @@ width: 100px;
 | .scale>.z | z	0 |  |
 | .scale>.scale3d | x, y, z |	0, 0, 0 |  |
 
-##### rotate
+### rotate
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .rotate | rotate | 0deg |  |
@@ -378,24 +407,24 @@ width: 100px;
 | .rotate>.z | z | 0 |  |
 | .rotate>.rotate3d |	x, y, z, rotate | 0, 0, 0, 0deg |  |
 
-##### skew
+### skew
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .skew | x, y | 0deg, 0deg	|  |
 | .skew>.x | x | 0deg	|  |
 | .skew>.y | y | 0deg	|  |
 
-##### bg-img
+### bg-img
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .bg-img |	url, background-size, background-position, background-repeat | , 100%, center, no-repeat |  |
 
-##### bg-sprite
+### bg-sprite
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .bg-sprite |	url, background-position, background-repeat | , , no-repeat |  |
 
-##### bg-line
+### bg-line
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .bg-line | rotate, color, ... |	, @c-black, fade(color-1, 0%), ... |	支持输入1~5的颜色渐变 |
@@ -404,14 +433,14 @@ width: 100px;
 **例如**
 <BgLine/>
 
-##### bg-radial
+### bg-radial
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .bg-radial | type, color, ... |	, @c-black, fade(color-1, 0%), ... | 支持输入1~5的颜色渐变 |
 | .bg-radial-rainbow | type |	circle | 彩虹渐变 |
 
 
-##### spread 扩散线条
+### spread 扩散线条
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | ,spread>.top | width, heigh, color, time | 100%, 1px, @c-line, 1s | 顶部发散线条 |
@@ -434,7 +463,7 @@ width: 100px;
 **效果**
 <Spread/>
 
-##### reflect 渐隐镜像效果
+### reflect 渐隐镜像效果
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .reflect | l, opacity, length | 0, 0.3, 70% | 镜像效果距离主体距离, 效果透明度, 效果渐变长度(默认为向下镜像，仅对部分浏览器生效) |
@@ -445,7 +474,7 @@ width: 100px;
 | .reflect>.left | l, opacity, length | 0, 0.3, 70% | 向左镜像 |
 | .reflect>.right | l, opacity, length | 0, 0.3, 70% | 向右镜像 |
 
-##### btn 按钮
+### btn 按钮
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .btn | width, height, radius, bg-color, time, darken, lighten |	, width, 0, @c-btn, 1s, 5%, 70% |	宽, 高, 圆角, 背景色, 动画时间, hover变暗程度, active时水波纹变亮程度 |
@@ -453,7 +482,7 @@ width: 100px;
 **效果**
 <Btn/>
 
-##### arrow 箭头
+### arrow 箭头
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .arrow>.top | size, color | 5px, @c-line | 箭头尖角指向方向 |
@@ -468,7 +497,7 @@ width: 100px;
 **效果**
 <Arrow/>
 
-##### filter 滤镜
+### filter 滤镜
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .filter | ...	|  |  |	
@@ -483,18 +512,18 @@ width: 100px;
 | .contrast | contrast |  | 对比度 |
 | .drop-shadow | drop-shadow |  | 阴影 |
 
-##### animation
+### animation
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .animation | name, duration, delay, count |	, 1s, 0s, infinite | 动画名, 持续时间, 延迟播放, 播放次数 |
 | .animation-state | duration, delay, count |	1s, 0s, infinite | 持续时间, 延迟播放, 播放次数 |
 
-##### transition
+### transition
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .transition |	property, duration, delay |	transformv, 1s, 0s | 过度元素, 持续时间, 延迟播放 |
 
-##### svg 图片
+### svg 图片
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
 | .svg-* | color, background-size, background-position, background-repeat |	@c-line, 100%, center, no-repeat | 正在寻找一套简单的单色模版，未来可能有较大变化 |

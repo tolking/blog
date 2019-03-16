@@ -4,10 +4,10 @@ lang: zh-CN
 image: https://picsum.photos/1920/1080/?random&date=2018-01-08
 date: 2018-01-08
 tags:
-  - javascript
+  - js
+  - strict
 categories:
-  - futurama
-readingTime: 6 Minutes
+  - summary
 meta:
   - name: description
     content: 在头部加上 "use strict" 启用严格模式，使用严格模式能够有效的降低bug，开始需要适应

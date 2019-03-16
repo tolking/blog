@@ -5,10 +5,9 @@ display: home
 image: https://picsum.photos/1920/1080/?random&date=2017-11-15
 date: 2017-11-15
 tags:
-  - javascript
+  - js
 categories:
-  - futurama
-readingTime: 6 Minutes
+  - summary
 meta:
   - name: description
     content: 使用babel-polyfill来解决一些低版本的浏览器对es6新语法的不支持

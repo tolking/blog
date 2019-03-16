@@ -7,8 +7,7 @@ date: 2018-08-19
 tags:
   - html
 categories:
-  - futurama
-readingTime: 3 Minutes
+  - summary
 meta:
   - name: description
     content: 通过使用 preload、prefetch 来优化页面加载
@@ -25,12 +24,12 @@ meta:
 </head>
 ```
 
-preload
+## preload
 - 能够让你在你的HTML页面中 head 元素内部书写一些声明式的资源获取请求
 - 可以指明哪些资源是在页面加载完成后即刻需要的，在浏览器的主渲染机制介入前就进行预加载
 - 这一机制使得资源可以更早的得到加载并可用，且更不易阻塞页面的初步渲染，进而提升性能
 
-通过 as 属性指定加载类型
+### 通过 as 属性指定加载类型
 - audio: 音频文件。
 - document: 一个将要被嵌入到 frame 或 iframe 内部的HTML文档。
 - embed: 一个将要被嵌入到 embed 元素内部的资源
@@ -50,7 +49,7 @@ preload
 </head>
 ```
 
-通过 type 属性指定加载MIME类型
+### 通过 type 属性指定加载MIME类型
 - 指明加载的MIME类型
 - 浏览器如果支持，则会进行这一类型资源的预加载
 - 否则便对其加以忽略
@@ -61,11 +60,11 @@ preload
 </head>
 ```
 
-通过 crossorigin 属性指定跨域资源
+### 通过 crossorigin 属性指定跨域资源
 - 预加载那些跨域资源
 - 需要后端服务器支持
 
-通过 media 属性使用媒体查询
+### 通过 media 属性使用媒体查询
 - 接受媒体类型或有效的媒体查询作为属性值
 - 根据不同的条件使用响应式的预加载
 ``` html
@@ -75,7 +74,7 @@ preload
 </head>
 ```
 
-prefetch
+## prefetch
 - 利用空闲时间提前获取用户未来可能会访问的内容
 - 与使用 preload 的资源相比使用 prefetch 的资源相对优先级较低
 ``` html

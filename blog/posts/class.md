@@ -5,11 +5,11 @@ display: home
 image: https://picsum.photos/1920/1080/?random&date=2018-02-19
 date: 2018-02-19
 tags:
-  - javascript
+  - js
   - es6
 categories:
-  - futurama
-readingTime: 6 Minutes
+  - learn
+  - summary
 meta:
   - name: description
     content: ES6引入了 Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已
@@ -36,17 +36,17 @@ const point = new Point(2, 3)
 point.toString() // (2, 3)
 ```
 
-#### 不存在变量提升
+### 不存在变量提升
 
 ``` js
 new Foo() // ReferenceError
 class Foo {}
 ```
 
-#### this的指向
+### this的指向
 类的方法内部如果含有this，它默认指向类的实例
 
-#### Class的继承
+### Class的继承
 
 Class之间可以通过extends关键字实现继承
 
@@ -63,7 +63,7 @@ class ColorPoint extends Point {
 }
 ```
 
-#### Class的取值函数（getter）和存值函数（setter）
+### Class的取值函数（getter）和存值函数（setter）
 
 ``` js
 class CustomHTMLElement {
@@ -86,7 +86,7 @@ var descriptor = Object.getOwnPropertyDescriptor(CustomHTMLElement.prototype, "h
 "set" in descriptor  // true
 ```
 
-#### Class的Generator方法
+### Class的Generator方法
 
 如果某个方法之前加上星号（*），就表示该方法是一个Generator函数。
 
@@ -109,7 +109,7 @@ for (let x of new Foo('hello', 'world')) {
 // world
 ```
 
-#### Class的静态方法
+### Class的静态方法
 
 类相当于实例的原型，所有在类中定义的方法，都会被实例继承。如果在一个方法前，加上static关键字，就表示该方法不会被实例继承，而是直接通过类来调用，这就称为“静态方法”
 

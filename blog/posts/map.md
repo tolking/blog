@@ -5,11 +5,11 @@ display: home
 image: https://picsum.photos/1920/1080/?random&date=2018-02-25
 date: 2018-02-25
 tags:
-  - javascript
+  - js
   - es6
 categories:
-  - futurama
-readingTime: 12 Minutes
+  - learn
+  - summary
 meta:
   - name: description
     content: Map 类似于对象，但是“键”的范围不限于字符串，各种类型的值(包括对象)都可以当作键

@@ -5,9 +5,9 @@ image: https://picsum.photos/1920/1080/?random&date=2018-09-08
 date: 2018-09-08
 tags:
   - vue
+  - problem
 categories:
-  - futurama
-readingTime: 3 Minutes
+  - summary
 meta:
   - name: description
     content: 安全的清除 vue 中的定时器
@@ -17,7 +17,8 @@ meta:
 
 <!-- more -->
 
-所需要做的就是在页面销毁之前将可能没用完成的定时器清除，大致代码如下
+**所需要做的就是在页面销毁之前将可能没用完成的定时器清除，大致代码如下**
+
 ``` html vue
 <template>
   <p>{{ time }}</p>

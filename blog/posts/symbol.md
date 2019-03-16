@@ -2,14 +2,14 @@
 title: ES6 symbol
 lang: zh-CN
 display: home
-image: https://picsum.photos/1920/1080/?random&date=2018-02-19
-date: 2018-02-19
+image: https://picsum.photos/1920/1080/?random&date=2018-02-18
+date: 2018-02-18
 tags:
-  - javascript
+  - js
   - es6
 categories:
-  - futurama
-readingTime: 6 Minutes
+  - learn
+  - summary
 meta:
   - name: description
     content: ES6引入了一种新的原始数据类型Symbol，表示独一无二的值。它是JavaScript语言的第七种数据类型，前六种是：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）
@@ -28,10 +28,12 @@ const s2 = Symbol('foo');
 s1 === s2 // false
 ```
 
+::: warning
 **Symbol函数前不能使用new命令**
 **Symbol值不能与其他类型的值进行运算**
+:::
 
-#### 作为属性名的Symbol
+### 作为属性名的Symbol
 
 ``` js
 const mySymbol = Symbol()
