@@ -41,9 +41,6 @@ module.exports = {
     ]
   },
   plugins: {
-    'sitemap': {
-      hostname: 'https://pake.web.id'
-    },
     'blog-multidir': {
       postsDir: {
         posts: 'posts/:year/:month/:day/:slug'
@@ -56,8 +53,9 @@ module.exports = {
       clientId: '32058bd2babe34bdc824',
       clientSecret: '9ce6c5a88c8e23fead191752511009827c4319d0',
     },
-    // 'sitemap': {
-    //   hostname: 'https://pake.web.id'
-    // }
+    'sitemap': {
+      hostname: 'https://ououe.com',
+      changefreq: 'weekly'
+    }
   }
 }
