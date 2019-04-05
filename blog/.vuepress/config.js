@@ -14,7 +14,7 @@ module.exports = {
   themeConfig: {
     cover: '/img/cover.jpg',
     logo: '/img/logo.png',
-    useVssue: false,
+    useVssue: true,
     postTime: {
       createTime: '创建时间',
       lastUpdated: '最后修改'
@@ -52,13 +52,13 @@ module.exports = {
         posts: 'posts/:year/:month/:day/:slug'
       }
     },
-    // '@vssue/vuepress-plugin-vssue': {
-    //   platform: 'github',
-    //   owner: 'tolking',
-    //   repo: 'blog',
-    //   clientId: '32058bd2babe34bdc824',
-    //   clientSecret: '9ce6c5a88c8e23fead191752511009827c4319d0',
-    // },
+    '@vssue/vuepress-plugin-vssue': {
+      platform: 'github',
+      owner: 'tolking',
+      repo: 'blog',
+      clientId: '32058bd2babe34bdc824',
+      clientSecret: '9ce6c5a88c8e23fead191752511009827c4319d0',
+    },
     'sitemap': {
       hostname: 'https://ououe.com',
       changefreq: 'weekly'
