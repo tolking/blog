@@ -1,11 +1,23 @@
 <template>
 <section class="flex">
-  <select v-model="flexName" class="flex-select">
-    <option v-for="(item, index) in className" :key="index" :value="item">{{ item }}</option>
-  </select>
+  <div class="flex-select">
+    <span>flex-</span>
+    <select v-model="_flexFlow" class="select-item">
+      <option v-for="(item, index) in flexFlowList" :key="index" :value="item">{{ item }}</option>
+    </select>
+    <select v-model="justifyContent" class="select-item">
+      <option v-for="(item, index) in justifyContentList" :key="index" :value="item">{{ item }}</option>
+    </select>
+    <select v-model="alignItems" class="select-item">
+      <option v-for="(item, index) in alignItemsList" :key="index" :value="item">{{ item }}</option>
+    </select>
+    <select v-model="alignContent" :disabled="flexFlow === 'x' || flexFlow === 'y'" class="select-item">
+      <option v-for="(item, index) in alignContentList" :key="index" :value="item">{{ item }}</option>
+    </select>
+  </div>
   <div @click="changeCount(1)" class="flex-btn">add</div>
   <div @click="changeCount(-1)" class="flex-btn">del</div>
-  <div ref="flexBox" :class="flexName" class="flex-box">
+  <div ref="flexBox" :class="'flex-' + flexFlow + justifyContent + alignItems + alignContent" class="flex-box">
     <div v-for="(item, index) in count" :key="index" class="box-item">{{ "box" + item }}</div>
   </div>
 </section>
@@ -15,34 +27,26 @@
 export default {
   data() {
     return {
-      flexName: "flex-cc",
       count: 2,
-      className: [
-        "flex-x",
-        "flex-y",
-        "flex-cb",
-        "flex-cbc",
-        "flex-ccc",
-        "flex-cw",
-        "flex-a",
-        "flex-as",
-        "flex-b",
-        "flex-bc",
-        "flex-bs",
-        "flex-c",
-        "flex-cc",
-        "flex-cs",
-        "flex-w",
-        "flex-wa",
-        "flex-wac",
-        "flex-was",
-        "flex-wb",
-        "flex-wbc",
-        "flex-wbs",
-        "flex-wc",
-        "flex-wcc",
-        "flex-wcs"
-      ]
+      flexFlow: 'x',
+      flexFlowList: ['x', 'y', 'w', 'm'],
+      justifyContent: 'c',
+      justifyContentList: ['s', 'a', 'b', 'c', 'e'],
+      alignItems: 'c',
+      alignItemsList: ['s', 'b', 'c', 'e', 'h'],
+      alignContent: '',
+      alignContentList: ['', 's', 'a', 'b', 'c', 'e']
+    }
+  },
+  computed: {
+    _flexFlow: {
+      get () {
+        return this.flexFlow
+      },
+      set (value) {
+        this.flexFlow = value
+        if (value === 'x' || value === 'y') this.alignContent = ''
+      }
     }
   },
   methods: {
@@ -63,7 +67,9 @@ export default {
   .flex-select {
     .d-ibt;
     .m(1rem 1rem 0);
-    .box(8rem, 3rem);
+    .select-item {
+      .box(4rem, 3rem);
+    }
   }
   .flex-btn {
     .d-ibt;

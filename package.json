@@ -19,10 +19,11 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "postcss-propro": "^1.0.2",
+    "postcss-flex-alias": "^1.0.0",
     "release-it": "^7.6.3",
     "vuepress": "^1.0.0-alpha.39",
     "vuepress-plugin-blog-multidir": "^1.0.4",
-    "vuepress-plugin-sitemap": "^2.0.0-alpha.0",
-    "vuepress-theme-ououe": "^1.1.1"
+    "vuepress-plugin-sitemap": "^2.1.2",
+    "vuepress-theme-ououe": "^1.1.2"
   }
 }
