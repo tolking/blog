@@ -42,6 +42,11 @@ module.exports = {
     ]
   },
   plugins: {
+    '@vuepress/last-updated': {
+      transformer: (timestamp, lang) => {
+        return new Date(timestamp).toISOString()
+      }
+    },
     'blog-multidir': {
       postsDir: {
         posts: 'posts/:year/:month/:day/:slug'
