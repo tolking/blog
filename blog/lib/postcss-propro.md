@@ -4,8 +4,8 @@ lang: en-US
 image: https://picsum.photos/1920/1080/?random&date=2018-12-07
 date: 2018-12-07
 tags:
+  - css
   - postcss
-  - postcss-propro
 categories:
   - documentation
 ---

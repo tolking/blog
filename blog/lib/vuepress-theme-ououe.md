@@ -6,7 +6,6 @@ date: 2019-02-22
 tags:
   - vue
   - vuepress
-  - vuepress-theme-ououe
 categories:
   - documentation
 --- 

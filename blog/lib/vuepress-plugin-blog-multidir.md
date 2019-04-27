@@ -6,7 +6,6 @@ date: 2019-03-09
 tags:
   - vue
   - vuepress
-  - vuepress-plugin-blog-multidir
 categories:
   - documentation
 --- 

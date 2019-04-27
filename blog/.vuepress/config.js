@@ -52,6 +52,9 @@ module.exports = {
         posts: 'posts/:year/:month/:day/:slug'
       }
     },
+    'reading-progress': {
+      readingDir: ['post', 'lib']
+    },
     '@vssue/vuepress-plugin-vssue': {
       platform: 'github',
       owner: 'tolking',

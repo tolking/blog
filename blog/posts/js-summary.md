@@ -202,3 +202,12 @@ Object.assign(obj, obj1, obj2);
 let newObj = JSON.parse(JSON.stringify(obj))
 // 此时修改 newObj 的数据将不会引起 obj 数据的变化
 ```
+
+## 获取页面的id元素
+``` js
+// 一般方法
+const app = document.getElementById('app')
+// 也可以这样
+const app = window.app
+// 完全不推荐这样，这样获取的值很有可能不是你所需要的
+```
