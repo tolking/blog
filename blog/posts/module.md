@@ -44,7 +44,7 @@ var name = 'Michael';
 function multiply (x) {
   return x * x;
 }
-export {name, multiply};
+export { name, multiply };
 ```
 
 - export 输出的变量就是本来的名字，但是可以使用as关键字重命名

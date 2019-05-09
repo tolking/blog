@@ -79,14 +79,13 @@ set position for reading progress bar
 ## Front matter
 
 Change the reading progress bar display of the current page by use `readingShow`
+- Type: `string`, `boolean`
+- Default: `null`
+- one of `top`, `bottom`, `left`, `right`, `true`, `false`
 
 ``` md
 ---
 readingShow: false
----
-// or
----
-readingShow: true
 ---
 ```
 

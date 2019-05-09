@@ -53,7 +53,7 @@ module.exports = {
       }
     },
     'reading-progress': {
-      readingDir: ['post', 'lib']
+      readingDir: ['posts', 'lib']
     },
     '@vssue/vuepress-plugin-vssue': {
       platform: 'github',

@@ -1,7 +1,6 @@
 ---
 title: babel-polyfill的引用和使用
 lang: zh-CN
-display: home
 image: https://picsum.photos/1920/1080/?random&date=2017-11-15
 date: 2017-11-15
 tags:
