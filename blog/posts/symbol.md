@@ -1,7 +1,6 @@
 ---
 title: ES6 symbol
 lang: zh-CN
-display: home
 image: https://picsum.photos/1920/1080/?random&date=2018-02-18
 date: 2018-02-18
 tags:
