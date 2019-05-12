@@ -28,26 +28,26 @@ JavaScript 中的所有事物都是对象。整理部分 Object 构造函数的�
 
 ``` js
 const person = {
-  name: '',
-  age: 0,
   say () {
+    name: '',
     console.log(`My name is ${this.name}. I am ${this.age}`)
   }
 }
 
-const me = Object.create(person)
-
-me.name = 'XXX'
-me.age = 18
-me.say() // My name is XXX. I am 18
-
-// or
-
 const me = Object.create(person, {
-  name: { value: 'XXX' },
-  age: { value: 18 }
+  age: {
+    get () {
+      return 18
+    },
+    set (newValue) {
+      age = newValue
+    },
+    enumerable: true,
+    configurable: true
+  }
 })
 
+me.name = 'XXX'
 me.say() // My name is XXX. I am 18
 ```
 
@@ -179,6 +179,78 @@ const obj = {
 }
 const map = new Map(Object.entries(obj))
 console.log(map) // Map(4) {"a" => 1, "b" => 2, "c" => 3, "d" => 4}
+```
+
+### `Object.defineProperty()`
+
+使用 `Object.defineProperty(obj, prop, descriptor)` 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回这个对象
+
+- obj 要在其上定义属性的对象
+- prop 要定义或修改的属性的名称
+- descriptor 将被定义或修改的属性描述符
+
+``` js
+// 使用 __proto__
+var obj = {}
+var descriptor = Object.create(null) // 没有继承的属性
+// 默认没有 enumerable，没有 configurable，没有 writable
+descriptor.value = 'static'
+Object.defineProperty(obj, 'key', descriptor)
+
+// 显式
+Object.defineProperty(obj, 'key', {
+  enumerable: false,
+  configurable: false,
+  writable: false,
+  value: 'static'
+})
+
+// 循环使用同一对象
+function withValue(value) {
+  var d = withValue.d || (
+    withValue.d = {
+      enumerable: false,
+      writable: false,
+      configurable: false,
+      value: null
+    }
+  )
+  d.value = value
+  return d
+}
+// ... 并且 ...
+Object.defineProperty(obj, 'key', withValue('static'))
+
+// 如果 freeze 可用, 防止代码添加或删除对象原型的属性
+// （value, get, set, enumerable, writable, configurable）
+(Object.freeze||Object)(Object.prototype)
+```
+
+### `Object.defineProperties()`
+
+使用 `Object.defineProperties(obj, props)` 方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象
+
++ obj 在其上定义或修改属性的对象。
++ props 要定义其可枚举属性或修改的属性描述符的对象。对象中存在的属性描述符主要有两种：数据描述符和访问器描述符（更多详情，请参阅Object.defineProperty()）。描述符具有以下键：
+  - configurable true 当且仅当该属性描述符的类型可以被改变并且该属性可以从对应对象中删除。默认为 false
+  - enumerable true 当且仅当在枚举相应对象上的属性时该属性显现。默认为 false
+  - value 与属性关联的值。可以是任何有效的JavaScript值（数字，对象，函数等）。默认为 undefined.
+  - writable true当且仅当与该属性相关联的值可以用assignment operator改变时。默认为 false
+  - get 作为该属性的 getter 函数，如果没有 getter 则为undefined。函数返回值将被用作属性的值。默认为 undefined
+  - set 作为属性的 setter 函数，如果没有 setter 则为undefined。函数将仅接受参数赋值给该属性的新值。默认为 undefined
+
+``` js
+var obj = {}
+Object.defineProperties(obj, {
+  'value1': {
+    value: true,
+    writable: true
+  },
+  'value2': {
+    value: 'Hello',
+    writable: false
+  }
+}) // {value1: true, value2: "Hello"}
 ```
 
 ### `Object.freeze()`
