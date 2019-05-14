@@ -20,12 +20,10 @@ ES6允许使用箭头 => 定义函数，简化函数的写法
 
 ``` js
 const sum = function(num1, num2) {
-  return num1 + num2;
+  return num1 + num2
 }
 // 等同于
-const sum = (num1, num2) => {
-  num1 + num2
-}
+const sum = (num1, num2) => num1 + num2
 ```
 
 ::: tip

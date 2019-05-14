@@ -13,7 +13,7 @@ meta:
     content: Object构造函数的方法
 --- 
 
-JavaScript 中的所有事物都是对象。整理部分 Object 构造函数的方法
+JavaScript 中的所有事物都是对象。整理 Object 构造函数的方法
 
 <!-- more -->
 
@@ -34,7 +34,7 @@ const person = {
   }
 }
 
-const me = Object.create(person, {
+let me = Object.create(person, {
   age: {
     get () {
       return 18
@@ -190,9 +190,8 @@ console.log(map) // Map(4) {"a" => 1, "b" => 2, "c" => 3, "d" => 4}
 - descriptor 将被定义或修改的属性描述符
 
 ``` js
-// 使用 __proto__
-var obj = {}
-var descriptor = Object.create(null) // 没有继承的属性
+const obj = {}
+let descriptor = Object.create(null) // 没有继承的属性
 // 默认没有 enumerable，没有 configurable，没有 writable
 descriptor.value = 'static'
 Object.defineProperty(obj, 'key', descriptor)
@@ -207,7 +206,7 @@ Object.defineProperty(obj, 'key', {
 
 // 循环使用同一对象
 function withValue(value) {
-  var d = withValue.d || (
+  let d = withValue.d || (
     withValue.d = {
       enumerable: false,
       writable: false,
@@ -240,7 +239,7 @@ Object.defineProperty(obj, 'key', withValue('static'))
   - set 作为属性的 setter 函数，如果没有 setter 则为undefined。函数将仅接受参数赋值给该属性的新值。默认为 undefined
 
 ``` js
-var obj = {}
+let obj = {}
 Object.defineProperties(obj, {
   'value1': {
     value: true,
@@ -250,7 +249,9 @@ Object.defineProperties(obj, {
     value: 'Hello',
     writable: false
   }
-}) // {value1: true, value2: "Hello"}
+})
+
+console.log(obj) // {value1: true, value2: "Hello"}
 ```
 
 ### `Object.freeze()`
@@ -258,7 +259,7 @@ Object.defineProperties(obj, {
 使用 `Object.freeze(obj)` 方法可以冻结一个对象。一个被冻结的对象再也不能被修改；冻结了一个对象则不能向这个对象添加新的属性，不能删除已有属性，不能修改该对象已有属性的可枚举性、可配置性、可写性，以及不能修改已有属性的值。此外，冻结一个对象后该对象的原型也不能被修改
 
 ``` js
-const obj = {
+let obj = {
   a: 1,
   b: 2,
   c: 3,
@@ -268,4 +269,181 @@ Object.freeze(obj)
 
 obj.a = 'a'
 console.log(obj) // {a: 1, b: 2, c: 3, d: 4}
+```
+
+### `Object.isFrozen()`
+
+使用 `Object.isFrozen(obj)` 方法判断一个对象是否被冻结。
+
+``` js
+let obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+}
+
+console.log(Object.isFrozen(obj)) // false
+
+Object.freeze(obj)
+
+obj.a = 'a'
+console.log(obj) // {a: 1, b: 2, c: 3, d: 4}
+
+console.log(Object.isFrozen(obj)) // true
+```
+
+### `Object.seal()`
+
+使用 `Object.seal(obj)` 方法封闭一个对象，阻止添加新属性并将所有现有属性标记为不可配置。当前属性的值只要可写就可以改变(不会影响从原型链上继承的属性。但 __proto__ 属性的值也会不能修改)
+
+``` js
+let obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+}
+
+Object.seal(obj)
+delete obj.a // false
+obj.a = 'a'
+console.log(obj) // {a: "a", b: 2, c: 3, d: 4}
+```
+
+### `Object.isSealed()`
+
+使用 `Object.isSealed(obj)` 方法判断一个对象是否被密封
+
+``` js
+let obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+}
+
+console.log(Object.isSealed(obj)) // false
+
+Object.seal(obj)
+delete obj.a // false
+obj.a = 'a'
+console.log(obj) // {a: "a", b: 2, c: 3, d: 4}
+
+console.log(Object.isSealed(obj)) // true
+```
+
+### `Object.preventExtensions()`
+
+使用 `Object.preventExtensions(obj)` 方法让一个对象变的不可扩展，也就是永远不能再添加新的属性(仅阻止添加自身的属性。但属性仍然可以添加到对象原型)
+
+``` js
+let obj = {}
+Object.preventExtensions(obj)
+
+obj.a = 1
+console.log(obj) // {}
+```
+
+### `Object.isExtensible()`
+
+使用 `Object.isExtensible(obj)` 方法判断一个对象是否是可扩展的(是否可以在它上面添加新的属性)
+
+``` js
+let obj = {}
+
+console.log(Object.isExtensible(obj)) // true
+
+Object.preventExtensions(obj)
+
+obj.a = 1
+console.log(obj) // {}
+console.log(Object.isExtensible(obj)) // false
+```
+
+### `Object.getOwnPropertyNames()`
+
+使用 `Object.getOwnPropertyNames(obj)` 方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组
+
+``` js
+const a = Symbol('a')
+const b = Symbol.for('b')
+const person = {
+  [a]: 'a',
+  [b]: 'b',
+  name: 'XXX',
+  age: 18,
+  say () {
+    name: '',
+    console.log(`My name is ${this.name}. I am ${this.age}`)
+  }
+}
+
+console.log(Object.getOwnPropertyNames(person)) // ["name", "age", "say"]
+```
+
+### `Object.getOwnPropertySymbols()`
+
+使用 `Object.getOwnPropertySymbols(obj)` 方法返回一个给定对象自身的所有 Symbol 属性的数组
+
+``` js
+const a = Symbol('a')
+const b = Symbol.for('b')
+const person = {
+  [a]: 'a',
+  [b]: 'b',
+  name: 'XXX',
+  age: 18,
+  say () {
+    name: '',
+    console.log(`My name is ${this.name}. I am ${this.age}`)
+  }
+}
+
+console.log(Object.getOwnPropertySymbols(person)) // [Symbol(a), Symbol(b)]
+```
+
+### `Object.getOwnPropertyDescriptor()`
+
+使用 `Object.getOwnPropertyDescriptor(obj, prop)` 方法返回指定对象上一个自有属性对应的属性描述符(自有属性指的是直接赋予该对象的属性，不需要从原型链上进行查找的属性)
+
+- obj 需要查找的目标对象
+- prop 目标对象内属性名称
+
+``` js
+const a = Symbol('a')
+const b = Symbol.for('b')
+const person = {
+  [a]: 'a',
+  [b]: 'b',
+  name: 'XXX',
+  age: 18,
+  say () {
+    name: '',
+    console.log(`My name is ${this.name}. I am ${this.age}`)
+  }
+}
+
+console.log(Object.getOwnPropertyDescriptor(person, 'say')) // {value: ƒ, writable: true, enumerable: true, configurable: true}
+```
+
+### `Object.getPrototypeOf()`
+
+使用 `Object.getPrototypeOf(obj)` 方法返回指定对象的原型(内部[[Prototype]]属性的值)
+
+``` js
+const a = Symbol('a')
+const b = Symbol.for('b')
+const person = {
+  [a]: 'a',
+  [b]: 'b',
+  name: 'XXX',
+  age: 18,
+  say () {
+    name: '',
+    console.log(`My name is ${this.name}. I am ${this.age}`)
+  }
+}
+
+console.log(Object.getPrototypeOf(person) === Object.getPrototypeOf({})) // true  
 ```

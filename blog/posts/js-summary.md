@@ -197,6 +197,18 @@ Object.assign(obj, obj1, obj2);
 // 如果具有相同的键值将被后面覆盖
 ```
 
+### 通过 ... 来浅拷贝一个对象
+``` js
+let obj = { a: 1, b:2 }
+let obj1 = { ...obj }
+
+obj.a = 'a'
+obj1.a = 'b'
+
+console.log(obj) // {a: "a", b: 2}
+console.log(obj1) // {a: "b", b: 2}
+```
+
 ## 通过 json 来深拷贝一个对象
 ``` js
 let newObj = JSON.parse(JSON.stringify(obj))

@@ -33,7 +33,7 @@ meta:
 ```
 ``` css
 .box {
-  position: absolute;
+  position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
