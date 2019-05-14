@@ -9823,10 +9823,10 @@ vuepress-plugin-container@^2.0.0:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-reading-progress@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-reading-progress/-/vuepress-plugin-reading-progress-1.0.5.tgz#1f89bb70d5494c25afc095fd036ab3049439eb41"
-  integrity sha512-ZfjLe2LQI5eklDdKI9T4cnC1uNwLyqtnYXl3RA2vYSgWZ3M3nLWXJwXK/GUWpUJqRT5rQG8G6Kc3C6Pl+XoKhg==
+vuepress-plugin-reading-progress@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-reading-progress/-/vuepress-plugin-reading-progress-1.0.7.tgz#9a278866b5280e447226579945eded3055ba48ce"
+  integrity sha512-XFnD42/Xt4ZQ3G0j1ViF2WmBJM7f+zYJLKfD2ZEkIq3Ar38c3FKR/LU94aENaWRGnfDMDmAMEYjLrcmR4uq49g==
 
 vuepress-plugin-sitemap@^2.1.2:
   version "2.1.2"

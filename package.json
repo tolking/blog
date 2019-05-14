@@ -23,7 +23,7 @@
     "release-it": "^7.6.3",
     "vuepress": "^1.0.0-alpha.39",
     "vuepress-plugin-blog-multidir": "^1.0.4",
-    "vuepress-plugin-reading-progress": "^1.0.5",
+    "vuepress-plugin-reading-progress": "^1.0.7",
     "vuepress-plugin-sitemap": "^2.1.2",
     "vuepress-theme-ououe": "^1.2.0"
   }
