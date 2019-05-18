@@ -9835,10 +9835,10 @@ vuepress-plugin-sitemap@^2.1.2:
   dependencies:
     sitemap "^2.0.1"
 
-vuepress-theme-ououe@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-ououe/-/vuepress-theme-ououe-1.2.0.tgz#75bdc5785de96e961eec4cd420e72cb01ea88d1d"
-  integrity sha512-b6LWesQ02MMTo0vnobO2DjBPe5/RA9eSMRK8VKyFove7po6VxrSARcDHF58v0p7aFMCYft2HMnolscwU5/sMkw==
+vuepress-theme-ououe@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-ououe/-/vuepress-theme-ououe-1.2.1.tgz#27067a013b66e9867891f23f3255de6a1cac7065"
+  integrity sha512-OIhaneH/jk7E8KBBC1orjhQ6Wj5KBnzuihmnTA0Ke3kDZx8tQuld+hjdjyawKeI1r/sQy+DuUBEzMAFrzO9PMg==
 
 vuepress@^1.0.0-alpha.39:
   version "1.0.0-alpha.47"
