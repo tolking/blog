@@ -8,23 +8,24 @@
     "build": "vuepress build blog",
     "push": "deploy.sh"
   },
-  "devDependencies": {
+  "dependencies": {
     "@vssue/vuepress-plugin-vssue": "^0.7.5",
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.39",
-    "@vuepress/plugin-last-updated": "^1.0.0-alpha.39",
-    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.39",
-    "@vuepress/plugin-nprogress": "^1.0.0-alpha.39",
-    "@vuepress/plugin-search": "^1.0.0-alpha.39",
+    "@vuepress/plugin-back-to-top": "^1.0.1",
+    "@vuepress/plugin-last-updated": "^1.0.1",
+    "@vuepress/plugin-medium-zoom": "^1.0.1",
+    "@vuepress/plugin-nprogress": "^1.0.1",
+    "@vuepress/plugin-search": "^1.0.1",
     "conventional-changelog-cli": "^2.0.11",
+    "vuepress": "^1.0.1",
+    "vuepress-plugin-blog-multidir": "^1.0.5",
+    "vuepress-plugin-reading-progress": "^1.0.7",
+    "vuepress-plugin-sitemap": "^2.1.2",
+    "vuepress-theme-ououe": "^1.2.3"
+  },
+  "devDependencies": {
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "postcss-flex-alias": "^1.0.0",
-    "postcss-propro": "^1.0.2",
-    "release-it": "^7.6.3",
-    "vuepress": "^1.0.0-alpha.39",
-    "vuepress-plugin-blog-multidir": "^1.0.4",
-    "vuepress-plugin-reading-progress": "^1.0.7",
-    "vuepress-plugin-sitemap": "^2.1.2",
-    "vuepress-theme-ououe": "^1.2.1"
+    "postcss-propro": "^1.0.2"
   }
 }
