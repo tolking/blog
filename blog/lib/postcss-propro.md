@@ -1,6 +1,7 @@
 ---
 title: postcss-propro
 lang: en-US
+description: plugin adds and extends some properties
 image: https://picsum.photos/1920/1080/?random&date=2018-12-07
 date: 2018-12-07
 tags:

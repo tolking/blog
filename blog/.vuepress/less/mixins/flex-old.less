@@ -40,9 +40,12 @@
 .ai-e () {
   .ai>.end;
 }
+.ai-h () {
+  .ai>.stretch;
+}
 
 .ac-s () {
-  .ac>.(flex-start);
+  .ac(flex-start);
 }
 .ac-a () {
   .ac(space-around);
@@ -57,12 +60,12 @@
   .ac(flex-end);
 }
 
-.reverse-x {
+.reverse-x () {
   .fxd>.row-r;
 }
-.reverse-y {
+.reverse-y () {
   .fxd>.column-r;
 }
-.reverse-w {
+.reverse-w () {
   .fxw>.wrap-r;
 }

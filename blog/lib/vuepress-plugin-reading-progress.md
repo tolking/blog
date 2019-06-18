@@ -1,6 +1,7 @@
 ---
 title: vuepress-plugin-reading-progress
 lang: en-US
+description: a reading progress bar plugin for vuepress
 image: https://picsum.photos/1920/1080/?random&date=2019-04-14
 date: 2019-04-14
 tags:
@@ -12,9 +13,7 @@ categories:
 
 > a reading progress bar plugin for vuepress
 
-::: warning
-**This plugin is for Vuepress 1.x which is currently in alpha**
-:::
+**This plugin is for Vuepress 1.0**
 
 <!-- more -->
 

@@ -1,6 +1,7 @@
 ---
 title: m-less 参数介绍
 lang: zh-CN
+description: 个人自用less maixins 介绍
 image: https://picsum.photos/1920/1080/?random&date=2018-10-20
 date: 2018-10-20
 tags:
@@ -38,35 +39,21 @@ categories:
 ::: tip
 手动引入 -old
 **仅对内置属性处理**
-- 将 mixins.less 里面的 @import "alias"; 改为 @import "alias-old";
-- 将 styles.less 里面的 @import "flex"; 改为 @import "flex-old";
+1. 将 mixins.less 里面的 `alias` 改为 `alias-old`
+1. 将 mixins.less 里面的 `flex` 改为 `flex-old`
 :::
 
 ## 目录结构
 
 ```
 +- less
-  +- mixins
-    +- animation.less
-    +- arrow.less
-    +- bg.less
-    +- box.less
-    +- btn.less
-    +- filter.less
-    +- font.less
-    +- mixitem.less
-    +- position.less
-    +- reflect.less
-    +- spread.less
-    +- transform.less
-  +- alias-old.less 属性简写，浏览器前缀兼容
-  +- alias.less 属性简写（默认）
-  +- base.less 清除浏览器默认样式
-  +- flex-old.less flex 类名，浏览器前缀兼容
-  +- flex.less flex 类名（默认）
+  +- mixins mixins 相关文件
+    ...
+  +- styles
+    +- alias.less 属性简写（默认）
+    +- main.less 样式文件
   +- mixins.less 输出 mixins 文件
   +- styles.less 输出文件
-  +- svg.less 整理的简单 svg 图片（未来可能有较大变动）
   +- variable.less 变量文件
 ```
 
@@ -86,21 +73,6 @@ categories:
 
 参考颜色
 <DefaultsColor/>
-
-## flex 类名
-
-直接在 class 里面增加
-``` html
-<div class="flex-cc">center</div>
-```
-仅部分常用的类名
-
-<Flex/>
-
-::: tip
-- 拉动上方右下角，可以改变主体大小
-- 根据内部元素数量，效果可能不同，增加或减少数量查看
-:::
 
 ## 属性简写
 

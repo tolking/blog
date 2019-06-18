@@ -1,6 +1,7 @@
 ---
-title: postcss-flex-alias 参数介绍
-lang: zh-CN
+title: postcss-flex-alias parameters
+lang: en-US
+description: postcss plugin easily write flex
 image: https://picsum.photos/1920/1080/?random&date=2019-04-05
 date: 2019-04-05
 tags:
@@ -17,21 +18,22 @@ postcss plugin easily write flex
 <Flex/>
 
 ::: tip
-- 拉动上方右下角，可以改变主体大小
-- 根据内部元素数量，效果可能不同，增加或减少数量查看
+- Pull the upper right and lower corner, you can change the size of the box body
+- Depending on the number of internal elements, the effect may vary, increasing or decreasing the number of views
 :::
 
 ## Explain
 
 **display: flex-[`flex-flow`][`justify-content`][`align-items`][`align-content`]**
 
+Use `_` to denote null values, and last `_` values can be omitted (display: flex-wb_s)
 
 ### flex-flow
 
 - `x`: row nowrap
 - `y`: column nowrap
 - `w`: row wrap
-- `m`: column warp
+- `m`: column wrap
 
 ### justify-content
 

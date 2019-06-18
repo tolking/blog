@@ -17,7 +17,7 @@
   </div>
   <div @click="changeCount(1)" class="flex-btn">add</div>
   <div @click="changeCount(-1)" class="flex-btn">del</div>
-  <div ref="flexBox" :class="'flex-' + flexFlow + justifyContent + alignItems + alignContent" class="flex-box">
+  <div :style="setStyle()" class="flex-box">
     <div v-for="(item, index) in count" :key="index" class="box-item">{{ "box" + item }}</div>
   </div>
 </section>
@@ -28,14 +28,15 @@ export default {
   data() {
     return {
       count: 2,
+      style: '',
       flexFlow: 'x',
-      flexFlowList: ['x', 'y', 'w', 'm'],
+      flexFlowList: ['_', 'x', 'y', 'w', 'm'],
       justifyContent: 'c',
-      justifyContentList: ['s', 'a', 'b', 'c', 'e'],
+      justifyContentList: ['_', 's', 'a', 'b', 'c', 'e'],
       alignItems: 'c',
-      alignItemsList: ['s', 'b', 'c', 'e', 'h'],
-      alignContent: '',
-      alignContentList: ['', 's', 'a', 'b', 'c', 'e']
+      alignItemsList: ['_', 's', 'b', 'c', 'e', 'h'],
+      alignContent: '_',
+      alignContentList: ['_', 's', 'a', 'b', 'c', 'e']
     }
   },
   computed: {
@@ -53,6 +54,46 @@ export default {
     changeCount(n) {
       this.count += n;
       this.count = this.count || 1;
+    },
+    setStyle() {
+      let style = 'display: flex;'
+      if (this.flexFlow) {
+        style += {
+          x: 'flex-flow: row nowrap;',
+          y: 'flex-flow: column wrap;',
+          w: 'flex-flow: row wrap;',
+          m: 'flex-flow: column wrap;'
+        }[this.flexFlow]
+      }
+      if (this.justifyContent) {
+        style += {
+          s: 'justify-content: flex-start;',
+          a: 'justify-content: space-around;',
+          b: 'justify-content: space-between;',
+          c: 'justify-content: center;',
+          e: 'justify-content: flex-end;'
+        }[this.justifyContent]
+      }
+      if (this.alignItems) {
+        style += {
+          s: 'align-items: flex-start;',
+          b: 'align-items: baseline;',
+          c: 'align-items: center;',
+          e: 'align-items: flex-end;',
+          h: 'align-items: stretch;'     
+        }[this.alignItems]
+      }
+      if (this.alignContent) {
+        style += {
+          s: 'align-content: flex-start;',
+          a: 'align-content: space-around;',
+          b: 'align-content: space-between;',
+          c: 'align-content: center;',
+          e: 'align-content: flex-end;'
+        }[this.alignContent]
+      }
+      this.style = style
+      return style
     }
   },
 }
@@ -60,7 +101,6 @@ export default {
 
 <style lang="less" scoped>
 @import url("../less/mixins");
-@import url("../less/flex");
 
 .flex {
   width: 100%;
