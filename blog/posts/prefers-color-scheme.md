@@ -6,7 +6,7 @@ description: 通过媒体查询 prefers-color-scheme 让你的网站支持黑暗
 image: https://picsum.photos/1920/1080/?random&date=2019-06-27
 date: 2019-06-27
 tags:
-  - js
+  - css
 categories:
   - summary
 --- 
