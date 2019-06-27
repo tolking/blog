@@ -1,7 +1,7 @@
 ---
 title: nuxt 踩坑记录
 lang: zh-CN
-display: home
+description: 为了实现更好的 seo，不得不考虑将之前的 vue 单页面程序托到服务器上渲染​，看了官方的 ssr 和 nuxt，最后选择通过 nuxt 实现
 image: https://picsum.photos/1920/1080/?random&date=2018-11-08
 date: 2018-11-08
 tags:
@@ -9,9 +9,6 @@ tags:
   - nuxt
 categories:
   - summary
-meta:
-  - name: description
-    content: 为了实现更好的 seo，不得不考虑将之前的 vue 单页面程序托到服务器上渲染​，看了官方的 ssr 和 nuxt，最后选择通过 nuxt 实现
 --- 
 
 为了实现更好的 seo，不得不考虑将之前的 vue 单页面程序托到服务器上渲染​，看了官方的 ssr 和 nuxt，最后选择通过 nuxt 实现。

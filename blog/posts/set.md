@@ -1,7 +1,7 @@
 ---
 title: ES6 Set
 lang: zh-CN
-display: home
+description: Set 类似于数组，但是成员的值都是唯一的，没有重复的值
 image: https://picsum.photos/1920/1080/?random&date=2018-02-22
 date: 2018-02-22
 tags:
@@ -10,9 +10,6 @@ tags:
 categories:
   - learn
   - summary
-meta:
-  - name: description
-    content: Set 类似于数组，但是成员的值都是唯一的，没有重复的值
 --- 
 
 Set 类似于数组，但是成员的值都是唯一的，没有重复的值
