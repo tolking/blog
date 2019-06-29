@@ -1,5 +1,5 @@
 ---
-title: postcss-flex-alias parameters
+title: postcss-flex-alias
 lang: en-US
 description: postcss plugin easily write flex
 image: https://picsum.photos/1920/1080/?random&date=2019-04-05
@@ -17,7 +17,7 @@ postcss plugin easily write flex
 
 <Flex/>
 
-::: tip
+::: tip TIP
 - Pull the upper right and lower corner, you can change the size of the box body
 - Depending on the number of internal elements, the effect may vary, increasing or decreasing the number of views
 :::

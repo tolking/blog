@@ -1,7 +1,7 @@
 <template>
 <section class="flex">
   <div class="flex-select">
-    <span>flex-</span>
+    <p style="display:inline-block">flex-</p>
     <select v-model="_flexFlow" class="select-item">
       <option v-for="(item, index) in flexFlowList" :key="index" :value="item">{{ item }}</option>
     </select>

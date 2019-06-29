@@ -27,7 +27,7 @@ const s2 = Symbol('foo');
 s1 === s2 // false
 ```
 
-::: warning
+::: warning 注意
 **Symbol函数前不能使用new命令**
 **Symbol值不能与其他类型的值进行运算**
 :::

@@ -40,6 +40,6 @@ meta:
 
 ## 当在任意需要布尔类型的地方，系统都会自动调用Boolean()构造函数将值转换为Boolean类型
 
-::: tip
+::: tip 提示
 null、0、-0、+0、''、undefined、NaN这些都会转换为false，其他的值都会转换为true
 :::

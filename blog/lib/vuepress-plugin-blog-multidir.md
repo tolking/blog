@@ -170,7 +170,7 @@ example
 
 ## attention
 
-::: tip
+::: tip TIP
 **You don't need to create a `index.md(or README.md)` file in a folder that needs Pagination**
 :::
 

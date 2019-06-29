@@ -77,6 +77,6 @@ directives: {
 + vnode：Vue 编译生成的虚拟节点。移步 VNode API 来了解更多详情
 + oldVnode：上一个虚拟节点，仅在 update 和 componentUpdated 钩子中可用
 
-::: tip
+::: tip 提示
 **除了 el 之外，其它参数都应该是只读的，切勿进行修改。如果需要在钩子之间共享数据，建议通过元素的 dataset 来进行**
 :::

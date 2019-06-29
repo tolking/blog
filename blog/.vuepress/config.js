@@ -43,30 +43,55 @@ module.exports = {
       require('autoprefixer')
     ]
   },
-  plugins: {
-    '@vuepress/last-updated': {
+  plugins: [
+    // Preventing sitemap errors
+    ['@vuepress/last-updated', {
       transformer: (timestamp, lang) => {
         return new Date(timestamp).toISOString()
       }
-    },
-    'blog-multidir': {
+    }],
+    // permalink for posts
+    ['blog-multidir', {
       postsDir: {
         posts: 'posts/:year/:month/:day/:slug'
       }
-    },
-    'reading-progress': {
+    }],
+    // add vuepress-plugin-reading-progress
+    ['reading-progress', {
       readingDir: ['posts', 'lib']
-    },
-    '@vssue/vuepress-plugin-vssue': {
+    }],
+    // add vuepress-plugin-container
+    ['container', {
+      type: 'right',
+      defaultTitle: ''
+    }],
+    ['container', {
+      type: 'tip',
+      before: info => `<div class="tip"><p class="title">${info}</p>`,
+      after: '</div>'
+    }],
+    ['container', {
+      type: 'warning',
+      before: info => `<div class="warning"><p class="title">${info}</p>`,
+      after: '</div>'
+    }],
+    ['container', {
+      type: 'danger',
+      before: info => `<div class="danger"><p class="title">${info}</p>`,
+      after: '</div>'
+    }],
+    // add @vssue/vuepress-plugin-vssue
+    ['@vssue/vuepress-plugin-vssue', {
       platform: 'github',
       owner: 'tolking',
       repo: 'blog',
       clientId: '32058bd2babe34bdc824',
-      clientSecret: '9ce6c5a88c8e23fead191752511009827c4319d0',
-    },
-    'sitemap': {
+      clientSecret: '9ce6c5a88c8e23fead191752511009827c4319d0'
+    }],
+    // add vuepress-plugin-sitemap
+    ['sitemap', {
       hostname: 'https://ououe.com',
       changefreq: 'weekly'
-    }
-  }
+    }]
+  ]
 }

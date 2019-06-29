@@ -36,7 +36,7 @@ categories:
 - 如果属性的所有的参数都有默认值，可以省略()，否则需要传人所需参数
 - 如果一个默认值为空，说明当没有当前参数时，只触发前面的属性，当前及后面的属性
 
-::: tip
+::: tip 提示
 手动引入 -old
 **仅对内置属性处理**
 1. 将 mixins.less 里面的 `alias` 改为 `alias-old`
@@ -187,7 +187,7 @@ width: 100px;
 
 ## 处理前缀
 
-::: warning
+::: warning 注意
 通过下面方法可以增加特定属性的前缀 需要传入完整属性名，不可简写
 :::
 
@@ -258,7 +258,7 @@ width: 100px;
 | .font>.style | style, size, color |	italic, , @c-text |
 | .font | size, color, family	|  |  |
 
-::: warning
+::: warning 注意
 如果 .font 后面带了三个参数，后面接着的 font 里面的内容不能改简写
 ``` less
  .test {

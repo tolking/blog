@@ -26,7 +26,7 @@ const sum = function(num1, num2) {
 const sum = (num1, num2) => num1 + num2
 ```
 
-::: tip
+::: tip 提示
 **箭头函数有几个使用注意点**
 
 1. 函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象

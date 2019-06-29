@@ -20,7 +20,7 @@ Module基本用法
 
 <!-- more -->
 
-::: tip
+::: tip 提示
 注意：浏览器中使用时需要指定 type="module"
 :::
 
