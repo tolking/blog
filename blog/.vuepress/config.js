@@ -32,9 +32,6 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/tolking' }
     ]
   },
-  markdown: {
-    lineNumbers: true
-  },
   postcss: {
     plugins: [
       require('postcss-propro'),
