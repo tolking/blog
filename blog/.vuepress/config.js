@@ -89,6 +89,13 @@ module.exports = {
     ['sitemap', {
       hostname: 'https://ououe.com',
       changefreq: 'weekly'
+    }],
+    // add pwa
+    ['@vuepress/pwa', {
+      updatePopup: {
+        message: '发现新内容可用',
+        buttonText: '刷新'
+      }
     }]
   ]
 }
