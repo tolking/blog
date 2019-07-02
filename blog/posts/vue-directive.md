@@ -6,7 +6,7 @@ date: 2019-05-17
 tags:
   - vue
 categories:
-  - summary
+  - learn
 meta:
   - name: description
     content: Vue中的自定义指令

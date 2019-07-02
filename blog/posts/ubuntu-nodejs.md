@@ -1,6 +1,7 @@
 ---
 title: ubuntu 下安装 nodejs 踩坑
 lang: zh-CN
+description: 在 ubuntu 下安装 nodejs 的踩坑记录
 image: https://picsum.photos/1920/1080/?random&date=2018-12-20
 date: 2018-12-20
 tags:
@@ -8,9 +9,6 @@ tags:
   - nodejs
 categories:
   - summary
-meta:
-  - name: description
-    content: 在 ubuntu 下安装 nodejs 的踩坑记录
 --- 
 
 我的需求就是在服务器上安装 nodejs 来跑之前用 nuxt 重构的网站程序，过程不出所料的磕磕碰碰

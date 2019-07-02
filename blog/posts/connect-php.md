@@ -1,6 +1,7 @@
 ---
 title: 向php发送json的一种处理方法
 lang: zh-CN
+description: 向php发送json的一种处理方法
 image: https://picsum.photos/1920/1080/?random&date=2019-05-15
 date: 2019-05-15
 tags:
@@ -9,9 +10,6 @@ tags:
   - axios
 categories:
   - summary
-meta:
-  - name: description
-    content: 向php发送json的一种处理方法
 --- 
 
 由于`PHP`的默认接收方式为 `'Content-Type": "application/x-www-form-urlencoded"`，如果直接向 PHP 发送 json 则 PHP 解析不到数据。需要前端或者后端修改一下

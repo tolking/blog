@@ -2,15 +2,13 @@
 title: Object构造函数的方法
 lang: zh-CN
 display: home
+description: Object构造函数的方法
 image: https://picsum.photos/1920/1080/?random&date=2019-05-11
 date: 2019-05-11
 tags:
   - js
 categories:
   - summary
-meta:
-  - name: description
-    content: Object构造函数的方法
 --- 
 
 JavaScript 中的所有事物都是对象。整理 Object 构造函数的方法

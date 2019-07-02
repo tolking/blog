@@ -6,7 +6,7 @@ date: 2019-05-15
 tags:
   - vue
 categories:
-  - summary
+  - learn
 meta:
   - name: description
     content: Vue中的过滤器

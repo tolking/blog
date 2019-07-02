@@ -1,6 +1,7 @@
 ---
 title: canvas 地图开发总结
 lang: zh-CN
+description: canvas 地图开发总结
 image: https://picsum.photos/1920/1080/?random&date=2019-01-17
 date: 2019-01-17
 tags:
@@ -8,9 +9,6 @@ tags:
   - canvas
 categories:
   - dailylife
-meta:
-  - name: description
-    content: canvas 地图开发总结
 --- 
 
 我是一名 [minecraft](https://www.minecraft.net/) 玩家，起初是玩游戏时觉得下界交通太复杂，容易迷失方向。于是就想统计一份线性地图来提供参考。最初只是简单的图片，但随着服务器肝帝愈来愈多，这种已经满足不了数据更新的需求。手动统计加上绘图实在太麻烦了。

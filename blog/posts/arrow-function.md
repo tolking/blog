@@ -1,6 +1,7 @@
 ---
 title: 箭头函数
 lang: zh-CN
+description: ES6允许使用箭头 => 定义函数，简化函数的写法
 image: https://picsum.photos/1920/1080/?random&date=2018-02-17
 date: 2018-02-17
 tags:
@@ -8,10 +9,6 @@ tags:
   - es6
 categories:
   - learn
-  - summary
-meta:
-  - name: description
-    content: ES6允许使用箭头 => 定义函数，简化函数的写法
 --- 
 
 ES6允许使用箭头 => 定义函数，简化函数的写法

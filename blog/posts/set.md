@@ -9,7 +9,6 @@ tags:
   - es6
 categories:
   - learn
-  - summary
 --- 
 
 Set 类似于数组，但是成员的值都是唯一的，没有重复的值

@@ -8,7 +8,7 @@ date: 2019-06-24
 tags:
   - js
 categories:
-  - summary
+  - learn
 --- 
 
 整理了 `JavaScript` 中的运算符

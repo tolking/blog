@@ -2,15 +2,13 @@
 title: html页面加载优化
 lang: zh-CN
 display: home
+description: 通过使用 preload、prefetch 来优化页面加载
 image: https://picsum.photos/1920/1080/?random&date=2018-08-19
 date: 2018-08-19
 tags:
   - html
 categories:
   - summary
-meta:
-  - name: description
-    content: 通过使用 preload、prefetch 来优化页面加载
 --- 
 
 通过使用 preload、prefetch 来优化页面加载

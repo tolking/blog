@@ -1,15 +1,13 @@
 ---
 title: js中隐性类型转换
 lang: zh-CN
+description: 只需要一点点时间学会使用js中隐性类型转换，更加轻松的处理部分类型
 image: https://picsum.photos/1920/1080/?random&date=2017-09-15
 date: 2017-09-15
 tags:
   - js
 categories:
   - summary
-meta:
-  - name: description
-    content: 只需要一点点时间学会使用js中隐性类型转换，更加轻松的处理部分类型
 --- 
 
 只需要一点点时间学会使用js中隐性类型转换，更加轻松的处理部分类型

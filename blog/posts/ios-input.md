@@ -1,6 +1,7 @@
 ---
-title: ios 输入法将页面往上顶，输入法收回后下方留下空白区域
+title: ios 输入法将页面往上顶
 lang: zh-CN
+description: ios 输入法将页面往上顶，输入法收回后下方留下空白区域
 image: https://picsum.photos/1920/1080/?random&date=2019-01-12
 date: 2019-01-12
 tags:
@@ -9,15 +10,15 @@ tags:
   - problem
 categories:
   - summary
-meta:
-  - name: description
-    content: ios 输入法将页面往上顶，输入法收回后下方留下空白区域
 --- 
+
+ios 输入法将页面往上顶，输入法收回后下方留下空白区域
+
+<!-- more -->
 
 ​Android 没有这种问题，to经过测试没有办法通过纯 css 解决
 后来考虑通过 js 在输入框失去焦点是将页面滚动到顶部
 
-<!-- more -->
 
 ``` js
 const input = document.getElementsByTagName('input');

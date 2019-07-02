@@ -2,15 +2,13 @@
 title: 数组方法总结
 lang: zh-CN
 display: home
+description: 常用数组方法总结
 image: https://picsum.photos/1920/1080/?random&date=2019-06-13
 date: 2019-06-13
 tags:
   - js
 categories:
   - summary
-meta:
-  - name: description
-    content: 数组方法总结
 --- 
 
 数组方法总结
