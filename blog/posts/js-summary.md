@@ -238,4 +238,8 @@ const flattenDeep = arr => Array.isArray(arr)
   : [arr]
 
 flattenDeep([1, [[2], [3, [4]], 5]]) // [1, 2, 3, 4, 5]
+
+// 或者使用 `flat()` (这样会移除新数组中的空项)
+
+[1, [[2], [3, [4]], 5]].flat(Infinity) // [1, 2, 3, 4, 5]
 ```

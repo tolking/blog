@@ -38,9 +38,13 @@ categories:
 - filter()
 创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。
 
+- flat()
+按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回(会移除新数组中的空项)
+
 ``` js
 let arr1 = [1, 2, 3, 4, 5]
 let arr2 = ['a', 'b', 'c']
+let arr3 = [1, [[2], [3, [4]], 5]]
 
 const a = arr1.concat(arr2) // [1, 2, 3, 4, 5, "a", "b", "c"]
 const b = arr1.join() // "1,2,3,4,5"
@@ -49,15 +53,47 @@ const d = arr1.map(item => item * 2) // [2, 4, 6, 8, 10]
 const e = arr1.every(item => item > 0) // true
 const f = arr1.some(item => item > 0) // true
 const g = arr1.filter(item => item > 2) // [3, 4, 5]
+const h = arr.flat(2) // [1, 2, 3, [4], 5]
+const h2 = arr.flat(Infinity) // [1, 2, 3, 4, 5]
 
 arr1 // [1, 2, 3, 4, 5]
 arr2 // ['a', 'b', 'c']
+arr3 // [1, [[2], [3, [4]], 5]]
 ```
 
 ## 不改变原数组，返回单个值
 
+- find() 与 findIndex()
+`find()`返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined
+`findIndex()`返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1
+
+::: tip 提示
+`arr.find(callback(element, index, array), thisArg)` 或 `arr.findIndex(callback(element, index, array), thisArg)`
+  - element: 当前遍历到的元素
+  - index(*): 当前遍历到的索引
+  - array(*): 数组本身
+  - thisArg(*): 执行回调时用作this 的对象
+:::
+
+``` js
+let arr = [1, 2, 3, 4, 5]
+
+arr.find((element) => element % 3 === 0) // 3
+arr.findIndex((element) => element % 3 === 0) // 2
+arr // [1, 2, 3, 4, 5]
+```
+
 - reduce()
-对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。
+对数组中的每个元素执行一个由您提供的函数(升序执行)，将其结果汇总为单个返回值。
+
+::: tip 提示
+`arr.reduce(callback(accumulator, currentValue, index, array), initialValue)`
+ - accumulator: 累计器累计回调的返回值
+ - currentValue: 数组中正在处理的元素
+ - currentIndex(*): 数组中正在处理的当前元素的索引。 如果提供了initialValue，则起始索引号为0，否则为1
+ - array(*): 调用的数组
+ - initialValue(*): 作为第一次调用 callback 函数时的第一个参数的值。如果没有提供初始值，则将使用数组中的第一个元素
+:::
 
 ``` js
 const arr = [1, 2, 3, 4]
@@ -134,4 +170,46 @@ arr // [1, 2, 3, 4, 5]
 const g = arr.splice(2, 1, '3')
 g // [3]
 arr // [1, 2, "3", 4, 5]
+```
+
+- copyWithin()
+浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度。
+
+::: tip 提示
+`arr.copyWithin(target, start, end)`
+  - target: 复制序列到该位置。如果是负数，将从末尾开始计算
+  - start(*): 开始复制元素的起始位置。如果是负数，start 将从末尾开始计算。如果 start 被忽略，copyWithin 将会从0开始复制
+  - end(*): 开始复制元素的结束位置。copyWithin 将会拷贝到该位置，但不包括 end 这个位置的元素。如果是负数， end 将从末尾开始计算。如果 end 被忽略，copyWithin 方法将会一直复制至数组结尾
+:::
+
+``` js
+let arr = [1, 2, 3, 4, 5]
+
+const a = arr.copyWithin(2)
+a // [1, 2, 1, 2, 3]
+arr // [1, 2, 1, 2, 3]
+const b = arr.copyWithin(3, 2, 4)
+b // [1, 2, 1, 1, 2]
+arr // [1, 2, 1, 1, 2]
+```
+
+- fill()
+用一个固定值填充一个数组中从起始索引到终止索引内的全部元素
+
+::: tip 提示
+`arr.fill(value, start, end)`
+  - value: 用来填充数组元素的值
+  - start(*): 起始索引
+  - end(*): 终止索引
+:::
+
+``` js
+let arr = [1, 2, 3, 4, 5]
+
+const a = arr.fill(0, 2, 4)
+a // [1, 2, 0, 0, 5]
+arr // [1, 2, 0, 0, 5]
+const b = arr.fill(10)
+b // [10, 10, 10, 10, 10]
+arr // [10, 10, 10, 10, 10]
 ```
