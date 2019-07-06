@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js运算符 | 雨无声</title>
+    <meta name="description" content="JavaScript 的运算符，包括了赋值，比较，算数，位运算，逻辑，字符串，三元等等">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="author" content="tolking &lt;w13131wang@gmail.com&gt;">
+  <meta name="copyright" content="网站内容版权所有，转载请注明出处">
+  <meta name="keywords" content="m-less, less, mixins, 常用 mixins 文件, mixins 总结, mixins 整理, less 总结整理, less 技巧, css 简写, ououe, 雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com">
+    
+    <link rel="preload" href="/assets/css/0.styles.3c89d6db.css" as="style"><link rel="preload" href="/assets/js/app.8c687fbd.js" as="script"><link rel="preload" href="/assets/js/36.0e5da1a0.js" as="script"><link rel="preload" href="/assets/js/9.f234ba67.js" as="script"><link rel="prefetch" href="/assets/js/10.cdb991ff.js"><link rel="prefetch" href="/assets/js/11.d824e307.js"><link rel="prefetch" href="/assets/js/12.8556fce2.js"><link rel="prefetch" href="/assets/js/13.7926e846.js"><link rel="prefetch" href="/assets/js/14.b0e69a46.js"><link rel="prefetch" href="/assets/js/15.7b15d2ad.js"><link rel="prefetch" href="/assets/js/16.26001bd7.js"><link rel="prefetch" href="/assets/js/17.e731f166.js"><link rel="prefetch" href="/assets/js/18.3e3a438e.js"><link rel="prefetch" href="/assets/js/19.d380bc63.js"><link rel="prefetch" href="/assets/js/2.11f4cf6e.js"><link rel="prefetch" href="/assets/js/20.0b552186.js"><link rel="prefetch" href="/assets/js/21.93323ded.js"><link rel="prefetch" href="/assets/js/22.bbca1ba5.js"><link rel="prefetch" href="/assets/js/23.015f249e.js"><link rel="prefetch" href="/assets/js/24.34113a3a.js"><link rel="prefetch" href="/assets/js/25.02417628.js"><link rel="prefetch" href="/assets/js/26.6b543233.js"><link rel="prefetch" href="/assets/js/27.8ee36f40.js"><link rel="prefetch" href="/assets/js/28.bdd0623a.js"><link rel="prefetch" href="/assets/js/29.458d52e8.js"><link rel="prefetch" href="/assets/js/3.5dc4b0f0.js"><link rel="prefetch" href="/assets/js/30.6be71b56.js"><link rel="prefetch" href="/assets/js/31.37eba154.js"><link rel="prefetch" href="/assets/js/32.8deb7b2a.js"><link rel="prefetch" href="/assets/js/33.55604d27.js"><link rel="prefetch" href="/assets/js/34.fd8c108d.js"><link rel="prefetch" href="/assets/js/35.7016d327.js"><link rel="prefetch" href="/assets/js/37.ca22cf3d.js"><link rel="prefetch" href="/assets/js/38.6a262234.js"><link rel="prefetch" href="/assets/js/39.219626ab.js"><link rel="prefetch" href="/assets/js/4.16224466.js"><link rel="prefetch" href="/assets/js/40.66c891d3.js"><link rel="prefetch" href="/assets/js/41.fe57cf27.js"><link rel="prefetch" href="/assets/js/42.3a7a68cd.js"><link rel="prefetch" href="/assets/js/43.d9930853.js"><link rel="prefetch" href="/assets/js/44.850fa319.js"><link rel="prefetch" href="/assets/js/45.d81a0e32.js"><link rel="prefetch" href="/assets/js/46.1a585d9a.js"><link rel="prefetch" href="/assets/js/47.9eb68e97.js"><link rel="prefetch" href="/assets/js/48.bc31fad7.js"><link rel="prefetch" href="/assets/js/5.48628086.js"><link rel="prefetch" href="/assets/js/6.431625e2.js"><link rel="prefetch" href="/assets/js/7.b3e74598.js"><link rel="prefetch" href="/assets/js/8.d704a77c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3c89d6db.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><section id="global-layout" data-v-815d6976><header class="header" data-v-77dd1092 data-v-815d6976><div class="header-navbar" data-v-77dd1092><div class="flex-xbc main header-nav" data-v-77dd1092><nav class="nav-link" data-v-77dd1092><a href="/" class="inblock link-logo router-link-active" data-v-77dd1092><img src="/img/logo.png" alt="logo" class="logo-img" data-v-77dd1092></a> <section class="nav-link" data-v-9045a1be data-v-77dd1092><span class="list-item" data-v-9045a1be><a href="/" class="item-link router-link-active" data-v-9045a1be>Home</a></span><span class="list-item" data-v-9045a1be><a href="/posts/" class="item-link router-link-active" data-v-9045a1be>Blog</a></span><span class="list-item" data-v-9045a1be><a href="/lib/" class="item-link" data-v-9045a1be>Doc</a></span><span class="list-item" data-v-9045a1be><a href="/tag/" class="item-link" data-v-9045a1be>Tags</a></span><span class="list-item" data-v-9045a1be><a href="/category/" class="item-link" data-v-9045a1be>Categories</a></span><span class="list-item" data-v-9045a1be><a href="/about/" class="item-link" data-v-9045a1be>About</a></span></section></nav> <div class="search-box" data-v-77dd1092><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div> </header> <!----> <section class="page" data-v-815d6976><section class="info" style="background-image:url(https://picsum.photos/1920/1080/?random&amp;date=2019-06-24);" data-v-c8515940><article class="main info-content" data-v-2b193ff9 data-v-c8515940><div class="content-header" data-v-2b193ff9><h1 class="header-title" data-v-2b193ff9>js运算符</h1></div> <div class="flex-wcc content-tag" data-v-2b193ff9><div class="inblock tag-list" data-v-2b193ff9><a href="/category/learn/" class="tag-text" data-v-2b193ff9>learn</a></div> <span class="tag-space" data-v-2b193ff9>/</span> <div class="inblock tag-list" data-v-2b193ff9><a href="/tag/js/" class="tag-text" data-v-2b193ff9>js</a></div></div> <div class="content content__default" data-v-2b193ff9><p>整理了 <code>JavaScript</code> 中的运算符</p> <h2 id="运算符"><a href="#运算符" aria-hidden="true" class="header-anchor">#</a> 运算符</h2> <h3 id="算术运算符"><a href="#算术运算符" aria-hidden="true" class="header-anchor">#</a> 算术运算符</h3> <p><code>算术运算符</code>使用数值作为操作数并返回一个数值</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 加法运算符</span>
+<span class="token number">10</span> <span class="token operator">+</span> <span class="token number">3</span> <span class="token comment">// 13</span>
+
+<span class="token comment">// 减法运算符</span>
+<span class="token number">10</span> <span class="token operator">-</span> <span class="token number">3</span> <span class="token comment">// 7</span>
+
+<span class="token comment">// 除法运算符</span>
+<span class="token number">10</span> <span class="token operator">/</span> <span class="token number">3</span> <span class="token comment">// 3</span>
+
+<span class="token comment">// 乘法运算符</span>
+<span class="token number">10</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token comment">// 30</span>
+
+<span class="token comment">// 取模运算符</span>
+<span class="token number">10</span> <span class="token operator">%</span> <span class="token number">3</span> <span class="token comment">// 1</span>
+
+<span class="token comment">// 自增运算符</span>
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span>
+x<span class="token operator">++</span>
+x <span class="token comment">// 11</span>
+
+<span class="token comment">// 自减运算符</span>
+x<span class="token operator">--</span>
+x <span class="token comment">// 10</span>
+
+<span class="token comment">// 指数运算符</span>
+<span class="token number">2</span> <span class="token operator">**</span> <span class="token number">3</span> <span class="token comment">// 8</span>
+</code></pre></div><h3 id="赋值运算符"><a href="#赋值运算符" aria-hidden="true" class="header-anchor">#</a> 赋值运算符</h3> <p>一个<code>赋值运算符</code>将它右边操作数的值赋给它左边的操作数</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 赋值</span>
+<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span>
+x <span class="token comment">// 10</span>
+
+<span class="token comment">// 加法赋值</span>
+x <span class="token operator">+=</span> <span class="token number">10</span> <span class="token comment">// (x = x + 10)</span>
+x <span class="token comment">// 20</span>
+
+<span class="token comment">// 减法赋值</span>
+x <span class="token operator">-=</span> <span class="token number">10</span> <span class="token comment">// (x = x - 10)</span>
+x <span class="token comment">// 10</span>
+
+<span class="token comment">// 乘法赋值</span>
+x <span class="token operator">*=</span> <span class="token number">10</span> <span class="token comment">// (x = x * 10)</span>
+x <span class="token comment">// 100</span>
+
+<span class="token comment">// 除法赋值</span>
+x <span class="token operator">/=</span> <span class="token number">10</span> <span class="token comment">// (x = x / 10)</span>
+x <span class="token comment">// 10</span>
+
+<span class="token comment">// 求余赋值</span>
+x <span class="token operator">%=</span> <span class="token number">4</span> <span class="token comment">// (x = x % 4)</span>
+x <span class="token comment">// 2</span>
+
+<span class="token comment">// 求幂赋值</span>
+x <span class="token operator">**=</span> <span class="token number">4</span> <span class="token comment">// (x = x ** 4)</span>
+x <span class="token comment">// 16</span>
+
+<span class="token comment">// 左移位赋值</span>
+x <span class="token operator">&lt;&lt;=</span> <span class="token number">2</span> <span class="token comment">// (x = x &lt;&lt; 2)</span>
+x <span class="token comment">// 64</span>
+
+<span class="token comment">// 右移位赋值</span>
+x <span class="token operator">&gt;&gt;=</span> <span class="token number">2</span> <span class="token comment">// (x = x &gt;&gt; 2)</span>
+x <span class="token comment">// 16</span>
+
+<span class="token comment">// 无符号右移位赋值</span>
+x <span class="token operator">&gt;&gt;&gt;=</span> <span class="token number">2</span> <span class="token comment">// (x = x &gt;&gt;&gt; 2)</span>
+x <span class="token comment">// 4</span>
+
+<span class="token comment">// 按位与赋值</span>
+x <span class="token operator">&amp;=</span> <span class="token number">3</span> <span class="token comment">// (x = x &amp; 3)</span>
+x <span class="token comment">// 0</span>
+
+<span class="token comment">// 按位异或赋值</span>
+x <span class="token operator">^=</span> <span class="token number">3</span> <span class="token comment">// (x = x ^ 3)</span>
+x <span class="token comment">// 3</span>
+
+<span class="token comment">// 按位或赋值</span>
+x <span class="token operator">|=</span> <span class="token number">4</span> <span class="token comment">// (x = x | 4)</span>
+x <span class="token comment">// 7</span>
+
+<span class="token comment">// 解构赋值</span>
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token keyword">var</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">]</span> <span class="token operator">=</span> arr
+a <span class="token comment">// 1</span>
+b <span class="token comment">// 2</span>
+c <span class="token comment">// 3</span>
+
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  d<span class="token punctuation">:</span> <span class="token string">'d'</span><span class="token punctuation">,</span>
+  e<span class="token punctuation">:</span> <span class="token string">'e'</span><span class="token punctuation">,</span>
+  f<span class="token punctuation">:</span> <span class="token string">'f'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> <span class="token punctuation">{</span> d<span class="token punctuation">,</span> e<span class="token punctuation">,</span> f <span class="token punctuation">}</span> <span class="token operator">=</span> obj
+d <span class="token comment">// &quot;d&quot;</span>
+e <span class="token comment">// &quot;e&quot;</span>
+f <span class="token comment">// &quot;f&quot;</span>
+</code></pre></div><h3 id="比较运算符"><a href="#比较运算符" aria-hidden="true" class="header-anchor">#</a> 比较运算符</h3> <p><code>比较运算符</code>比较它的操作数并返回一个基于表达式是否为真的逻辑值</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 等于</span>
+<span class="token number">3</span> <span class="token operator">==</span> <span class="token string">'3'</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 不等于</span>
+<span class="token number">3</span> <span class="token operator">!=</span> <span class="token string">'3'</span> <span class="token comment">// false</span>
+
+<span class="token comment">// 全等</span>
+<span class="token number">3</span> <span class="token operator">===</span> <span class="token string">'3'</span> <span class="token comment">// false</span>
+
+<span class="token comment">// 不全等</span>
+<span class="token number">3</span> <span class="token operator">!==</span> <span class="token string">'3'</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 大于</span>
+<span class="token number">4</span> <span class="token operator">&gt;</span> <span class="token string">'3'</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 大于或等于</span>
+<span class="token number">4</span> <span class="token operator">&gt;=</span> <span class="token string">'3'</span>  <span class="token comment">// true</span>
+
+<span class="token comment">// 小于</span>
+<span class="token number">4</span> <span class="token operator">&lt;</span> <span class="token string">'3'</span> <span class="token comment">// false</span>
+
+<span class="token comment">// 小于或等于</span>
+<span class="token number">4</span> <span class="token operator">&lt;=</span> <span class="token string">'3'</span> <span class="token comment">// false</span>
+</code></pre></div><h3 id="位运算符"><a href="#位运算符" aria-hidden="true" class="header-anchor">#</a> 位运算符</h3> <p><code>位运算符</code>将它的操作数视为32位元的<strong>二进制串</strong>并返回一个标准的JavaScript数值</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 按位与 (每一个对应的位都为1则返回1， 否则返回0)</span>
+<span class="token number">10</span> <span class="token operator">&amp;</span> <span class="token number">3</span> <span class="token comment">// 2</span>
+
+<span class="token comment">// 按位或 (每一个对应的位，只要有一个为1则返回1， 否则返回0)</span>
+<span class="token number">10</span> <span class="token operator">|</span> <span class="token number">3</span> <span class="token comment">// 11</span>
+
+<span class="token comment">// 按位异或 (每一个对应的位，两个不相同则返回1，相同则返回0)</span>
+<span class="token number">10</span> <span class="token operator">^</span> <span class="token number">3</span> <span class="token comment">// 9</span>
+
+<span class="token comment">// 按位非 (反转被操作数的位)</span>
+<span class="token operator">~</span> <span class="token number">10</span> <span class="token comment">// -11</span>
+
+<span class="token comment">// 左移 (将 10.01 的二进制串向左移动 3 位,右边移入0)</span>
+<span class="token number">10.01</span> <span class="token operator">&lt;&lt;</span> <span class="token number">3</span> <span class="token comment">// 80</span>
+
+<span class="token comment">// 算术右移 (将 10.01 的二进制表示向右移动 3 位，丢弃被移出的所有位)</span>
+<span class="token number">10.01</span> <span class="token operator">&gt;&gt;</span> <span class="token number">3</span> <span class="token comment">// 1</span>
+
+<span class="token comment">// 无符号右移 (将 10.01 的二进制表示向右移动 3 位，丢弃被移出的所有位，并把左边空出的位都填充为0)</span>
+<span class="token number">10.01</span> <span class="token operator">&gt;&gt;&gt;</span> <span class="token number">3</span> <span class="token comment">// 1</span>
+</code></pre></div><h3 id="逻辑运算符"><a href="#逻辑运算符" aria-hidden="true" class="header-anchor">#</a> 逻辑运算符</h3> <p><code>逻辑运算符</code>常用于布尔值或逻辑之间。当操作数都是布尔值时，返回值也是布尔值。当它用于非布尔值的时候，返回值就可能是非布尔值</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 逻辑与</span>
+<span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">true</span> <span class="token comment">// true</span>
+<span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">false</span> <span class="token comment">// false</span>
+<span class="token boolean">false</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">true</span> <span class="token comment">// false</span>
+
+<span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'ok'</span><span class="token punctuation">)</span> <span class="token comment">// &quot;ok&quot;</span>
+
+<span class="token comment">// 逻辑或</span>
+<span class="token boolean">true</span> <span class="token operator">||</span> <span class="token boolean">true</span> <span class="token comment">// true</span>
+<span class="token boolean">false</span> <span class="token operator">||</span> <span class="token boolean">true</span> <span class="token comment">// true</span>
+<span class="token boolean">true</span> <span class="token operator">||</span> <span class="token boolean">false</span> <span class="token comment">// true</span>
+
+<span class="token keyword">function</span> <span class="token function">log</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">||</span> <span class="token string">'a不存在'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'true'</span><span class="token punctuation">)</span> <span class="token comment">// &quot;true&quot;</span>
+<span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// &quot;a不存在&quot;</span>
+
+<span class="token comment">// 逻辑非 (返回布尔值)</span>
+<span class="token operator">!</span><span class="token string">'test'</span> <span class="token comment">// false</span>
+<span class="token operator">!</span><span class="token operator">!</span><span class="token string">'test'</span> <span class="token comment">// true</span>
+</code></pre></div><h3 id="字符串运算符"><a href="#字符串运算符" aria-hidden="true" class="header-anchor">#</a> 字符串运算符</h3> <p>使用 <code>+</code> 与 <code>+=</code> 可以用来拼接字符串</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'string'</span> <span class="token operator">+</span> <span class="token number">1</span>
+str <span class="token comment">// &quot;string1&quot;</span>
+str <span class="token operator">+=</span> <span class="token string">'add'</span>
+str <span class="token comment">// &quot;string1add&quot;</span>
+</code></pre></div><h3 id="三元运算符"><a href="#三元运算符" aria-hidden="true" class="header-anchor">#</a> 三元运算符</h3> <p><code>三元运算符</code>根据给定条件在两个值中取其一</p> <p><code>条件</code> ? <code>值1</code> : <code>值2</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">checkScores</span><span class="token punctuation">(</span><span class="token parameter">scores</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>scores <span class="token operator">&gt;=</span> <span class="token number">60</span> <span class="token operator">?</span> <span class="token string">'及格'</span> <span class="token punctuation">:</span> <span class="token string">'不及格'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">checkScores</span><span class="token punctuation">(</span><span class="token number">59</span><span class="token punctuation">)</span> <span class="token comment">// &quot;不及格&quot;</span>
+<span class="token function">checkScores</span><span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span> <span class="token comment">// &quot;及格&quot;</span>
+</code></pre></div><h3 id="逗号操作符"><a href="#逗号操作符" aria-hidden="true" class="header-anchor">#</a> 逗号操作符</h3> <p><code>逗号操作符</code>对两个操作数进行求值并返回最终操作数的值</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">,</span> j <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+arr <span class="token comment">// [[0, 0], [1, 2], [2, 4], [3, 6], [4, 8]]</span>
+
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token string">'a'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token string">'b'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">c</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token string">'c'</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">c</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;a&quot;</span>
+<span class="token comment">// &quot;b&quot;</span>
+<span class="token comment">// &quot;c&quot;</span>
+<span class="token comment">// &quot;c&quot;</span>
+</code></pre></div><h3 id="一元操作符"><a href="#一元操作符" aria-hidden="true" class="header-anchor">#</a> 一元操作符</h3> <ul><li><code>delete</code></li></ul> <p><code>delete操作符</code>删除一个对象或一个对象的属性或者一个数组中某一个键值</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  b<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  c<span class="token punctuation">:</span> <span class="token number">3</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">delete</span> obj<span class="token punctuation">.</span>b <span class="token comment">// true</span>
+obj <span class="token comment">// {a: 1, c: 3}</span>
+</code></pre></div><ul><li><code>typeof</code></li></ul> <p><code>typeof操作符</code>返回一个表示 operand 类型的字符串值。operand 可为字符串、变量、关键词或对象，其类型将被返回</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">fun</span> <span class="token operator">=</span>  <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">&quot;round&quot;</span>
+<span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">var</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">typeof</span> fun <span class="token comment">// &quot;function&quot;</span>
+<span class="token keyword">typeof</span> str <span class="token comment">// &quot;string&quot;</span>
+<span class="token keyword">typeof</span> num <span class="token comment">// &quot;number&quot;</span>
+<span class="token keyword">typeof</span> date <span class="token comment">// &quot;object&quot;</span>
+<span class="token keyword">typeof</span> <span class="token boolean">true</span> <span class="token comment">// &quot;boolean&quot;</span>
+<span class="token keyword">typeof</span> <span class="token keyword">null</span> <span class="token comment">// &quot;object&quot;</span>
+</code></pre></div><ul><li><code>void</code></li></ul> <p><code>void运算符</code>表明一个运算没有返回值</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>javascript:void(0)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Click here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="关系操作符"><a href="#关系操作符" aria-hidden="true" class="header-anchor">#</a> 关系操作符</h3> <ul><li><code>in</code></li></ul> <p><code>in操作符</code>如果所指定的属性确实存在于所指定的对象中，则会返回true</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  b<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  c<span class="token punctuation">:</span> <span class="token number">3</span>
+<span class="token punctuation">}</span>
+<span class="token string">'a'</span> <span class="token keyword">in</span> obj <span class="token comment">// true</span>
+<span class="token number">2</span> <span class="token keyword">in</span> obj <span class="token comment">// false</span>
+</code></pre></div><ul><li><code>instanceof</code></li></ul> <p><code>instanceof操作符</code>如果所判别的对象确实是所指定的类型，则返回true</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+arr <span class="token keyword">instanceof</span> <span class="token class-name">Object</span> <span class="token comment">// true</span>
+arr <span class="token keyword">instanceof</span> <span class="token class-name">Array</span> <span class="token comment">// true</span>
+</code></pre></div><h2 id="运算符优先级"><a href="#运算符优先级" aria-hidden="true" class="header-anchor">#</a> 运算符优先级</h2> <table><thead><tr><th style="text-align:left;">优先级</th> <th style="text-align:left;">运算类型</th> <th style="text-align:left;">关联性</th> <th style="text-align:left;">运算符</th></tr></thead> <tbody><tr><td style="text-align:left;">20</td> <td style="text-align:left;">圆括号</td> <td style="text-align:left;">n/a</td> <td style="text-align:left;">( … )</td></tr> <tr><td style="text-align:left;">19</td> <td style="text-align:left;">成员访问</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… . …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">需计算的成员访问</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… [ … ]</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">new (带参数列表)</td> <td style="text-align:left;">n/a</td> <td style="text-align:left;">new … ( … )</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">函数调用</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… ( … )</td></tr> <tr><td style="text-align:left;">18</td> <td style="text-align:left;">new (无参数列表)</td> <td style="text-align:left;">从右到左</td> <td style="text-align:left;">new …</td></tr> <tr><td style="text-align:left;">17</td> <td style="text-align:left;">后置递增(运算符在后)</td> <td style="text-align:left;">n/a</td> <td style="text-align:left;">… ++</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">后置递减(运算符在后)</td> <td style="text-align:left;"></td> <td style="text-align:left;">… --</td></tr> <tr><td style="text-align:left;">16</td> <td style="text-align:left;">逻辑非</td> <td style="text-align:left;">从右到左</td> <td style="text-align:left;">! …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">按位非</td> <td style="text-align:left;"></td> <td style="text-align:left;">~ …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">一元加法</td> <td style="text-align:left;"></td> <td style="text-align:left;">+ …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">一元减法</td> <td style="text-align:left;"></td> <td style="text-align:left;">- …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">前置递增</td> <td style="text-align:left;"></td> <td style="text-align:left;">++ …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">前置递减</td> <td style="text-align:left;"></td> <td style="text-align:left;">-- …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">typeof</td> <td style="text-align:left;"></td> <td style="text-align:left;">typeof …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">void</td> <td style="text-align:left;"></td> <td style="text-align:left;">void …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">delete</td> <td style="text-align:left;"></td> <td style="text-align:left;">delete …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">await</td> <td style="text-align:left;"></td> <td style="text-align:left;">await …</td></tr> <tr><td style="text-align:left;">15</td> <td style="text-align:left;">幂</td> <td style="text-align:left;">从右到左</td> <td style="text-align:left;">… ** …</td></tr> <tr><td style="text-align:left;">14</td> <td style="text-align:left;">乘法</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… * …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">除法</td> <td style="text-align:left;"></td> <td style="text-align:left;">… / …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">取模</td> <td style="text-align:left;"></td> <td style="text-align:left;">… % …</td></tr> <tr><td style="text-align:left;">13</td> <td style="text-align:left;">加法</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… + …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">减法</td> <td style="text-align:left;"></td> <td style="text-align:left;">… - …</td></tr> <tr><td style="text-align:left;">12</td> <td style="text-align:left;">按位左移</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… &lt;&lt; …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">按位右移</td> <td style="text-align:left;"></td> <td style="text-align:left;">… &gt;&gt; …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">无符号右移</td> <td style="text-align:left;"></td> <td style="text-align:left;">… &gt;&gt;&gt; …</td></tr> <tr><td style="text-align:left;">11</td> <td style="text-align:left;">小于</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… &lt; …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">小于等于</td> <td style="text-align:left;"></td> <td style="text-align:left;">… &lt;= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">大于</td> <td style="text-align:left;"></td> <td style="text-align:left;">… &gt; …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">大于等于</td> <td style="text-align:left;"></td> <td style="text-align:left;">… &gt;= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">in</td> <td style="text-align:left;"></td> <td style="text-align:left;">… in …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">instanceof</td> <td style="text-align:left;"></td> <td style="text-align:left;">… instanceof …</td></tr> <tr><td style="text-align:left;">10</td> <td style="text-align:left;">等号</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… == …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">非等号</td> <td style="text-align:left;"></td> <td style="text-align:left;">… != …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">全等号</td> <td style="text-align:left;"></td> <td style="text-align:left;">… === …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">非全等号</td> <td style="text-align:left;"></td> <td style="text-align:left;">… !== …</td></tr> <tr><td style="text-align:left;">9</td> <td style="text-align:left;">按位与</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… &amp; …</td></tr> <tr><td style="text-align:left;">8</td> <td style="text-align:left;">按位异或</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… ^ …</td></tr> <tr><td style="text-align:left;">7</td> <td style="text-align:left;">按位或</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">…</td></tr> <tr><td style="text-align:left;">6</td> <td style="text-align:left;">逻辑与</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… &amp;&amp; …</td></tr> <tr><td style="text-align:left;">5</td> <td style="text-align:left;">逻辑或</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">…</td></tr> <tr><td style="text-align:left;">4</td> <td style="text-align:left;">条件运算符</td> <td style="text-align:left;">从右到左</td> <td style="text-align:left;">… ? … : …</td></tr> <tr><td style="text-align:left;">3</td> <td style="text-align:left;">赋值</td> <td style="text-align:left;">从右到左</td> <td style="text-align:left;">… = …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… += …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… -= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… *= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… /= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… %= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… &lt;&lt;= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… &gt;&gt;= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… &gt;&gt;&gt;= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… &amp;= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">… ^= …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;"></td> <td style="text-align:left;">…</td></tr> <tr><td style="text-align:left;">2</td> <td style="text-align:left;">yield</td> <td style="text-align:left;">从右到左</td> <td style="text-align:left;">yield …</td></tr> <tr><td style="text-align:left;"></td> <td style="text-align:left;">yield*</td> <td style="text-align:left;"></td> <td style="text-align:left;">yield* …</td></tr> <tr><td style="text-align:left;">1</td> <td style="text-align:left;">展开运算符</td> <td style="text-align:left;">n/a</td> <td style="text-align:left;">... …</td></tr> <tr><td style="text-align:left;">0</td> <td style="text-align:left;">逗号</td> <td style="text-align:left;">从左到右</td> <td style="text-align:left;">… , …</td></tr></tbody></table></div> <div class="content-time" data-v-2b193ff9><time datetime="2019-02-22" class="time-text" data-v-2b193ff9>创建时间: 2019-6-24</time> <time datetime="2019-02-22" class="time-text" data-v-2b193ff9>最后修改: 2019-7-2</time></div></article> <section class="flex-xb main info-nav" data-v-7579e4c5 data-v-c8515940><a href="/posts/2019/06/27/prefers-color-scheme/" class="flex-xb nav-item" data-v-7579e4c5><div class="flex-xcc item-img" data-v-7579e4c5><img src="https://picsum.photos/1920/1080/?random&amp;date=2019-06-27" alt="让网站支持黑暗模式" class="img" data-v-7579e4c5></div> <article class="flex-ysc item-content" data-v-7579e4c5><h2 class="content-title" data-v-7579e4c5>让网站支持黑暗模式</h2> <div class="content-text" data-v-7579e4c5><p>通过媒体查询 <code>prefers-color-scheme</code> 让你的网站支持黑暗模式</p>
+</div></article></a> <a href="/posts/2019/06/13/array/" class="flex-xb nav-item" data-v-7579e4c5><div class="flex-xcc item-img" data-v-7579e4c5><img src="https://picsum.photos/1920/1080/?random&amp;date=2019-06-13" alt="数组方法总结" class="img" data-v-7579e4c5></div> <article class="flex-ysc item-content" data-v-7579e4c5><h2 class="content-title" data-v-7579e4c5>数组方法总结</h2> <div class="content-text" data-v-7579e4c5><p>数组方法总结</p>
+</div></article></a></section> <!----></section></section> <footer class="footer" data-v-b5adfbec data-v-815d6976><section class="footer-link" data-v-9045a1be data-v-b5adfbec><span class="list-item" data-v-9045a1be><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="item-link" data-v-9045a1be>Github</a></span></section> <a href="/" class="copyright router-link-active" data-v-b5adfbec>雨无声 © 2019</a></footer></section><div class="global-ui"><!----><div class="reading-progress top" data-v-7681808f><div class="progress" data-v-7681808f></div></div><!----></div></div>
+    <script src="/assets/js/app.8c687fbd.js" defer></script><script src="/assets/js/36.0e5da1a0.js" defer></script><script src="/assets/js/9.f234ba67.js" defer></script>
+  </body>
+</html>
