@@ -12,4 +12,3 @@ yarn.lock
 package-lock.json
 
 *.test.js
-.travis.yml

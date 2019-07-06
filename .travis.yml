@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - lts/*
+script:
+  - ./deploy.sh
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: dist
+  github-token: $36a04d84a59a9a7865a320df4547ac1e4a5077bd
+  keep-history: true
+  on:
+    branch: master
