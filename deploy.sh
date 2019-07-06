@@ -16,11 +16,7 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# 如果发布到 https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
-
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:tolking/blog.git master:gh-pages
+# 使用 travis cl 自动构建
 git push -f https://${GITHUB_TOKEN}@github.com/tolking/blog.git master:gh-pages
 
 cd -

@@ -9,6 +9,7 @@ cache:
 script:
   - yarn build
 deploy:
+  committer_from_gh: true
   provider: pages
   skip-cleanup: true
   local_dir: dist
