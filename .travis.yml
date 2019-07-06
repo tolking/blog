@@ -1,13 +1,16 @@
 language: node_js
 node_js:
-  - lts/*
+  - 10.16.0
+cache:
+  directories:
+    - node_modules
 script:
-  - ./deploy.sh
+  - npm run build
 deploy:
   provider: pages
   skip-cleanup: true
   local_dir: dist
-  github-token: $36a04d84a59a9a7865a320df4547ac1e4a5077bd
+  github-token: 36a04d84a59a9a7865a320df4547ac1e4a5077bd
   keep-history: true
   on:
     branch: master
