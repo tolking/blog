@@ -11,6 +11,10 @@ categories:
   - documentation
 ---
 
+个人整理常用的css属性简写及常用的 mixins
+
+<!-- more -->
+
 ``` html
 <div class="btn">btn</div>
 ```
@@ -29,7 +33,7 @@ categories:
 ## 简介
 
 - 自用的less文件  [github](https://github.com/tolking/m-less)
-- 包含常用属性简写、常用的 mixins、常用的 flex 类名、颜色及字体定义、清除浏览器默认样式
+- 包含常用属性简写、常用的 mixins、颜色及字体定义、清除浏览器默认样式
 - 默认只对少数几个属性进行了浏览器前缀处理，建议使用 Autoprefixer 处理浏览器前缀兼容
 - 或者手动引入 -old 文件
 - 使用最好有些 less 基础
@@ -50,7 +54,7 @@ categories:
   +- mixins mixins 相关文件
     ...
   +- styles
-    +- alias.less 属性简写（默认）
+    +- base.less 属性简写（默认）
     +- main.less 样式文件
   +- mixins.less 输出 mixins 文件
   +- styles.less 输出文件

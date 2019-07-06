@@ -1,7 +1,6 @@
 ---
 title: 让网站支持黑暗模式
 lang: zh-CN
-display: home
 description: 通过媒体查询 prefers-color-scheme 让你的网站支持黑暗模式及其更好的兼容
 image: https://picsum.photos/1920/1080/?random&date=2019-06-27
 date: 2019-06-27
@@ -16,7 +15,7 @@ categories:
 
 <!-- more -->
 
-::: tip 提示
+::: tip
 这个属性目前还是实验性的，要使用需要满足下面的几个条件
 1. MacOS 在 Mojave 10.14 版本以上或者 windows 10 在 1809 以上
 2. 使用[支持浏览器](https://caniuse.com/#search=prefers-color-scheme)
