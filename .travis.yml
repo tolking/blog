@@ -1,16 +1,18 @@
 language: node_js
 node_js:
   - 10.16.0
+install:
+  - yarn
 cache:
   directories:
     - node_modules
 script:
-  - npm run build
+  - yarn build
 deploy:
   provider: pages
   skip-cleanup: true
   local_dir: dist
-  github-token: 36a04d84a59a9a7865a320df4547ac1e4a5077bd
+  github-token: $GITHUB_TOKEN
   keep-history: true
   on:
     branch: master
