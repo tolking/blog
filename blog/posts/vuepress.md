@@ -2,7 +2,7 @@
 title: vuepress 踩坑记录
 lang: zh-CN
 display: home
-description: 记录使用 vuepress 以来的一些心得
+description: 记录使用 vuepress 以来所遇到的坑及解决办法
 image: https://picsum.photos/1920/1080/?random&date=2019-07-07
 date: 2019-07-07
 tags:
@@ -84,4 +84,36 @@ module.exports = {
 
 4. GitHub Pages and Travis CI 自动化部署
 
+- 在项目的根目录创建 `.travis.yml`
+- [查考](https://docs.travis-ci.com/user/deployment/pages/) 配置文件，或者复制下面的配置
 
+``` yml
+language: node_js
+node_js:
+  - lts/*
+install:
+  - yarn
+cache:
+  directories:
+    - node_modules
+script:
+  - yarn build
+deploy:
+  committer_from_gh: true
+  provider: pages
+  skip-cleanup: true
+  local_dir: dist
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
+```
+
+- 进入 [github](https://github.com) 获取 token 
+  + settings -> Developer settings -> Personal access tokens -> Generate new token
+  + 输入 Note 同时勾选所有 -> Generate token
+  + 复制 token
+- 进入 [travis ci](https://travis-ci.org) 创建 `GITHUB_TOKEN`
+  + 进入你对应仓库的 settings
+  + 在 Environment Variables 下面的 NAME 中输入 `GITHUB_TOKEN`，在 VALUE 中粘贴从 github 中复制的值
+  + 点击 add 增加环境变量
