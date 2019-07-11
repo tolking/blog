@@ -64,11 +64,13 @@ arr3 // [1, [[2], [3, [4]], 5]]
 ## 不改变原数组，返回单个值
 
 - find() 与 findIndex()
-`find()`返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined
-`findIndex()`返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1
+  - `find()`返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined
+  - `findIndex()`返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1
 
 ::: tip 提示
-`arr.find(callback(element, index, array), thisArg)` 或 `arr.findIndex(callback(element, index, array), thisArg)`
+`arr.find(callback(element, index, array), thisArg)`
+
+`arr.findIndex(callback(element, index, array), thisArg)`
   - element: 当前遍历到的元素
   - index(*): 当前遍历到的索引
   - array(*): 数组本身
