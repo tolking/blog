@@ -5,6 +5,7 @@ display: home
 description: 通过使用 preload、prefetch 来优化页面加载
 image: https://picsum.photos/1920/1080/?random&date=2018-08-19
 date: 2018-08-19
+vssue-title: html-preload
 tags:
   - html
 categories:

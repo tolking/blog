@@ -1,15 +1,14 @@
 ---
 title: Vue中的自定义指令
 lang: zh-CN
+description: Vue中的自定义指令，对普通 DOM 元素进行底层操作
 image: https://picsum.photos/1920/1080/?random&date=2019-05-17
 date: 2019-05-17
+vssue-title: vue-directive
 tags:
   - vue
 categories:
   - learn
-meta:
-  - name: description
-    content: Vue中的自定义指令
 --- 
 
 在 `Vue` 中自定义自定义指令，对普通 DOM 元素进行底层操作

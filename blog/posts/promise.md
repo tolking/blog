@@ -5,6 +5,7 @@ display: home
 description: 所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。从语法上说，Promise是一个对象，从它可以获取异步操作的消息。Promise提供统一的API，各种异步操作都可以用同样的方法进行处理
 image: https://picsum.photos/1920/1080/?random&date=2018-02-15
 date: 2018-02-15
+vssue-title: promise
 tags:
   - js
   - es6

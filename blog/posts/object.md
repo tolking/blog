@@ -5,6 +5,7 @@ display: home
 description: Object构造函数的方法
 image: https://picsum.photos/1920/1080/?random&date=2019-05-11
 date: 2019-05-11
+vssue-title: object
 tags:
   - js
 categories:

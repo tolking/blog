@@ -4,6 +4,7 @@ lang: en-US
 description: postcss plugin easily write flex
 image: https://picsum.photos/1920/1080/?random&date=2019-04-05
 date: 2019-04-05
+vssue-title: postcss-flex-alias
 tags:
   - css
   - postcss

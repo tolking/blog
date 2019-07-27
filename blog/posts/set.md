@@ -4,6 +4,7 @@ lang: zh-CN
 description: Set 类似于数组，但是成员的值都是唯一的，没有重复的值
 image: https://picsum.photos/1920/1080/?random&date=2018-02-22
 date: 2018-02-22
+vssue-title: set
 tags:
   - js
   - es6

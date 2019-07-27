@@ -4,6 +4,7 @@ lang: en-US
 description: a reading progress bar plugin for vuepress
 image: https://picsum.photos/1920/1080/?random&date=2019-04-14
 date: 2019-04-14
+vssue-title: vuepress-plugin-reading-progress
 tags:
   - vue
   - vuepress

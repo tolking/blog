@@ -5,6 +5,7 @@ display: home
 description: 通过 Module 的 export 与 import 来分割代码，集中相同的代码，优化逻辑
 image: https://picsum.photos/1920/1080/?random&date=2018-04-01
 date: 2018-04-01
+vssue-title: module
 tags:
   - js
   - es6

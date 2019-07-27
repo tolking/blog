@@ -4,6 +4,7 @@ lang: en-US
 description: Build your blog through multiple folders for vuepress
 image: https://picsum.photos/1920/1080/?random&date=2019-03-09
 date: 2019-03-09
+vssue-title: vuepress-plugin-blog-multidir
 tags:
   - vue
   - vuepress

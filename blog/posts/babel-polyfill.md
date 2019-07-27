@@ -4,6 +4,7 @@ lang: zh-CN
 description: 使用babel-polyfill来解决一些低版本的浏览器对es6新语法的不支持
 image: https://picsum.photos/1920/1080/?random&date=2017-11-15
 date: 2017-11-15
+vssue-title: babel-polyfill
 tags:
   - js
 categories:

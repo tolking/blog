@@ -4,6 +4,7 @@ lang: en-US
 description: A blog theme for VuePress
 image: https://picsum.photos/1920/1080/?random&date=2019-02-22
 date: 2019-02-22
+vssue-title: vuepress-theme-ououe
 tags:
   - vue
   - vuepress
@@ -234,7 +235,7 @@ However, you can still access it through the right path.
 
 You can change the default options.
 
-``` js
+``` js {8}
 // .vuepress -> config.js
 module.exports = {
   theme: 'ououe',

@@ -4,6 +4,7 @@ lang: zh-CN
 description: 记录一些遇到的css问题，不同的设备对css的支持不一样，可能出现不同的效果
 image: https://picsum.photos/1920/1080/?random&date=2018-07-22
 date: 2018-07-22
+vssue-title: css-problem
 tags:
   - css
   - problem

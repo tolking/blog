@@ -5,6 +5,7 @@ display: home
 description: JavaScript 的运算符，包括了赋值，比较，算数，位运算，逻辑，字符串，三元等等
 image: https://picsum.photos/1920/1080/?random&date=2019-06-24
 date: 2019-06-24
+vssue-title: operators
 tags:
   - js
 categories:

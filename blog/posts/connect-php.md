@@ -4,6 +4,7 @@ lang: zh-CN
 description: 向php发送json的一种处理方法
 image: https://picsum.photos/1920/1080/?random&date=2019-05-15
 date: 2019-05-15
+vssue-title: connect-php
 tags:
   - json
   - php

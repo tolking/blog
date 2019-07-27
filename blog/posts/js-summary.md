@@ -5,6 +5,7 @@ display: home
 description: 收集整理关于js的一些常用的技巧和新版带来的更加方便的操作
 image: https://picsum.photos/1920/1080/?random&date=2017-09-12
 date: 2017-09-12
+vssue-title: js-summary
 tags:
   - js
 categories:

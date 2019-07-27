@@ -4,6 +4,7 @@ lang: zh-CN
 description: js按位运算符/二进制运算符的简单简绍和使用
 image: https://picsum.photos/1920/1080/?random&date=2017-12-03
 date: 2017-12-03
+vssue-title: bitwise-operators
 tags:
   - js
 categories:

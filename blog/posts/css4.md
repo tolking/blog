@@ -5,6 +5,7 @@ display: home
 description: 列举一些在下一代css技术中我最期待的属性
 image: https://picsum.photos/1920/1080/?random&date=2019-07-06
 date: 2019-07-06
+vssue-title: cssnext
 tags:
   - css
   - cssnext
