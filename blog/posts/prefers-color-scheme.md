@@ -25,26 +25,20 @@ categories:
 然后你就可以编写你的样式了
 
 ``` css
-:root {
-  --bgColor: #eee;
-  --textColor: #111;
-}
 @media (prefers-color-scheme: light) {
-  :root {
+  .prefers-color {
     --bgColor: #f3f5f7;
     --textColor: #282c34;
   }
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  .prefers-color {
     --bgColor: #282c34;
     --textColor: #f3f5f7;
   }
 }
 
-.dome {
-  width: 100%;
-  height: 100px;
+.prefers-color {
   color: var(--textColor);
   background: var(--bgColor);
 }
@@ -53,31 +47,27 @@ categories:
 ##### 效果
 
 <style>
-:root {
-  --bgColor: #eee;
-  --textColor: #111;
-}
 @media (prefers-color-scheme: light) {
-  :root {
+  .prefers-color {
     --bgColor: #f3f5f7;
     --textColor: #282c34;
   }
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  .prefers-color {
     --bgColor: #282c34;
     --textColor: #f3f5f7;
   }
 }
 
-.dome {
+.prefers-color {
   width: 100%;
   height: 100px;
   color: var(--textColor);
   background: var(--bgColor);
 }
 </style>
-<p class="dome"></p>
+<div class="prefers-color"></div>
 
 
 当然目前这样的兼容性比较差，如果你需要更好的兼容性。你可以参考[css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme)
