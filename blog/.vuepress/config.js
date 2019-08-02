@@ -16,7 +16,6 @@ module.exports = {
   ],
   theme: 'ououe',
   themeConfig: {
-    defaultTheme: 'dark',
     cover: '/img/cover.jpg',
     logo: '/img/logo.png',
     useVssue: true,
@@ -40,7 +39,6 @@ module.exports = {
     plugins: [
       require('postcss-propro'),
       require('postcss-flex-alias'),
-      require('css-prefers-color-scheme/postcss'),
       require('autoprefixer')
     ]
   },
