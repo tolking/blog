@@ -103,6 +103,12 @@ cover: {
 - Type: `boolean`
 - Default: `true`
 
+### backgroundImage
+- Type: `boolean`
+- Default: `true`
+
+background image on posts pages
+
 ### pageGroup
 - Type: `number`
 - Default: `5`

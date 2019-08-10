@@ -18,6 +18,7 @@ module.exports = {
   themeConfig: {
     cover: '/img/cover.jpg',
     logo: '/img/logo.png',
+    backgroundImage: false,
     useVssue: true,
     postTime: {
       createTime: '创建时间',
