@@ -19,8 +19,6 @@
     "vuepress-theme-ououe": "^1.3.5"
   },
   "devDependencies": {
-    "less": "^3.9.0",
-    "less-loader": "^4.1.0",
     "postcss-flex-alias": "^1.0.0",
     "postcss-propro": "^1.0.2"
   }

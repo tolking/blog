@@ -91,11 +91,10 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@import url("../less/mixins");
-
+<style scoped>
 .color {
-  .box(2rem, 2rem);
-  .border(0);
+  width: 2rem;
+  height: 2rem;
+  border: 0px;
 }
 </style>

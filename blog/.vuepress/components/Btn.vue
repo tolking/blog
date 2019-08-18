@@ -2,13 +2,12 @@
 <div class="btn">btn</div>
 </template>
 
-<style lang="less" scoped>
-@import url("../less/mixins");
-
+<style lang="postcss" scoped>
 .btn {
-  .m(20px);
-  .btn(100px, 40px, 10px, @c-blue);
-  .box>.shadow;
-  .font(20px, @c-white);
+  --c-blue: #0074d9;
+  margin: 20px;
+  btn: 100px 40px 10px var(--c-blue);
+  font-size: 20px;
+  color: #fff;
 }
 </style>

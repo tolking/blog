@@ -99,35 +99,55 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@import url("../less/mixins");
-
+<style lang="postcss" scoped>
 .flex {
+  --c-btn: #0074d9;
+  --c-white: #fff;
+  --c-bg: #f3f5f7;
+  --c-border: #eaecef;
+  --c-text: #2c3e50;
   width: 100%;
-  .flex-select {
-    .d-ibt;
-    .m(1rem 1rem 0);
-    .select-item {
-      .box(4rem, 3rem);
-    }
+}
+@media (prefers-color-scheme: dark) {
+  .flex {
+    --c-white: #3e3b3b;
+    --c-bg: #282c34;
+    --c-border: #4e4e4e;
+    --c-text: #ccc;
   }
-  .flex-btn {
-    .d-ibt;
-    .m(1rem);
-    .btn(8rem, 3rem, 0.5rem);
-    .box>.shadow;
-    .font(1rem, @c-white);
-  }
-  .flex-box {
-    .m(2rem 0);
-    .box(100%, 500px);
-    .bg(#f3f5f7);
-    .res-b;
-    .box-item {
-      .p(5rem);
-      .box>.border;
-      .bg(@c-white);
-    }
-  }
+}
+.flex .flex-select {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1rem 1rem 0;
+}
+.flex .flex-select .select-item {
+  width: 4rem;
+  height: 3rem;
+  border-color: var(--c-border);
+  background: var(--c-bg);
+  color: var(--c-text);
+}
+.flex .flex-btn {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1rem;
+  btn: 8rem 3rem .5rem var(--c-btn);
+  font-size: 1rem;
+  color: #fff;
+}
+.flex .flex-box {
+  margin: 2rem 0;
+  width: 100%;
+  height: 500px;
+  background: var(--c-bg);
+  resize: both;
+  overflow: auto;
+}
+.flex .flex-box .box-item {
+  padding: 5rem;
+  border: 1px var(--c-border) solid;
+  background: var(--c-white);
+  color: var(--c-text);
 }
 </style>
