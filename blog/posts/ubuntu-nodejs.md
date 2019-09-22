@@ -2,7 +2,7 @@
 title: ubuntu 下安装 nodejs 踩坑
 lang: zh-CN
 description: 在 ubuntu 下安装 nodejs 的踩坑记录
-image: https://picsum.photos/1920/1080/?random&date=2018-12-20
+image: https://picsum.photos/536/354?random&date=2018-12-20
 date: 2018-12-20
 vssue-title: ubuntu-nodejs
 tags:

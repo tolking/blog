@@ -2,7 +2,7 @@
 title: m-less 参数介绍
 lang: zh-CN
 description: 个人自用less maixins 介绍
-image: https://picsum.photos/1920/1080/?random&date=2018-10-20
+image: https://picsum.photos/536/354?random&date=2018-10-20
 date: 2018-10-20
 vssue-title: m-less
 tags:

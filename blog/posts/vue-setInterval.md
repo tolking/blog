@@ -2,7 +2,7 @@
 title: vue 清除定时器
 lang: zh-CN
 description: 安全的清除 vue 中的定时器
-image: https://picsum.photos/1920/1080/?random&date=2018-09-08
+image: https://picsum.photos/536/354?random&date=2018-09-08
 date: 2018-09-08
 vssue-title: vue-setInterval
 tags:

@@ -2,7 +2,7 @@
 title: Vue中的过滤器
 lang: zh-CN
 description: Vue中的过滤器,自定义过滤器，可被用于一些常见的文本格式化
-image: https://picsum.photos/1920/1080/?random&date=2019-05-15
+image: https://picsum.photos/536/354?random&date=2019-05-15
 date: 2019-05-15
 vssue-title: vue-filters
 tags:

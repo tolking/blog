@@ -2,7 +2,7 @@
 title: vuepress-theme-default-prefers-color-scheme
 lang: en-US
 description: add prefers-color-scheme for vuepress default theme
-image: https://picsum.photos/1920/1080/?random&date=2019-08-23
+image: https://picsum.photos/536/354?random&date=2019-08-23
 date: 2019-08-23
 vssue-title: vuepress-theme-default-prefers-color-scheme
 tags:

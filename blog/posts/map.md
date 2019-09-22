@@ -2,7 +2,7 @@
 title: ES6 Map
 lang: zh-CN
 description: Map 类似于对象，但是“键”的范围不限于字符串，各种类型的值(包括对象)都可以当作键
-image: https://picsum.photos/1920/1080/?random&date=2018-02-25
+image: https://picsum.photos/536/354?random&date=2018-02-25
 date: 2018-02-25
 vssue-title: map
 tags:

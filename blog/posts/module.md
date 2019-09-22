@@ -2,7 +2,7 @@
 title: ES6 Module (模块)
 lang: zh-CN
 description: 通过 Module 的 export 与 import 来分割代码，集中相同的代码，优化逻辑
-image: https://picsum.photos/1920/1080/?random&date=2018-04-01
+image: https://picsum.photos/536/354?random&date=2018-04-01
 date: 2018-04-01
 vssue-title: module
 tags:

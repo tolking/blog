@@ -2,7 +2,7 @@
 title: vuepress-theme-ououe
 lang: en-US
 description: A blog theme for VuePress
-image: https://picsum.photos/1920/1080/?random&date=2019-02-22
+image: https://picsum.photos/536/354?random&date=2019-02-22
 date: 2019-02-22
 vssue-title: vuepress-theme-ououe
 tags:
@@ -32,7 +32,7 @@ Take [TryGhost/Casper](https://github.com/TryGhost/Casper) as a reference
 
 ``` sh
 yarn add vuepress-theme-ououe
-// or
+# or
 npm i vuepress-theme-ououe
 ```
 
@@ -62,7 +62,7 @@ support `light`, `dark` or `{ theme: [begin hours, end hours] }`
 
 ``` js {4,6,8}
 module.exports = {
-  theme: 'default-prefers-color-scheme',
+  theme: 'ououe',
   themeConfig: {
     defaultTheme: 'dark',
     // or

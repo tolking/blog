@@ -2,7 +2,7 @@
 title: vuepress-plugin-blog-multidir
 lang: en-US
 description: Build your blog through multiple folders for vuepress
-image: https://picsum.photos/1920/1080/?random&date=2019-03-09
+image: https://picsum.photos/536/354?random&date=2019-03-09
 date: 2019-03-09
 vssue-title: vuepress-plugin-blog-multidir
 tags:
@@ -22,7 +22,7 @@ categories:
 
 ``` sh
 yarn add vuepress-plugin-blog-multidir
-// or
+# or
 npm i vuepress-plugin-blog-multidir
 ```
 
@@ -37,7 +37,6 @@ module.exports = {
 ```
 
 [ Vuepress documentation](https://v1.vuepress.vuejs.org/plugin/using-a-plugin.html)
-
 
 ## Options
 

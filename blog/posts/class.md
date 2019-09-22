@@ -3,7 +3,7 @@ title: ES6 class
 lang: zh-CN
 display: home
 description: ES6引入了 Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已
-image: https://picsum.photos/1920/1080/?random&date=2018-02-19
+image: https://picsum.photos/536/354?random&date=2018-02-19
 date: 2018-02-19
 vssue-title: class
 tags:

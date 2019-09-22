@@ -2,7 +2,7 @@
 title: vuepress-plugin-reading-progress
 lang: en-US
 description: a reading progress bar plugin for vuepress
-image: https://picsum.photos/1920/1080/?random&date=2019-04-14
+image: https://picsum.photos/536/354?random&date=2019-04-14
 date: 2019-04-14
 vssue-title: vuepress-plugin-reading-progress
 tags:
@@ -28,7 +28,7 @@ add reading progress bar for vuepress
 
 ``` sh
 yarn add vuepress-plugin-reading-progress
-// or
+# or
 npm i vuepress-plugin-reading-progress
 ```
 

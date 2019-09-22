@@ -2,7 +2,7 @@
 title: postcss-propro
 lang: en-US
 description: a postcss plugin adds and extends some properties
-image: https://picsum.photos/1920/1080/?random&date=2018-12-07
+image: https://picsum.photos/536/354?random&date=2018-12-07
 date: 2018-12-07
 vssue-title: postcss-propro
 tags:

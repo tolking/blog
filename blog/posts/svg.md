@@ -3,7 +3,7 @@ title: SVG 图像的使用及优化
 lang: zh-CN
 display: home
 description: 对于一些简单的图标如果使用svg图标会比普通图片更小，svg 的图片是矢量图形，放大缩小不会产生锯齿,支持通过 css 修改样式、增加动画
-image: https://picsum.photos/1920/1080/?random&date=2018-10-01
+image: https://picsum.photos/536/354?random&date=2018-10-01
 date: 2018-10-01
 vssue-title: svg
 tags:

@@ -2,7 +2,7 @@
 title: canvas 地图开发总结
 lang: zh-CN
 description: canvas 地图开发总结
-image: https://picsum.photos/1920/1080/?random&date=2019-01-17
+image: https://picsum.photos/536/354?random&date=2019-01-17
 date: 2019-01-17
 vssue-title: minecraft-map
 tags:

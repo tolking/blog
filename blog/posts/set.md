@@ -2,7 +2,7 @@
 title: ES6 Set
 lang: zh-CN
 description: Set 类似于数组，但是成员的值都是唯一的，没有重复的值
-image: https://picsum.photos/1920/1080/?random&date=2018-02-22
+image: https://picsum.photos/536/354?random&date=2018-02-22
 date: 2018-02-22
 vssue-title: set
 tags:
