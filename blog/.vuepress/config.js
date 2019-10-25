@@ -25,12 +25,12 @@ module.exports = {
       lastUpdated: '最后修改'
     },
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Blog', link: '/posts/' },
-      { text: 'Doc', link: '/lib/' },
-      { text: 'Tags', link: '/tag/' },
-      { text: 'Categories', link: '/category/'},
-      { text: 'About', link: '/about/' }
+      { text: '主页', link: '/' },
+      { text: '博客', link: '/posts/' },
+      { text: '档案', link: '/lib/' },
+      { text: '标签', link: '/tag/' },
+      { text: '分类', link: '/category/'},
+      { text: '关于', link: '/about/' }
     ],
     footer: [
       { text: 'Github', link: 'https://github.com/tolking' }
