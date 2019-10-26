@@ -12,9 +12,11 @@ categories:
   - documentation
 --- 
 
-vuepress-theme-default-prefers-color-scheme is a theme that adds `light` and `dark` themes to the [default theme](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html) of vuepress
+> vuepress-theme-default-prefers-color-scheme is a theme that adds `light` and `dark` themes to the [default theme](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html) of vuepress
 
 <!-- more -->
+
+[Live Demo and Documentation](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme)
 
 ## How It Works
 
