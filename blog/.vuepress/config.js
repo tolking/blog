@@ -46,7 +46,7 @@ module.exports = {
   plugins: [
     // Preventing sitemap errors
     ['@vuepress/last-updated', {
-      transformer: (timestamp, lang) => {
+      transformer: timestamp => {
         return new Date(timestamp).toISOString()
       }
     }],
@@ -55,10 +55,6 @@ module.exports = {
       postsDir: {
         posts: 'posts/:year/:month/:day/:slug'
       }
-    }],
-    // add vuepress-plugin-reading-progress
-    ['reading-progress', {
-      readingDir: ['posts', 'lib']
     }],
     // add vuepress-plugin-container
     ['container', {
