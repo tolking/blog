@@ -29,7 +29,7 @@ module.exports = {
       { text: '博客', link: '/posts/' },
       { text: '档案', link: '/lib/' },
       { text: '标签', link: '/tag/' },
-      { text: '分类', link: '/category/'},
+      { text: '分类', link: '/category/' },
       { text: '关于', link: '/about/' }
     ],
     footer: [
