@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>toLocaleString 的使用 | 雨无声</title>
+    <meta name="description" content="使用 toLovaleString 来国际化日期或者数字格式">
+    <link rel="icon" href="/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="author" content="tolking &lt;w13131wang@gmail.com&gt;">
+  <meta name="copyright" content="网站内容版权所有，转载请注明出处">
+  <meta name="keywords" content="m-less, less, mixins, 常用 mixins 文件, mixins 总结, mixins 整理, less 总结整理, less 技巧, css 简写, ououe, 雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com">
+    
+    <link rel="preload" href="/assets/css/0.styles.5e7ec7c1.css" as="style"><link rel="preload" href="/assets/js/app.2d540c55.js" as="script"><link rel="preload" href="/assets/js/50.f71b591c.js" as="script"><link rel="preload" href="/assets/js/9.3b1e930a.js" as="script"><link rel="prefetch" href="/assets/js/10.9ef64bc1.js"><link rel="prefetch" href="/assets/js/11.20c660e5.js"><link rel="prefetch" href="/assets/js/12.b30e2f07.js"><link rel="prefetch" href="/assets/js/13.8c3c4185.js"><link rel="prefetch" href="/assets/js/14.d3c723da.js"><link rel="prefetch" href="/assets/js/15.49687b49.js"><link rel="prefetch" href="/assets/js/16.e5181453.js"><link rel="prefetch" href="/assets/js/17.e9b9991b.js"><link rel="prefetch" href="/assets/js/18.1d67517e.js"><link rel="prefetch" href="/assets/js/19.1e59bcc1.js"><link rel="prefetch" href="/assets/js/2.b412cfac.js"><link rel="prefetch" href="/assets/js/20.36d06c65.js"><link rel="prefetch" href="/assets/js/21.872e391d.js"><link rel="prefetch" href="/assets/js/22.f0ea0d77.js"><link rel="prefetch" href="/assets/js/23.73551d2d.js"><link rel="prefetch" href="/assets/js/24.6e665222.js"><link rel="prefetch" href="/assets/js/25.2a38b286.js"><link rel="prefetch" href="/assets/js/26.af72d88a.js"><link rel="prefetch" href="/assets/js/27.8128b690.js"><link rel="prefetch" href="/assets/js/28.de47a42f.js"><link rel="prefetch" href="/assets/js/29.21b8a05e.js"><link rel="prefetch" href="/assets/js/3.e3a9580c.js"><link rel="prefetch" href="/assets/js/30.a7d4c12d.js"><link rel="prefetch" href="/assets/js/31.da132e03.js"><link rel="prefetch" href="/assets/js/32.b8f51141.js"><link rel="prefetch" href="/assets/js/33.405e4e39.js"><link rel="prefetch" href="/assets/js/34.46587ea9.js"><link rel="prefetch" href="/assets/js/35.8ffd0c7a.js"><link rel="prefetch" href="/assets/js/36.9fa08e1e.js"><link rel="prefetch" href="/assets/js/37.f4e1a656.js"><link rel="prefetch" href="/assets/js/38.24d28334.js"><link rel="prefetch" href="/assets/js/39.718934f0.js"><link rel="prefetch" href="/assets/js/4.c87ac659.js"><link rel="prefetch" href="/assets/js/40.c1829eb3.js"><link rel="prefetch" href="/assets/js/41.e6b236e3.js"><link rel="prefetch" href="/assets/js/42.2957e0fe.js"><link rel="prefetch" href="/assets/js/43.356a7ed8.js"><link rel="prefetch" href="/assets/js/44.a29b55c4.js"><link rel="prefetch" href="/assets/js/45.09603d25.js"><link rel="prefetch" href="/assets/js/46.2f559379.js"><link rel="prefetch" href="/assets/js/47.94f03640.js"><link rel="prefetch" href="/assets/js/48.db78bb4d.js"><link rel="prefetch" href="/assets/js/49.57a39ed9.js"><link rel="prefetch" href="/assets/js/5.2cbc4840.js"><link rel="prefetch" href="/assets/js/51.86ed6ea7.js"><link rel="prefetch" href="/assets/js/52.bd874bc8.js"><link rel="prefetch" href="/assets/js/53.482bc0e9.js"><link rel="prefetch" href="/assets/js/54.8314d19f.js"><link rel="prefetch" href="/assets/js/55.29cdb867.js"><link rel="prefetch" href="/assets/js/56.bdc79b4b.js"><link rel="prefetch" href="/assets/js/57.b50ba64f.js"><link rel="prefetch" href="/assets/js/6.83ea1bad.js"><link rel="prefetch" href="/assets/js/7.21c416de.js"><link rel="prefetch" href="/assets/js/8.6949e8d6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5e7ec7c1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><section id="global-layout" data-v-50ab53c8><header class="header" data-v-2012f84a data-v-50ab53c8><div class="header-navbar" data-v-2012f84a><div class="flex-xbc main header-nav" data-v-2012f84a><div class="nav-link" data-v-2012f84a><a href="/" class="inblock link-logo router-link-active" data-v-2012f84a><img data-src="/img/logo.png" loading="lazy" alt="logo" class="logo-img lazy" data-v-2012f84a></a> <nav class="link-list" data-v-2012f84a><a href="/" class="list-item router-link-active" data-v-2012f84a>主页</a><a href="/posts/" class="list-item router-link-active" data-v-2012f84a>博客</a><a href="/lib/" class="list-item" data-v-2012f84a>档案</a><a href="/tag/" class="list-item" data-v-2012f84a>标签</a><a href="/category/" class="list-item" data-v-2012f84a>分类</a><a href="/about/" class="list-item" data-v-2012f84a>关于</a></nav></div> <div class="search-box" data-v-2012f84a><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div> </header> <!----> <section class="page" data-v-50ab53c8 data-v-50ab53c8><section class="info no-bg" data-v-338901da><article class="main info-content" data-v-163b3ecc data-v-338901da><div class="content-header" data-v-163b3ecc><h1 class="header-title" data-v-163b3ecc>toLocaleString 的使用</h1></div> <div class="flex-wcc content-tag" data-v-163b3ecc><div class="inblock tag-list" data-v-163b3ecc><a href="/category/summary/" class="tag-text" data-v-163b3ecc>summary
+      </a></div> <span class="tag-space" data-v-163b3ecc>/</span> <div class="inblock tag-list" data-v-163b3ecc><a href="/tag/js/" class="tag-text" data-v-163b3ecc>js
+      </a></div></div> <div class="content content__default" data-v-163b3ecc><p>使用 toLovaleString 来国际化日期或者数字格式</p> <h2 id="date-prototype-tolocalestring"><a href="#date-prototype-tolocalestring" class="header-anchor">#</a> Date.prototype.toLocaleString()</h2> <h3 id="不带参数"><a href="#不带参数" class="header-anchor">#</a> 不带参数</h3> <p>根据时区和语言环境返回</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6 上午11:35:00&quot;</span>
+</code></pre></div><h3 id="可选参数-locales"><a href="#可选参数-locales" class="header-anchor">#</a> 可选参数 locales</h3> <p>是一个 BCP 47 语言标记的字符串，或者是一个包括多个语言标记的数组 <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" target="_blank" rel="noopener noreferrer">参考<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <blockquote><p>通过 <code>navigator.language</code> 可以获取浏览器的默认设置</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6 上午11:35:00&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;12/6/2019, 11:35:00 AM&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'ar-EG'</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;٦‏/١٢‏/٢٠١٩ ١١:٣٥:٠٠ ص&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'ja-JP-u-ca-japanese'</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;1/12/6 11:35:00&quot;</span>
+</code></pre></div><h3 id="可选参数-options"><a href="#可选参数-options" class="header-anchor">#</a> 可选参数 options</h3> <h4 id="datestyle-timestyle"><a href="#datestyle-timestyle" class="header-anchor">#</a> dateStyle, timeStyle</h4> <ul><li><code>full</code>, <code>long</code>, <code>medium</code>, <code>short</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// dateStyle</span>
+<span class="token comment">// full</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> dateStyle<span class="token punctuation">:</span> <span class="token string">'full'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019年12月6日星期五&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> dateStyle<span class="token punctuation">:</span> <span class="token string">'full'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;Friday, December 6, 2019&quot;</span>
+
+<span class="token comment">// long</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> dateStyle<span class="token punctuation">:</span> <span class="token string">'long'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019年12月6日&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> dateStyle<span class="token punctuation">:</span> <span class="token string">'long'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;December 6, 2019&quot;</span>
+
+<span class="token comment">// medium</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> dateStyle<span class="token punctuation">:</span> <span class="token string">'medium'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019年12月6日&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> dateStyle<span class="token punctuation">:</span> <span class="token string">'medium'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;Dec 6, 2019&quot;</span>
+
+<span class="token comment">// short</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> dateStyle<span class="token punctuation">:</span> <span class="token string">'short'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> dateStyle<span class="token punctuation">:</span> <span class="token string">'short'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;12/6/19&quot;</span>
+
+<span class="token comment">// timeStyle</span>
+<span class="token comment">// full</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeStyle<span class="token punctuation">:</span> <span class="token string">'full'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;中国标准时间 上午11:35:00&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeStyle<span class="token punctuation">:</span> <span class="token string">'full'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;11:35:00 AM China Standard Time&quot;</span>
+
+<span class="token comment">// long</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeStyle<span class="token punctuation">:</span> <span class="token string">'long'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;GMT+8 上午11:35:00&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeStyle<span class="token punctuation">:</span> <span class="token string">'long'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;11:35:00 AM GMT+8&quot;</span>
+
+<span class="token comment">// medium</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeStyle<span class="token punctuation">:</span> <span class="token string">'medium'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;上午11:35:00&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeStyle<span class="token punctuation">:</span> <span class="token string">'medium'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;11:35:00 AM&quot;</span>
+
+<span class="token comment">// short</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeStyle<span class="token punctuation">:</span> <span class="token string">'short'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;上午11:35&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeStyle<span class="token punctuation">:</span> <span class="token string">'short'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;11:35 AM&quot;</span>
+</code></pre></div><h4 id="timezone"><a href="#timezone" class="header-anchor">#</a> timeZone</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeZone<span class="token punctuation">:</span> <span class="token string">'Asia/Shanghai'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6 上午11:35:00&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeZone<span class="token punctuation">:</span> <span class="token string">'America/New_York'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/5 下午10:35:00&quot;</span>
+</code></pre></div><h4 id="timezonename"><a href="#timezonename" class="header-anchor">#</a> timeZoneName</h4> <ul><li><code>long</code>, <code>short</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeZoneName<span class="token punctuation">:</span> <span class="token string">'long'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6 中国标准时间 上午11:35:00&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeZoneName<span class="token punctuation">:</span> <span class="token string">'short'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6 GMT+8 上午11:35:00&quot;</span>
+</code></pre></div><h4 id="hour12"><a href="#hour12" class="header-anchor">#</a> hour12</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> hour12<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6 上午11:35:00&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> hour12<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6 11:35:00&quot;</span>
+</code></pre></div><h4 id="hourcycle"><a href="#hourcycle" class="header-anchor">#</a> hourCycle</h4> <ul><li><code>h11</code>, <code>h12</code>, <code>h23</code>, <code>h24</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> hourCycle<span class="token punctuation">:</span> <span class="token string">'h12'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6 上午11:35:00&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> hourCycle<span class="token punctuation">:</span> <span class="token string">'h23'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019/12/6 11:35:00&quot;</span>
+</code></pre></div><h4 id="era-weekday"><a href="#era-weekday" class="header-anchor">#</a> era, weekday</h4> <ul><li><code>long</code>, <code>short</code>, <code>narrow</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> era<span class="token punctuation">:</span> <span class="token string">'long'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;12 6, 2019 Anno Domini, 11:35:00 AM&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> era<span class="token punctuation">:</span> <span class="token string">'short'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;12 6, 2019 AD, 11:35:00 AM&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> era<span class="token punctuation">:</span> <span class="token string">'narrow'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;12 6, 2019 A, 11:35:00 AM&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> weekday<span class="token punctuation">:</span> <span class="token string">'long'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;星期五&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> weekday<span class="token punctuation">:</span> <span class="token string">'short'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;周五&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> weekday<span class="token punctuation">:</span> <span class="token string">'narrow'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;五&quot;</span>
+</code></pre></div><h4 id="year-day-hour-minute-second"><a href="#year-day-hour-minute-second" class="header-anchor">#</a> year, day, hour, minute, second</h4> <ul><li><code>numeric</code>, <code>2-digit</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> year<span class="token punctuation">:</span> <span class="token string">'numeric'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;2019年&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> year<span class="token punctuation">:</span> <span class="token string">'2-digit'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;19年&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> day<span class="token punctuation">:</span> <span class="token string">'numeric'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;6日&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> day<span class="token punctuation">:</span> <span class="token string">'2-digit'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;06日&quot;</span>
+</code></pre></div><h4 id="month"><a href="#month" class="header-anchor">#</a> month</h4> <ul><li><code>numeric</code>, <code>2-digit</code>, <code>long</code>, <code>short</code>, <code>narrow</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2019-12-06 11:35'</span><span class="token punctuation">)</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> month<span class="token punctuation">:</span> <span class="token string">'numeric'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;12&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> month<span class="token punctuation">:</span> <span class="token string">'2-digit'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;12&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> month<span class="token punctuation">:</span> <span class="token string">'long'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;December&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> month<span class="token punctuation">:</span> <span class="token string">'short'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;Dec&quot;</span>
+
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> month<span class="token punctuation">:</span> <span class="token string">'narrow'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;D&quot;</span>
+</code></pre></div><h2 id="number-prototype-tolocalestring"><a href="#number-prototype-tolocalestring" class="header-anchor">#</a> Number.prototype.toLocaleString()</h2> <h3 id="locales"><a href="#locales" class="header-anchor">#</a> locales</h3> <p>同上</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> number <span class="token operator">=</span> <span class="token number">1024.1234</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;1,024.123&quot;</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-Hans-CN-u-nu-hanidec'</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;一,〇二四.一二三&quot;</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'de-DE'</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;1.024,123&quot;</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'ar-EG'</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;١٬٠٢٤٫١٢٣&quot;</span>
+</code></pre></div><h3 id="options"><a href="#options" class="header-anchor">#</a> options</h3> <h4 id="style"><a href="#style" class="header-anchor">#</a> style</h4> <ul><li><code>decimal</code>, <code>currency</code>, <code>percent</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> number <span class="token operator">=</span> <span class="token number">1024</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> style<span class="token punctuation">:</span> <span class="token string">'decimal'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;1,024&quot;</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> style<span class="token punctuation">:</span> <span class="token string">'currency'</span><span class="token punctuation">,</span> currency<span class="token punctuation">:</span> <span class="token string">'CNY'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;￥1,024.00&quot;</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> style<span class="token punctuation">:</span> <span class="token string">'percent'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;102,400%&quot;</span>
+</code></pre></div><h4 id="currency"><a href="#currency" class="header-anchor">#</a> currency</h4> <p>当 <code>style</code> 为 <code>currency</code> 时，需要指定货币格式符号 <a href="https://www.currency-iso.org/dam/downloads/lists/list_one.xml" target="_blank" rel="noopener noreferrer">查考<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h4 id="currencydisplay"><a href="#currencydisplay" class="header-anchor">#</a> currencyDisplay</h4> <ul><li><code>symbol</code>, <code>code</code>, <code>name</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> number <span class="token operator">=</span> <span class="token number">1024</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> style<span class="token punctuation">:</span> <span class="token string">'currency'</span><span class="token punctuation">,</span> currency<span class="token punctuation">:</span> <span class="token string">'CNY'</span><span class="token punctuation">,</span> currencyDisplay<span class="token punctuation">:</span> <span class="token string">'symbol'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;￥1,024.00&quot;</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> style<span class="token punctuation">:</span> <span class="token string">'currency'</span><span class="token punctuation">,</span> currency<span class="token punctuation">:</span> <span class="token string">'CNY'</span><span class="token punctuation">,</span> currencyDisplay<span class="token punctuation">:</span> <span class="token string">'code'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;CNY 1,024.00&quot;</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> style<span class="token punctuation">:</span> <span class="token string">'currency'</span><span class="token punctuation">,</span> currency<span class="token punctuation">:</span> <span class="token string">'CNY'</span><span class="token punctuation">,</span> currencyDisplay<span class="token punctuation">:</span> <span class="token string">'name'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;1,024.00人民币&quot;</span>
+</code></pre></div><h4 id="usegrouping"><a href="#usegrouping" class="header-anchor">#</a> useGrouping</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> number <span class="token operator">=</span> <span class="token number">1024</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> useGrouping<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;1,024&quot;</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> useGrouping<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;1024&quot;</span>
+</code></pre></div><h4 id="minimumintegerdigits"><a href="#minimumintegerdigits" class="header-anchor">#</a> minimumIntegerDigits</h4> <p>使用的整数数字的最小数目(默认 1) 1 ~ 21</p> <h4 id="minimumfractiondigits"><a href="#minimumfractiondigits" class="header-anchor">#</a> minimumFractionDigits</h4> <p>使用的小数位数的最小数目 0 ~ 20</p> <h4 id="maximumfractiondigits"><a href="#maximumfractiondigits" class="header-anchor">#</a> maximumFractionDigits</h4> <p>使用的小数位数的最大数目 0 ~ 20</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> number <span class="token operator">=</span> <span class="token number">1024.1234</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> minimumIntegerDigits<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span> minimumFractionDigits<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> maximumFractionDigits<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;01,024.12&quot;</span>
+</code></pre></div><h4 id="minimumsignificantdigits"><a href="#minimumsignificantdigits" class="header-anchor">#</a> minimumSignificantDigits</h4> <p>使用的有效数字的最小数目(默认 1) 1 ~ 21</p> <h4 id="maximumsignificantdigits"><a href="#maximumsignificantdigits" class="header-anchor">#</a> maximumSignificantDigits</h4> <p>使用的有效数字的最大数量(默认 minimumsignificantdigits) 1 ~ 21</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> number <span class="token operator">=</span> <span class="token number">1024.1234</span>
+
+number<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token string">'zh-CN'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> minimumSignificantDigits<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> maximumSignificantDigits<span class="token punctuation">:</span> <span class="token number">5</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;1,024.1&quot;</span>
+</code></pre></div></div> <div class="content-time" data-v-163b3ecc><time datetime="Dec 6, 2019" class="time-text" data-v-163b3ecc>创建时间: Dec 6, 2019
+    </time> <time datetime="Dec 6, 2019" class="time-text" data-v-163b3ecc>最后修改: Dec 6, 2019
+    </time></div></article> <section class="flex-xb main info-nav" data-v-3eb1f814 data-v-338901da><!----> <a href="/posts/2019/10/26/backdrop-filter/" class="flex-xb nav-item" data-v-3eb1f814><div class="flex-xcc item-img" data-v-3eb1f814><img data-src="https://picsum.photos/1920/1080/?random&amp;date=2019-10-26" loading="lazy" alt="backdrop-filter 的使用" class="img lazy" data-v-3eb1f814></div> <article class="flex-ysc item-content" data-v-3eb1f814><h2 class="content-title" data-v-3eb1f814>backdrop-filter 的使用</h2> <div class="content" data-v-3eb1f814><p>这个属性可以为一个元素后面区域添加图形效果，如模糊或颜色偏移等</p>
+</div></article></a></section> <!----></section></section> <footer class="footer" data-v-6126e543 data-v-50ab53c8><nav class="link-list" data-v-6126e543><a href="https://github.com/tolking" target="_blank" rel="noopener noreferrer" class="list-item" data-v-6126e543>Github</a></nav> <a href="/" class="copyright router-link-active" data-v-6126e543>雨无声 © 2019</a></footer></section><div class="global-ui"><!----><div class="reading-progress top" data-v-56679cca><div class="progress" data-v-56679cca></div></div><!----></div></div>
+    <script src="/assets/js/app.2d540c55.js" defer></script><script src="/assets/js/50.f71b591c.js" defer></script><script src="/assets/js/9.3b1e930a.js" defer></script>
+  </body>
+</html>
