@@ -14,6 +14,8 @@ module.exports = {
     ['meta', { name: 'copyright', content: '网站内容版权所有，转载请注明出处' }],
     ['meta', { name: "keywords", content: "m-less, less, mixins, 常用 mixins 文件, mixins 总结, mixins 整理, less 总结整理, less 技巧, css 简写, ououe, 雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com" }]
   ],
+  // Set default language
+  locales: { '/': { lang: 'zh-CN' }},
   theme: 'ououe',
   themeConfig: {
     cover: '/img/cover.jpg',
