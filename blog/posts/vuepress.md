@@ -29,7 +29,7 @@ module.exports = {
 }
 ```
 
-2. 使用 `vuepress-plugin-sitemap` 报错
+2. 使用 `vuepress-plugin-sitemap` 与 `@vuepress/last-updated` 报错
 
 主要是由于 `@vuepress/last-updated` 插件将 `lastUpdated` 编译为 `lang` 所在时间格式。转换后的中文时间格式没有办法被 `vuepress-plugin-sitemap` 识别引起的
 
@@ -39,7 +39,7 @@ module.exports = {
   // ...
   plugins: [
     ['@vuepress/last-updated', {
-      transformer: (timestamp, lang) => {
+      transformer: timestamp => {
         return new Date(timestamp).toISOString()
       }
     }]
@@ -118,3 +118,39 @@ deploy:
   + 进入你对应仓库的 settings
   + 在 Environment Variables 下面的 NAME 中输入 `GITHUB_TOKEN`，在 VALUE 中粘贴从 github 中复制的值
   + 点击 add 增加环境变量
+
+5. 修改网站的默认语言
+
+``` js
+// .vuepress/config.js
+module.exports = {
+  // ...
+  locales: { '/': { lang: 'zh-CN' }}
+}
+```
+
+6. 注册第三方的全局组建
+
+``` js
+// .vuepress/enhanceApp.js
+import XXX from 'XXX'
+
+export default ({ Vue }) => {
+  Vue.use(XXX)
+}
+
+```
+
+7. 设置别名
+
+``` js
+// .vuepress/config.js
+const path = require('path')
+
+module.exports = {
+  // ...
+  chainWebpack: config => {
+    config.resolve.alias.set('@', path.resolve(__dirname, '../src'))
+  }
+}
+```
