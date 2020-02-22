@@ -1,7 +1,6 @@
 ---
 title: Object构造函数的方法
 lang: zh-CN
-display: home
 description: Object构造函数的方法
 image: https://picsum.photos/536/354?random&date=2019-05-11
 date: 2019-05-11
