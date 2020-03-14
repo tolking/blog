@@ -9,10 +9,10 @@ tags:
   - vue
   - vuepress
 categories:
-  - documentation
+  - project
 --- 
 
-> Build your blog through multiple folders
+Build your blog through multiple folders
 
 **This plugin is for Vuepress 1.0**
 

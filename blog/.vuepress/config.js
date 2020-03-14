@@ -6,6 +6,13 @@ module.exports = {
   evergreen: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: '/img/homescreen144.png' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/img/homescreen144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
     ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' }],
     ['meta', { name: 'renderer', content: 'webkit' }],
     ['meta', { name: 'force-rendering', content: 'webkit' }],
@@ -29,7 +36,7 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
       { text: '博客', link: '/posts/' },
-      { text: '档案', link: '/lib/' },
+      { text: '项目', link: '/lib/' },
       { text: '标签', link: '/tag/' },
       { text: '分类', link: '/category/' },
       { text: '关于', link: '/about/' }
@@ -46,12 +53,6 @@ module.exports = {
     ]
   },
   plugins: [
-    // Preventing sitemap errors
-    ['@vuepress/last-updated', {
-      transformer: timestamp => {
-        return new Date(timestamp).toISOString()
-      }
-    }],
     // permalink for posts
     ['blog-multidir', {
       postsDir: {

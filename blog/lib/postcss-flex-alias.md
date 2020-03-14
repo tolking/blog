@@ -9,7 +9,7 @@ tags:
   - css
   - postcss
 categories:
-  - documentation
+  - project
 ---
 
 postcss plugin easily write flex

@@ -7,7 +7,7 @@ description: 关于我
 
 ### 前端
 
-- typescript、es5/es6
+- typescript、es5、es6、es7
 - vue全家桶、nuxt、vue ssr
 - reach
 - postcss、less、stylus
@@ -15,11 +15,11 @@ description: 关于我
 
 ### 小程序
 
-- mpvue、微信原生小程序
+- 微信原生小程序、uniapp、mpvue
 
-### 后端
+### 其它
 
-- nodejs、koa、sequelize
+- 熟悉 nodejs、koa、sequelize
 
 ### 联系我
 

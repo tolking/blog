@@ -1,6 +1,5 @@
 ---
 title: 关于通过二维码打开微信小程序
-lang: zh-CN
 display: home
 description: 对于微信小程序可以通过扫码打开，同时也可以通过二维码传递参数，不但有专门的微信小程序二维码而且还支持普通的二维码，根据自己的经验总结一下两者的使用
 image: https://picsum.photos/536/354?random&date=2020-02-22

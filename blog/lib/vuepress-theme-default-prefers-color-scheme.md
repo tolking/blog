@@ -1,6 +1,5 @@
 ---
 title: vuepress-theme-default-prefers-color-scheme
-lang: en-US
 description: add prefers-color-scheme for vuepress default theme
 image: https://picsum.photos/536/354?random&date=2019-08-23
 date: 2019-08-23
@@ -9,88 +8,31 @@ tags:
   - vue
   - vuepress
 categories:
-  - documentation
+  - project
 --- 
 
-> vuepress-theme-default-prefers-color-scheme is a theme that adds `light` and `dark` themes to the [default theme](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html) of vuepress
+vuepress-theme-default-prefers-color-scheme 是为了让 vuepress 的 [默认主题](https://vuepress.vuejs.org/zh/theme/default-theme-config.html) 支持 `浅色` 与 `深色` 模式的主题
 
 <!-- more -->
 
-[Live Demo and Documentation](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme)
+[详细文档及演示](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme)
 
-## How It Works
+## 原理
 
-base on [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) and [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+主要是基于下一代 css 技术中的 [prefers-color-scheme](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme) 与 [CSS Variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*) 实现
 
-#### View Support Browsers
+#### 查看支持浏览器
 
 - [prefers-color-scheme](https://www.caniuse.com/#search=prefers-color-scheme)
 - [CSS Variables](https://www.caniuse.com/#search=CSS%20Variables)
 
-**`prefers-color-scheme` also needs your system support**
+**对于 `prefers-color-scheme` 还需要你的操作系统支持切换浅色与深色模式**
 
 - mac Mojave ^10.14
 - windows 10 ^1809
 
-**For unsupported browsers, the same style as the default theme will be displayed**
-
-## Installation
-
-``` sh
-yarn add vuepress-theme-default-prefers-color-scheme
-# or
-npm i vuepress-theme-default-prefers-color-scheme
-```
-
-## Usage
-
-``` js {3}
-// .vuepress -> config.js
-module.exports = {
-  theme: 'default-prefers-color-scheme',
-  themeConfig: {
-    // ...
-  }
-}
-```
-
-## Options
-
-### defaultTheme
-- Type: `string`, `object`
-- Default: `undefined`
-- Required: `false`
+**对于都不支持的浏览器将显示与默认主题几乎相同的样式**
 
 ::: tip
-By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`. base on [css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme)
+当然只需简单的配置就可以支持为更多的浏览器带来深色模式
 :::
-
-support `light`, `dark` or `{ theme: [begin hours, end hours] }`
-
-``` js {4,6,8}
-module.exports = {
-  theme: 'default-prefers-color-scheme',
-  themeConfig: {
-    defaultTheme: 'dark',
-    // or
-    defaultTheme: { dark: [18, 6] },
-    // or
-    defaultTheme: { light: [6, 18], dark: [18, 6] },
-  },
-  // When using `light theme` or `dark theme`, you need to add a postcss plugins to your config.js
-  postcss: {
-    plugins: [
-      require('css-prefers-color-scheme/postcss'),
-      require('autoprefixer')
-    ]
-  }
-}
-```
-
-[Theme Config](https://v1.vuepress.vuejs.org/theme/default-theme-config.html)
-
-## Styling
-
-To apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl), In your `.vuepress/styles/palette.styl` file.
-
-**`$accentColor` and `$accentDarkColor` are best changed together**

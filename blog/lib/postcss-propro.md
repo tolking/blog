@@ -9,7 +9,7 @@ tags:
   - css
   - postcss
 categories:
-  - documentation
+  - project
 ---
 
 a postcss plugin adds and extends some properties

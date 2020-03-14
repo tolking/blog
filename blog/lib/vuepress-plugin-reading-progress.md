@@ -9,12 +9,10 @@ tags:
   - vue
   - vuepress
 categories:
-  - documentation
+  - project
 --- 
 
-> a reading progress bar plugin for vuepress
-
-**This plugin is for Vuepress 1.0**
+a reading progress bar plugin for vuepress
 
 <!-- more -->
 
