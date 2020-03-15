@@ -1,6 +1,5 @@
 ---
 title: m-less 参数介绍
-lang: zh-CN
 description: 个人自用less maixins 介绍
 image: https://picsum.photos/536/354?random&date=2018-10-20
 date: 2018-10-20
@@ -9,7 +8,7 @@ tags:
   - css
   - less
 categories:
-  - documentation
+  - project
 ---
 
 个人整理常用的css属性简写及常用的 mixins
