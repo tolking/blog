@@ -1,6 +1,5 @@
 ---
 title: js运算符
-lang: zh-CN
 description: JavaScript 的运算符，包括了赋值，比较，算数，位运算，逻辑，字符串，三元等等
 image: https://picsum.photos/536/354?random&date=2019-06-24
 date: 2019-06-24
@@ -204,6 +203,19 @@ function log(a) {
 }
 log('true') // "true"
 log() // "a不存在"
+log(false) // "a不存在"
+
+// ??
+true ?? 'ok' // true
+false ?? 'ok' // false
+undefined ?? 'ok' // ok
+
+function log(a) {
+  console.log(a ?? 'a不存在')
+}
+log('true') // "true"
+log() // "a不存在"
+log(false) // false
 
 // 逻辑非 (返回布尔值)
 !'test' // false

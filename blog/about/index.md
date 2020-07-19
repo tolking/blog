@@ -1,25 +1,17 @@
 ---
 title: 关于我
-lang: zh-CN
 layout: Page
 description: 关于我
 ---
 
-### 前端
+### 简介
 
-- typescript、es5、es6、es7
-- vue全家桶、nuxt、vue ssr
-- reach
-- postcss、less、stylus
-- canvas svg
+- 一名前端程序员
+- 主要从事WEB前端、小程序开发
+- 喜欢新技术
+- 热爱开源
 
-### 小程序
-
-- 微信原生小程序、uniapp、mpvue
-
-### 其它
-
-- 熟悉 nodejs、koa、sequelize
+<div style="height:60px"></div>
 
 ### 联系我
 

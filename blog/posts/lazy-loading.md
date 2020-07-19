@@ -1,6 +1,5 @@
 ---
 title: 原生的图片和框架懒加载
-lang: zh-CN
 display: home
 description: 使用浏览器的原生懒加载来实现对网页内部的图片与框架的懒加载
 image: https://picsum.photos/1920/1080/?random&date=2019-10-25
@@ -53,4 +52,4 @@ const supportLoading = 'loading' in HTMLImageElement.prototype
 
 对与不支持的浏览器，你可以使用其它的方式来实现懒加载
 
-- 参考 [vuepress-plugin-img-lazy](https://github.com/tolking/vuepress-plugin-img-lazy) 的实现
+- 参考 [vue-lazy-loading](https://github.com/tolking/vue-lazy-loading) [vuepress-plugin-img-lazy](https://github.com/tolking/vuepress-plugin-img-lazy) 的实现

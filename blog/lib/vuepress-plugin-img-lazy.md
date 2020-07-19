@@ -15,11 +15,11 @@ categories:
 
 <!-- more -->
 
-**该插件将优先使用 [原生](https://caniuse.com/#feat=loading-lazy-attr) 的图片懒加载，如果浏览器不支持将通过 lozad 实现**
+**该插件将优先使用 [原生](https://caniuse.com/#feat=loading-lazy-attr) 的图片懒加载，如果浏览器不支持将通过 [IntersectionObserver](https://caniuse.com/#feat=intersectionobserver) 实现**
 
 可以同时实现对 markdown 文件与主题里面的图片控制（主题需要引用 `ImgLazy` 组件 ）
 
-基于 [markdown-it-img-lazy](https://github.com/tolking/markdown-it-img-lazy)、 [markdown-it-imsize](https://github.com/tatsy/markdown-it-imsize)、 [lozad](https://github.com/ApoorvSaxena/lozad.js)
+基于 [markdown-it-img-lazy](https://github.com/tolking/markdown-it-img-lazy)、 [markdown-it-imsize](https://github.com/tatsy/markdown-it-imsize)
 
 [在线演示](https://tolking.github.io/vuepress-plugin-img-lazy/preview.html)
 

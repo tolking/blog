@@ -1,6 +1,5 @@
 ---
 title: ES6 Module (模块)
-lang: zh-CN
 description: 通过 Module 的 export 与 import 来分割代码，集中相同的代码，优化逻辑
 image: https://picsum.photos/536/354?random&date=2018-04-01
 date: 2018-04-01
@@ -19,6 +18,8 @@ Module基本用法
 
 ::: tip 提示
 注意：浏览器中使用时需要指定 type="module"
+
+如果开发js插件需要在 package.json 中增加 "type": "module"
 :::
 
 ``` html
