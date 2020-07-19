@@ -9,3 +9,7 @@ Uses [vuepress-theme-ououe-template](https://github.com/tolking/vuepress-theme-o
 [Documentation](https://tolking.github.io/vuepress-theme-ououe)
 
 Power by [vuepress](https://github.com/vuejs/vuepress)
+
+## License
+
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
