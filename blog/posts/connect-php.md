@@ -1,25 +1,21 @@
 ---
-title: 向php发送json的一种处理方法
-lang: zh-CN
-description: 向php发送json的一种处理方法
+title: axios 将 json 转化为 formData
+description: axios 将 json 转化为 formData
 image: https://picsum.photos/536/354?random&date=2019-05-15
 date: 2019-05-15
 vssue-title: connect-php
 tags:
   - json
-  - php
   - axios
 categories:
   - summary
 --- 
 
-由于`PHP`的默认接收方式为 `'Content-Type": "application/x-www-form-urlencoded"`，如果直接向 PHP 发送 json 则 PHP 解析不到数据。需要前端或者后端修改一下
+基于 axios 的 transformRequest 将传入的 json 转化为 formData 对象
 
 <!-- more -->
 
-### 前端修改
-
-基于 `axios`, 修改请求头并改变数据格式
+对于简单的转化
 
 ``` js
 const service = axios.create({
@@ -35,3 +31,7 @@ const service = axios.create({
   ]
 })
 ```
+
+对于复杂的 json 可已使用第三方插件，例如：[qs](https://www.npmjs.com/package/qs)
+
+对于其它可能需要定义一个函数处理转化

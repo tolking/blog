@@ -1,7 +1,5 @@
 ---
 title: backdrop-filter 的使用
-lang: zh-CN
-display: home
 description: backdrop-filter 属性可以为一个元素后面区域添加图形效果，如模糊或颜色偏移等
 image: https://picsum.photos/1920/1080/?random&date=2019-10-26
 date: 2019-10-26
