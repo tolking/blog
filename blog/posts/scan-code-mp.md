@@ -1,6 +1,5 @@
 ---
 title: 关于通过二维码打开微信小程序
-display: home
 description: 微信小程序不但可以通过扫描专门的微信小程序二维码打开，而且还可以配置通过普通链接二维码打开，同时还可以向小程序传递参数
 image: https://picsum.photos/536/354?random&date=2020-02-22
 date: 2020-02-22

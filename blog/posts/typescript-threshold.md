@@ -1,18 +1,17 @@
 ---
 title: TypeScript 入门
 display: home
-description: 这是一个简单的入门，带你快速了解 TypeScript
+description: 这是一个简单的入门，带你快速了解 TypeScript 类型
 image: https://picsum.photos/536/354?random&date=2020-08-15
 date: 2020-08-15
 vssue-title: typescript-threshold
 tags:
   - ts
-  - js
 categories:
   - summary
---- 
+---
 
-这是一个简单的入门，带你快速了解 TypeScript
+这是一个简单的入门，带你快速了解 TypeScript 类型
 
 <!-- more -->
 
@@ -34,7 +33,9 @@ let fun = () => {}
 const type = 'type'
 ```
 
+::: tip
 然后将鼠标移动至变量名上，弹框显示类型推论。例如： `let flag: boolean`
+:::
 
 可以按照提示类型，完善代码（当然也可以省略）
 
@@ -139,6 +140,34 @@ let obj: {
 let sym: symbol = Symbol('key')
 ```
 
+### Date
+
+表示是一个时间
+
+``` ts
+let time: Date = new Date()
+```
+
+### RegExp
+
+表示是一个正则表达式
+
+``` ts
+let reg: RegExp = /^[0-9][a-z]/i
+```
+
+### Function
+
+表示是一个函数
+
+``` ts
+const fun: Function = () => {}
+
+function myName(name: string) {
+  console.log(name)
+}
+```
+
 ### any
 
 表示可以是一个任意类型的值。**不建议过多使用，不然就失去意义了**
@@ -147,6 +176,22 @@ let sym: symbol = Symbol('key')
 let a: any = 'hello world'
 
 a = 1024
+
+let b: string = a
+```
+
+### unknown
+
+表示可以是一个任意类型的值。**所有类型都可以分配给unknown，但unknown只能够分配给unknown或any**
+
+``` ts
+let a: unknown = 'hello world'
+
+a = 1024
+
+let b: string = a
+// let b: string
+// 不能将类型“unknown”分配给类型“string”
 ```
 
 ### tuple
@@ -165,14 +210,6 @@ cat[1] = 3
 
 ``` ts
 enum Vip {vip, svip, wip}
-```
-
-### RegExp
-
-表示是一个正则表达式
-
-``` ts
-let reg: RegExp = /^[0-9][a-z]/i
 ```
 
 ### void
@@ -246,7 +283,7 @@ if (!flaga) {
 对于可选对象的断言
 
 ``` ts
-let cata: {
+let cat: {
   readonly name: string
   age: number
   like?: {
@@ -257,16 +294,16 @@ let cata: {
   age: 2
 }
 
-if (!cata.like?.food) {
-  cata.like = { food: 'fish' }
+if (!cat.like?.food) {
+  cat.like = { food: 'fish' }
 }
 
-console.log(cata.like!.food);
+console.log(cat.like!.food);
 ```
 
 ## 接口和类型别名
 
-当类型过长不但影响阅读而且不利于重复使用
+当类型过长不但影响阅读而且不利于重复使用，通过接口和类型别名可以更好组织类型
 
 ``` ts
 interface Cat { // 通常使用大驼峰表示类型声明
@@ -290,9 +327,9 @@ type Test = boolean | string | number | Cat | Cat[]
 
 ## 模块
 
-通过模块可以将多个文件中的类型进行集中管理。**一般类型声明会放在 `@types` 或 `types` 文件夹下的 `*.d.ts` 中**
+通过模块可以将多个文件中的类型进声明行集中管理。**一般类型声明会放在 `@types` 或 `types` 文件夹下的 `*.d.ts` 中**
 
-修改代码文件夹结构
+修改代码文件夹结构如下
 
 ```
 |-- src
@@ -329,5 +366,10 @@ let cat: Cat = {
   }
 }
 ```
+
+
+::: tip
+可以将鼠标至类型名上，按住 `ctrl` 点击，可以跳转到类型定义
+:::
 
 至此就可以开始尝试将 js 代码迁移到 ts 了
