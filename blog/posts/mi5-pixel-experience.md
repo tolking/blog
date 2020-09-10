@@ -1,6 +1,5 @@
 ---
 title: 小米5 PixelExperience 体验
-lang: zh-CN
 display: home
 description: 突然发现 PixelExperience 这个 ROM 包，花了些时间刷机体验下，用起来比 MIUI 好很多 漂亮、流畅、没有注入广告
 image: https://picsum.photos/536/354?random&date=2020-05-30
