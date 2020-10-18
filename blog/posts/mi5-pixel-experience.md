@@ -6,12 +6,13 @@ image: https://picsum.photos/536/354?random&date=2020-05-30
 date: 2020-05-30
 vssue-title: PixelExperience
 tags:
+  - android
   - PixelExperience
 categories:
   - dailylife
 --- 
 
-突然发现 PixelExperience 这个 ROM 包，花了些时间刷机体验下，用起来比 MIUI 好很多 漂亮、流畅、没有注入广告
+突然发现 PixelExperience 这个 ROM 包，花了些时间刷机体验下，用起来比 MIUI 好很多 漂亮、流畅、没有注入广告。最重要的就是可以最大幅度的体验安卓原生的系统
 
 <!-- more -->
 

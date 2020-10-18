@@ -98,6 +98,7 @@ module.exports = {
         message: '发现新内容可用',
         buttonText: '刷新'
       }
-    }]
+    }],
+    'last-reading'
   ]
 }

@@ -1,7 +1,7 @@
 ---
 title: toLocaleString 的使用
 display: home
-description: 使用 toLovaleString 来国际化日期或者数字格式
+description: 使用 toLocaleString 来国际化日期或者数字格式
 image: https://picsum.photos/536/354/?random&date=2019-12-06
 date: 2019-12-06
 vssue-title: toLocaleString
@@ -11,7 +11,7 @@ categories:
   - summary
 ---
 
-使用 toLovaleString 来国际化日期或者数字格式
+使用 toLocaleString 来国际化日期或者数字格式
 
 <!-- more -->
 
