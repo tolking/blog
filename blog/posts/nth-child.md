@@ -1,7 +1,5 @@
 ---
 title: nth-child的一些特别使用技巧
-lang: zh-CN
-display: home
 description: nth-child的一些特别使用技巧
 image: https://picsum.photos/536/354?random&date=2019-05-09
 date: 2019-05-09
@@ -10,7 +8,7 @@ tags:
   - css
 categories:
   - summary
---- 
+---
 
 使用 `:nth-child()` 选择器匹配属于其父元素的`某个、间隔、某段`子元素
 
