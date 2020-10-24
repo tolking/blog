@@ -2,8 +2,8 @@
 title: git单模板多项目的探索
 display: home
 description: 我在用单模板进行多项目开发的尝试和探索
-image: https://picsum.photos/536/354?random&date=2020/10/23
-date: 2020/10/23
+image: https://picsum.photos/536/354?random&date=2020-10-23
+date: 2020-10-23
 vssue-title: git-template-project
 tags:
   - git
