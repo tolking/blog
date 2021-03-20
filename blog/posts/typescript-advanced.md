@@ -383,6 +383,8 @@ type PutDate<T, K extends keyof T> = {
   [Q in Exclude<keyof T, K>]?: T[Q]; 
 }
 
+// 等同于 type PutDate<T, K extends keyof T> = Required<Pick<T, K>> & Partial<Omit<T, K>>
+
 interface UserInfo {
   id?: string
   name: string
