@@ -1,6 +1,5 @@
 ---
 title: cssnext 中我最期待的属性
-display: home
 description: 列举一些在下一代css技术中我最期待的属性
 image: https://picsum.photos/536/354?random&date=2019-07-06
 date: 2019-07-06
@@ -10,7 +9,7 @@ tags:
   - cssnext
 categories:
   - summary
---- 
+---
 
 列举一些在下一代 `css` 技术中我最期待的属性
 
