@@ -93,7 +93,7 @@ page({
 App({
   onLaunch(option) {
     if (option.path.includes('?')) {
-      uni.reLaunch({
+      wx.reLaunch({
         url: option.path
       })
     }
