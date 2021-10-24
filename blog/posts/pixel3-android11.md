@@ -1,6 +1,5 @@
 ---
 title: pixel3 android 11 轻体验
-display: home
 description: 9月9日 android 11 正式版发布了，就第一时间把手里的 pixel3 升级，体验新版本变化
 image: https://picsum.photos/536/354?random&date=2020-09-10
 date: 2020-09-10
