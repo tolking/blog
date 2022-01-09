@@ -43,7 +43,7 @@ export function useList({ url, transform, immediate = true }) {
   const limit = ref(20)
   const total = ref(0)
   const query = ref({})
-  // 请求上传的表单
+  // 请求上传的表单 (为了方便处理搜索绑定的表单与请求所需表单存在差异的情况)
   const payload = computed(() => {
     const _query = transform ? transform(unref(query)) : query.value
     return Object.assign({}, _query, {
@@ -56,7 +56,7 @@ export function useList({ url, transform, immediate = true }) {
   immediate && loadList()
 
   async function loadList() {
-    // TODO: 请求api及赋值
+    // TODO: 请求api及赋值 (使用 `unref` 解构 `url`)
   }
 
   function refreshList() {
@@ -134,7 +134,7 @@ function transform(form) {
 ``` js
 import { computed, ref, unref, watch } from 'vue'
 
-function suffixId(url, id) {
+function replaceId(url, id) {
   // TODO: 处理url和id的关系
 }
 
@@ -147,7 +147,7 @@ export function useDetail({ url, immediate = true }) {
   const id = ref('')
   const detail = ref({})
   // 请求api的地址
-  const _url = computed(() => suffixId(unref(url), unref(id)))
+  const _url = computed(() => replaceId(unref(url), unref(id)))
 
   immediate && watch(id, loadDetail)
 
@@ -191,7 +191,7 @@ id.value = 1
 ``` js
 import { computed, ref, unref } from 'vue'
 
-function suffixId(url, id) {
+function replaceId(url, id) {
   // TODO: 处理url和id的关系
 }
 
@@ -207,7 +207,7 @@ export function useForm({ url, transform, type = 'post' }) {
     return transform ? transform(unref(form)) : form.value
   })
   // 处理修改需要绑定id
-  const _url = computed(() => suffixId(unref(url), form.value?.id))
+  const _url = computed(() => replaceId(unref(url), form.value?.id))
 
   async function submit(reqType = type) {
     if (reqType === 'post') {
@@ -299,6 +299,56 @@ export function useList({ url, transform, immediate = true }) {
 上面将增删改查分开，方便管理。当然都到这里了，是时候考虑重新合并了。
 
 上面故意将 id 与 url 分离的原因就是为了在 useCrud 使用同一个 url (当然受到api接口格式影响)。如果你感兴趣，这部分就留作练习了
+
+## 关于函数 replaceId 的封装
+
+在我的使用中，替换 ID 大至包含以下情况：
+
+- 需要后缀 ID 到 url 链接后面
+- 需要替换 url 链接中的 ID
+- url 链接中存在多处需要替换 ID 的地方 (对于这种情况，可以配合 动态 url 处理，或者进一步封装增加 transformId 函数)
+
+参考
+
+``` js
+/**
+ * 向字符串末尾增加分隔符
+ * @param {string} string 字符串
+ */
+export function withEndSeparator(string) {
+  return /\/$/.test(string) ? string : string + '/'
+}
+
+/**
+ * 替换链接ID，或者直接后缀ID
+ * @param {string} url 请求链接
+ * @param {string|number|undefined} arg 替换的ID值，注意排序
+ *
+ * ```
+ * const api1 = replaceId('/api', 1)
+ * api // '/api/1'
+ * const api2 = replaceId('/api/{id}', 2)
+ * api2 // '/api/2'
+ * const api3 = replaceId('/api/{id}/child', 3)
+ * api3 // '/api/3/child'
+ * const api4 = replaceId('/api/{id}/{cId}', 'test', 4)
+ * api4 // '/api/test/4'
+ * ```
+ */
+export function replaceId(url, ...arg) {
+  const [id, ...next] = arg
+
+  if (id !== undefined && /\{\w*\}/.test(url)) {
+    url = url.replace(/\{\w*\}/, String(id))
+  } else if (id !== undefined) {
+    url = withEndSeparator(url) + id
+  } else {
+    return url
+  }
+
+  return replaceId(url, ...next)
+}
+```
 
 ## 结语
 
