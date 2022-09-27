@@ -19,7 +19,7 @@ categories:
 ## ios底部input输入框的fixed问题
 
 - ios的fixed可能会没有效果，具体可以去搜搜
-- 过长的页面会使fixed变为absolute，固定的内容就随页面移动了
+- 过长的页面会使fixed变为absolute，固定的内容就随页面移动了
 - 解决方法
 - 将父级元素改为absolute，或者外层加一个absolute的div
 - 将自身的fixed改为absolute

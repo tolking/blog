@@ -62,7 +62,7 @@ categories:
 
 把暂存区的修改回退到工作区
 
-- `git reset --hard [commit_id]`
+- `git reset --hard [commit_id]`
 
 版本回退，使用 `git log` 查看 **commit_id**
 
