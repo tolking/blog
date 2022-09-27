@@ -1,6 +1,5 @@
 ---
 title: 原生的图片和框架懒加载
-display: home
 description: 使用浏览器的原生懒加载来实现对网页内部的图片与框架的懒加载
 image: https://picsum.photos/1920/1080/?random&date=2019-10-25
 date: 2019-10-25
