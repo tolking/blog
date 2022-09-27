@@ -82,4 +82,4 @@ self.addEventListener('activate', (e) => {
 self.skipWaiting()
 ```
 
-由于 Service Worker 文件存在更新，浏览器则会更新最新的 Service Worker 文件。在执行新 Service Worker 文件时，清空本地所有缓存。然后·所有的请求都走服务器，所以就可以正常执行注销代码
+由于 Service Worker 文件存在更新，浏览器则会更新最新的 Service Worker 文件。在执行新 Service Worker 文件时，清空本地所有缓存。然后所有的请求都走服务器，所以就可以正常执行注销代码
