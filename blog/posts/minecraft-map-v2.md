@@ -1,6 +1,5 @@
 ---
 title: 重构线性地图开发总结
-display: home
 description: 使用 svg 开发简单的线性地图总结
 image: https://picsum.photos/536/354?random&date=2020-12-06
 date: 2020-12-06
