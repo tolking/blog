@@ -15,7 +15,7 @@ description: 关于我
 
 ### 联系我
 
-- 邮箱：qw13131wang@gmail.com 或 qw13131wang@qq.com
+- 邮箱：qw13131wang@gmail.com
 - Github：[@tolking](https://github.com/tolking)
 
 ---
