@@ -9,16 +9,16 @@
     "build": "vuepress build blog"
   },
   "dependencies": {
-    "@vssue/api-github-v3": "^1.4.0",
-    "@vssue/vuepress-plugin-vssue": "^1.4.2",
-    "@vuepress/plugin-pwa": "^1.3.1",
-    "postcss-flex-alias": "^1.0.0",
-    "postcss-propro": "^1.0.2",
-    "vuepress": "^1.3.1",
-    "vuepress-plugin-container": "^2.1.2",
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "@vuepress/plugin-pwa": "^1.9.9",
+    "postcss-flex-alias": "^1.0.1",
+    "postcss-propro": "^1.0.3",
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-last-reading": "^1.0.0",
     "vuepress-plugin-sitemap": "^2.3.1",
-    "vuepress-theme-ououe": "^1.5.0"
+    "vuepress-theme-ououe": "^1.5.3"
   },
   "license": "CC BY-NC-SA 4.0"
 }
