@@ -1,6 +1,5 @@
 ---
 title: 使用媒体查询判断屏幕的方向
-lang: zh-CN
 description: 通过媒体查询 orientation 判断屏幕的方向
 image: https://picsum.photos/536/354?random&date=2019-07-19
 date: 2019-07-19
@@ -9,7 +8,7 @@ tags:
   - css
 categories:
   - summary
---- 
+---
 
 通过媒体查询 `orientation` 判断屏幕的方向，显示不同的样式
 

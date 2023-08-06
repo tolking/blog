@@ -9,7 +9,7 @@ tags:
   - es6
 categories:
   - learn
---- 
+---
 
 Module基本用法
 - 通过 Module 的 export 与 import 来分割代码，集中相同的代码，优化逻辑

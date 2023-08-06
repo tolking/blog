@@ -6,6 +6,8 @@
 node_modules/
 dist/
 test/
+cache/
+
 npm-debug.log
 yarn-error.log
 yarn.lock

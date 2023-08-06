@@ -1,6 +1,5 @@
 ---
 title: 记录一些遇到的css问题
-lang: zh-CN
 description: 记录一些遇到的css问题，不同的设备对css的支持不一样，可能出现不同的效果
 image: https://picsum.photos/536/354?random&date=2018-07-22
 date: 2018-07-22
@@ -10,7 +9,7 @@ tags:
   - problem
 categories:
   - summary
---- 
+---
 
 记录一些遇到的css问题，不同的设备对css的支持不一样，可能出现不同的效果
 

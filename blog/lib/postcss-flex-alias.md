@@ -16,7 +16,7 @@ postcss plugin easily write flex
 
 <!-- more -->
 
-<Flex/>
+<FlexAlias/>
 
 ::: tip TIP
 - Pull the upper right and lower corner, you can change the size of the box body

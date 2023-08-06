@@ -1,6 +1,5 @@
 ---
 title: ES6 变量的解构赋值
-lang: zh-CN
 description: ES6允许按照一定模式，从数组、对象或字符串中提取值，对变量进行赋值，这被称为解构（Destructuring）
 image: https://picsum.photos/536/354?random&date=2018-02-13
 date: 2018-02-13
@@ -10,7 +9,7 @@ tags:
   - es6
 categories:
   - learn
---- 
+---
 
 ES6允许按照一定模式，从数组、对象或字符串中提取值，对变量进行赋值，这被称为解构（Destructuring）
 

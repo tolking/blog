@@ -1,6 +1,5 @@
 ---
 title: ES6 Set
-lang: zh-CN
 description: Set 类似于数组，但是成员的值都是唯一的，没有重复的值
 image: https://picsum.photos/536/354?random&date=2018-02-22
 date: 2018-02-22
@@ -10,7 +9,7 @@ tags:
   - es6
 categories:
   - learn
---- 
+---
 
 Set 类似于数组，但是成员的值都是唯一的，没有重复的值
 - Set 是一个构造函数，用来生成 Set 数据结构

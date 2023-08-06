@@ -1,6 +1,5 @@
 ---
 title: vue 清除定时器
-lang: zh-CN
 description: 安全的清除 vue 中的定时器
 image: https://picsum.photos/536/354?random&date=2018-09-08
 date: 2018-09-08
@@ -10,7 +9,7 @@ tags:
   - problem
 categories:
   - summary
---- 
+---
 
 由于是单页面，在页面切换后，定时器没有被清除，在再次回到页面时，使得两个定时器同时工作，时间流逝加倍。使用 beforeDestroy() 来清除定时器
 

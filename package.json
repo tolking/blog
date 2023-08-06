@@ -1,24 +1,19 @@
 {
   "name": "my_blog",
-  "version": "2.0.0",
-  "description": "power by vuepress",
+  "version": "3.0.0",
+  "description": "power by vitepress",
   "author": "tolking <qw13131wang@gmail.com>",
   "scripts": {
-    "dev": "vuepress dev blog",
-    "serve": "vuepress dev blog",
-    "build": "vuepress build blog"
+    "dev": "vitepress dev blog",
+    "build": "vitepress build blog",
+    "preview": "vitepress preview blog"
   },
   "dependencies": {
-    "@vssue/api-github-v3": "^1.4.7",
-    "@vssue/vuepress-plugin-vssue": "^1.4.8",
-    "@vuepress/plugin-pwa": "^1.9.9",
-    "postcss-flex-alias": "^1.0.1",
-    "postcss-propro": "^1.0.3",
-    "vuepress": "^1.9.9",
-    "vuepress-plugin-container": "^2.1.5",
-    "vuepress-plugin-last-reading": "^1.0.0",
-    "vuepress-plugin-sitemap": "^2.3.1",
-    "vuepress-theme-ououe": "^1.5.3"
+    "vitepress": "1.0.0-beta.7",
+    "vitepress-theme-ououe": "^1.0.0"
   },
-  "license": "CC BY-NC-SA 4.0"
+  "license": "CC BY-NC-SA 4.0",
+  "devDependencies": {
+    "@types/node": "^20.4.8"
+  }
 }

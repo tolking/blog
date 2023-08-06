@@ -1,6 +1,5 @@
 ---
 title: js按位运算符及运用
-lang: zh-CN
 description: js按位运算符/二进制运算符的简单简绍和使用
 image: https://picsum.photos/536/354?random&date=2017-12-03
 date: 2017-12-03
@@ -9,7 +8,7 @@ tags:
   - js
 categories:
   - summary
---- 
+---
 
 js按位运算符/二进制运算符的简单简绍和使用
 

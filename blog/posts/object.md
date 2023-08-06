@@ -1,6 +1,5 @@
 ---
 title: Object构造函数的方法
-lang: zh-CN
 description: Object构造函数的方法
 image: https://picsum.photos/536/354?random&date=2019-05-11
 date: 2019-05-11
@@ -9,7 +8,7 @@ tags:
   - js
 categories:
   - summary
---- 
+---
 
 JavaScript 中的所有事物都是对象。整理 Object 构造函数的方法
 

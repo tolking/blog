@@ -8,7 +8,7 @@ tags:
   - svg
 categories:
   - summary
---- 
+---
 
 - 对于一些简单的图标如果使用svg图标会比普通图片更小
 - svg 的图片是矢量图形，放大缩小不会产生锯齿

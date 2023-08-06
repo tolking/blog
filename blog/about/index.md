@@ -1,7 +1,7 @@
 ---
 title: 关于我
-layout: Page
 description: 关于我
+date: 2019-02-25
 ---
 
 ### 简介
@@ -20,6 +20,6 @@ description: 关于我
 
 ---
 
-Theme by [vuepress-theme-ououe](https://github.com/tolking/vuepress-theme-ououe)
+Theme by [vitepress-theme-ououe](https://github.com/tolking/vitepress-theme-ououe)
 
-Power by [vuepress](https://github.com/vuejs/vuepress)
+Power by [vitepress](https://github.com/vuejs/vitepress)

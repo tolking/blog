@@ -1,6 +1,5 @@
 ---
 title: Vue中的自定义指令
-lang: zh-CN
 description: Vue中的自定义指令，对普通 DOM 元素进行底层操作
 image: https://picsum.photos/536/354?random&date=2019-05-17
 date: 2019-05-17
@@ -9,7 +8,7 @@ tags:
   - vue
 categories:
   - learn
---- 
+---
 
 在 `Vue` 中自定义自定义指令，对普通 DOM 元素进行底层操作
 

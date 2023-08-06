@@ -1,6 +1,5 @@
 ---
 title: ios 输入法将页面往上顶
-lang: zh-CN
 description: ios 输入法将页面往上顶，输入法收回后下方留下空白区域
 image: https://picsum.photos/536/354?random&date=2019-01-12
 date: 2019-01-12
@@ -11,7 +10,7 @@ tags:
   - problem
 categories:
   - summary
---- 
+---
 
 ios 输入法将页面往上顶，输入法收回后下方留下空白区域
 

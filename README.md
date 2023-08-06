@@ -2,13 +2,9 @@
 
 [WebSite](https://ououe.com)
 
-Theme by [vuepress-theme-ououe](https://github.com/tolking/vuepress-theme-ououe)
+Theme by [vitepress-theme-ououe](https://github.com/tolking/vitepress-theme-ououe)
 
-Uses [vuepress-theme-ououe-template](https://github.com/tolking/vuepress-theme-ououe-template) to starter
-
-[Documentation](https://tolking.github.io/vuepress-theme-ououe)
-
-Power by [vuepress](https://github.com/vuejs/vuepress)
+Power by [vitepress](https://github.com/vuejs/vitepress)
 
 ## License
 

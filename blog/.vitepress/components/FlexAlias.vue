@@ -15,8 +15,8 @@
       <option v-for="(item, index) in alignContentList" :key="index" :value="item">{{ item }}</option>
     </select>
   </div>
-  <div @click="changeCount(1)" class="flex-btn">add</div>
-  <div @click="changeCount(-1)" class="flex-btn">del</div>
+  <button @click="changeCount(1)" class="flex-btn">add</button>
+  <button @click="changeCount(-1)" class="flex-btn">del</button>
   <div :style="setStyle()" class="flex-box">
     <div v-for="(item, index) in count" :key="index" class="box-item">{{ "box" + item }}</div>
   </div>
@@ -99,7 +99,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .flex {
   --c-btn: #0074d9;
   --c-white: #fff;
@@ -121,18 +121,24 @@ export default {
   vertical-align: top;
   margin: 1rem 1rem 0;
 }
+.flex .flex-select p {
+  margin: 0;
+}
 .flex .flex-select .select-item {
   width: 4rem;
   height: 3rem;
   border-color: var(--c-border);
   background: var(--c-bg);
   color: var(--c-text);
+  text-align: center;
 }
 .flex .flex-btn {
   display: inline-block;
-  vertical-align: top;
   margin: 1rem;
-  btn: 8rem 3rem .5rem var(--c-btn);
+  width: 8rem;
+  height: 3rem;
+  border-radius: .5rem;
+  background-color: var(--c-btn);
   font-size: 1rem;
   color: #fff;
 }

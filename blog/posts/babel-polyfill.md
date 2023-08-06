@@ -1,6 +1,5 @@
 ---
 title: babel-polyfill的引用和使用
-lang: zh-CN
 description: 使用babel-polyfill来解决一些低版本的浏览器对es6新语法的不支持
 image: https://picsum.photos/536/354?random&date=2017-11-15
 date: 2017-11-15
@@ -9,7 +8,7 @@ tags:
   - js
 categories:
   - summary
---- 
+---
 
 使用 `babel-polyfill` 来解决一些低版本的浏览器对es6新语法的不支持
 

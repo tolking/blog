@@ -1,6 +1,5 @@
 ---
 title: git的一些常用命令
-lang: zh-CN
 display: home
 description: git的一些常用命令，搜集整理，开始轻松使用git
 image: https://picsum.photos/536/354?random&date=2019-08-18
@@ -10,7 +9,7 @@ tags:
   - git
 categories:
   - learn
---- 
+---
 
 搜集整理一些 `git` 的常用命令
 

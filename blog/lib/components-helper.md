@@ -18,6 +18,6 @@ components-helper 是一个通过解析 markdown 文档为 vue 组件库生成�
 
 使用该工具不再需要手动维护代码提示文件，仅仅需要维护文档。该工具会解析特定格式的内容用来生成提示信息。大体格式[参考](https://github.com/tolking/components-helper/tree/main/test)，同时提供了大量的配置统一与默认格式不一样的情况。
 
-[设计思路](/posts/2021/05/05/components-helper/)
+[设计思路](../posts/components-helper)
 
 [源码](https://github.com/tolking/components-helper)

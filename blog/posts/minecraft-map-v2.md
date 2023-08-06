@@ -16,7 +16,7 @@ categories:
 
 <!-- more -->
 
-之前的文章 [canvas 地图开发总结](/posts/2019/01/17/minecraft-map/) 中最后提到
+之前的文章 [canvas 地图开发总结](../posts/minecraft-map) 中最后提到
 
 > 总感觉选 canvas 是个巨大失误，如果用 svg 的话...
 

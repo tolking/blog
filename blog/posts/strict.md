@@ -1,6 +1,5 @@
 ---
 title: 严格模式下主要限制
-lang: zh-CN
 description: 在头部加上 "use strict" 启用严格模式，使用严格模式能够有效的降低bug，开始需要适应
 image: https://picsum.photos/536/354?random&date=2018-01-08
 date: 2018-01-08
@@ -10,7 +9,7 @@ tags:
   - strict
 categories:
   - learn
---- 
+---
 
 在头部加上 "use strict" 启用严格模式，使用严格模式能够有效的降低bug，开始需要适应
 

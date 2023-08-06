@@ -16,6 +16,8 @@ a postcss plugin adds and extends some properties
 
 <!-- more -->
 
+> 已经废弃，不建议使用。可以尝试 [UnoCSS](https://github.com/unocss/unocss)
+
 ## Options
 
 example
@@ -60,9 +62,6 @@ example
 }
 ```
 
-effect
-<Arrow/>
-
 ### box min-box max-box
 
 | parameter | value | default |
@@ -99,9 +98,6 @@ example
 }
 ```
 
-effect
-<Btn/>
-
 ### font-cc
 
 | parameter | value | default |
@@ -132,9 +128,6 @@ example
   font-hidden: 3;
 }
 ```
-
-effect
-<FontHidden/>
 
 ### position
 
@@ -204,6 +197,3 @@ example
   spread: top-bottom var(--c-line);
 }
 ```
-
-effect
-<Spread/>

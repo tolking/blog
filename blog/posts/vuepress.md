@@ -1,6 +1,5 @@
 ---
 title: vuepress 踩坑记录
-lang: zh-CN
 display: home
 description: 记录使用 vuepress 以来所遇到的坑及解决办法
 image: https://picsum.photos/536/354?random&date=2019-07-07
@@ -11,7 +10,7 @@ tags:
   - vuepress
 categories:
   - summary
---- 
+---
 
 记录使用 [vuepress](https://v1.vuepress.vuejs.org) 以来所遇到的坑及解决办法
 

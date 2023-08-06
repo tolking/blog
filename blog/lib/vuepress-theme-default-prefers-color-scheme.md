@@ -9,7 +9,7 @@ tags:
   - vuepress
 categories:
   - project
---- 
+---
 
 vuepress-theme-default-prefers-color-scheme 是为了让 vuepress 的 [默认主题](https://vuepress.vuejs.org/zh/theme/default-theme-config.html) 支持 `浅色` 与 `深色` 模式的主题
 

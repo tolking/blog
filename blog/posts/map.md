@@ -1,6 +1,5 @@
 ---
 title: ES6 Map
-lang: zh-CN
 description: Map 类似于对象，但是“键”的范围不限于字符串，各种类型的值(包括对象)都可以当作键
 image: https://picsum.photos/536/354?random&date=2018-02-25
 date: 2018-02-25
@@ -10,7 +9,7 @@ tags:
   - es6
 categories:
   - learn
---- 
+---
 
 Map 类似于对象，但是“键”的范围不限于字符串，各种类型的值(包括对象)都可以当作键
 - Map构造函数接受数组(任何具有 Iterator 接口、且每个成员都是一个双元素的数组的数据结构)作为参数

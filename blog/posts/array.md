@@ -1,6 +1,5 @@
 ---
 title: 数组方法总结
-lang: zh-CN
 description: 常用数组方法总结
 image: https://picsum.photos/536/354?random&date=2019-06-13
 date: 2019-06-13

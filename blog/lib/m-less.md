@@ -15,6 +15,8 @@ categories:
 
 <!-- more -->
 
+> 已经废弃，不建议使用。可以尝试 [UnoCSS](https://github.com/unocss/unocss)
+
 ``` html
 <div class="btn">btn</div>
 ```
@@ -26,9 +28,6 @@ categories:
   .font(20px, @c-white);
 }
 ```
-**效果**
-
-<Btn/> 
 
 ## 简介
 
@@ -74,9 +73,6 @@ categories:
 - @c-btn: @c-blue; // 按键背景
 - @c-shadow: fade(@c-black, 30%); // 阴影默认颜色
 - @c-t: transparent; // 透明
-
-参考颜色
-<DefaultsColor/>
 
 ## 属性简写
 
@@ -407,9 +403,6 @@ width: 100px;
 | .bg-line | rotate, color, ... |	, @c-black, fade(color-1, 0%), ... |	支持输入1~5的颜色渐变 |
 | .bg-line-rainbow | rotate |	90deg |	彩虹渐变 |
 
-**例如**
-<BgLine/>
-
 ### bg-radial
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
@@ -437,8 +430,6 @@ width: 100px;
   .font-cc(calc(3rem - 2px));
   .spread>.bottom(100%, 2px, #da3);
 ```
-**效果**
-<Spread/>
 
 ### reflect 渐隐镜像效果
 | 简写 | 参数 |	默认值 | 说明 |
@@ -456,9 +447,6 @@ width: 100px;
 | :-- | :-- | :-- | :-- |
 | .btn | width, height, radius, bg-color, time, darken, lighten |	, width, 0, @c-btn, 1s, 5%, 70% |	宽, 高, 圆角, 背景色, 动画时间, hover变暗程度, active时水波纹变亮程度 |
 
-**效果**
-<Btn/>
-
 ### arrow 箭头
 | 简写 | 参数 |	默认值 | 说明 |
 | :-- | :-- | :-- | :-- |
@@ -470,9 +458,6 @@ width: 100px;
 | .arrow>.top-right | size, color | 5px, @c-line |  |
 | .arrow>.bottom-left | size, color | 5px, @c-line |  |
 | .arrow>.bottom-right | size, color | 5px, @c-line |  |
-
-**效果**
-<Arrow/>
 
 ### filter 滤镜
 | 简写 | 参数 |	默认值 | 说明 |

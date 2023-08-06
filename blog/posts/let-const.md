@@ -1,6 +1,5 @@
 ---
 title: ES6 let 与 const
-lang: zh-CN
 description: ES6 新增了 let 命令，用来声明只在所在的代码块内有效变量，不存在变量提升
 image: https://picsum.photos/536/354?random&date=2018-02-12
 date: 2018-02-12
@@ -10,7 +9,7 @@ tags:
   - es6
 categories:
   - learn
---- 
+---
 
 ES6 新增了 let 命令，用来声明只在所在的代码块内有效变量，不存在变量提升
 
