@@ -1,7 +1,9 @@
 import { defineConfigWithTheme } from 'vitepress'
+import { withPwa } from '@vite-pwa/vitepress'
+import { genSitemap } from './sitemap'
 import type { Theme } from 'vitepress-theme-ououe'
 
-export default defineConfigWithTheme<Theme>({
+export default withPwa(defineConfigWithTheme<Theme>({
   title: '雨无声',
   description: '润雨细无声，何已湿衣襟',
   cleanUrls: true,
@@ -10,7 +12,6 @@ export default defineConfigWithTheme<Theme>({
   outDir: '../dist',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
@@ -23,7 +24,7 @@ export default defineConfigWithTheme<Theme>({
     ['meta', { name: 'applicable-device', content: 'pc,mobile' }],
     ['meta', { name: 'author', content: 'tolking <w13131wang@gmail.com>' }],
     ['meta', { name: 'copyright', content: '网站内容版权所有，转载请注明出处' }],
-    ['meta', { name: "keywords", content: "雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com" }]
+    ['meta', { name: "keywords", content: "雨无声, tolking, 前端技巧, 前端总结, 前端分享, ououe.com" }],
   ],
   themeConfig: {
     cover: '/img/cover.jpg',
@@ -59,9 +60,6 @@ export default defineConfigWithTheme<Theme>({
         prev: '上一页',
         next: '下一页',
       },
-      {
-        dir: 'about',
-      },
     ],
     excerpt: '<!-- more -->',
     createTime: {
@@ -79,4 +77,43 @@ export default defineConfigWithTheme<Theme>({
       provider: 'local',
     },
   },
-})
+  buildEnd: genSitemap,
+  pwa: {
+    outDir: '../dist',
+    manifest: {
+      id: '/',
+      name: "雨无声",
+      short_name: "雨无声",
+      start_url: "/index.html",
+      display: "standalone",
+      background_color: "#000",
+      theme_color: "#3eaf7c",
+      description: "润雨细无声，何已湿衣襟",
+      icons: [{
+        src: "/img/homescreen48.png",
+        sizes: "48x48",
+        type: "image/png"
+      }, {
+        src: "/img/homescreen72.png",
+        sizes: "72x72",
+        type: "image/png"
+      }, {
+        src: "/img/homescreen96.png",
+        sizes: "96x96",
+        type: "image/png"
+      }, {
+        src: "/img/homescreen144.png",
+        sizes: "144x144",
+        type: "image/png"
+      }, {
+        src: "/img/homescreen168.png",
+        sizes: "168x168",
+        type: "image/png"
+      }, {
+        src: "/img/homescreen192.png",
+        sizes: "192x192",
+        type: "image/png"
+      }],
+    },
+  },
+}))

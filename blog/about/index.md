@@ -1,13 +1,15 @@
 ---
 title: 关于我
 description: 关于我
-date: 2019-02-25
+createTime: false
+lastUpdated: false
+articlePagination: false
 ---
 
 ### 简介
 
 - 一名前端程序员
-- 主要从事WEB前端、小程序开发
+- 主要从事WEB前端、小程序、Flutter开发
 - 喜欢新技术
 - 热爱开源
 

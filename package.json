@@ -1,6 +1,7 @@
 {
   "name": "my_blog",
   "version": "3.0.0",
+  "type": "module",
   "description": "power by vitepress",
   "author": "tolking <qw13131wang@gmail.com>",
   "scripts": {
@@ -9,11 +10,15 @@
     "preview": "vitepress preview blog"
   },
   "dependencies": {
-    "vitepress": "1.0.0-beta.7",
-    "vitepress-theme-ououe": "^1.0.0"
+    "vitepress": "1.0.0-rc.4",
+    "vitepress-theme-ououe": "^1.0.1"
   },
   "license": "CC BY-NC-SA 4.0",
   "devDependencies": {
-    "@types/node": "^20.4.8"
+    "@types/node": "^20.4.10",
+    "@vite-pwa/vitepress": "^0.2.0",
+    "sitemap": "^7.1.1",
+    "vue": "^3.3.4",
+    "workbox-window": "^7.0.0"
   }
 }

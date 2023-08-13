@@ -1,10 +1,16 @@
+import { h } from 'vue'
 import Theme from 'vitepress-theme-ououe'
+import PwaPopup from '../components/PwaPopup.vue'
 import FlexAlias from '../components/FlexAlias.vue'
 import { type Theme as DefaultTheme, inBrowser } from 'vitepress'
 import './index.css'
 
 const theme: DefaultTheme = {
-  ...Theme,
+  Layout() {
+    return h(Theme.Layout!, null, {
+      'footer-after': () => h(PwaPopup)
+    })
+  },
   enhanceApp({ app, router }) {
     if (inBrowser) {
       // 重定向之前的永久链接
