@@ -80,6 +80,8 @@ export default withPwa(defineConfigWithTheme<Theme>({
   buildEnd: genSitemap,
   pwa: {
     outDir: '../dist',
+    manifestFilename: 'manifest.json',
+    filename: 'service-worker.js',
     manifest: {
       id: '/',
       name: "雨无声",
