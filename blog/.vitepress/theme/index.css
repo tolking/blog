@@ -1,14 +1,14 @@
 @media (min-width: 960px) {
-  .article-list:not(.article-pagination) .article-item:first-child,
-  .article-list:not(.article-pagination) .article-item:last-child {
+  .page .article-list:not(.article-pagination) .article-item:first-child,
+  .page .article-list:not(.article-pagination) .article-item:last-child {
     --vp-posts-span: 6;
     --vp-posts-direction: row;
     --vp-posts-height: 15rem;
   }
-  .article-list .article-item:nth-child(5),
-  .article-list .article-item:nth-child(6),
-  .article-list .article-item:nth-child(10),
-  .article-list .article-item:nth-child(11) {
+  .page .article-list .article-item:nth-child(5),
+  .page .article-list .article-item:nth-child(6),
+  .page .article-list .article-item:nth-child(10),
+  .page .article-list .article-item:nth-child(11) {
     --vp-posts-span: 3;
   }
 }
