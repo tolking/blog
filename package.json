@@ -10,7 +10,7 @@
     "preview": "vitepress preview blog"
   },
   "dependencies": {
-    "vitepress": "1.0.0-rc.4",
+    "vitepress": "^1.0.0-rc.4",
     "vitepress-theme-ououe": "^1.0.1"
   },
   "license": "CC BY-NC-SA 4.0",
