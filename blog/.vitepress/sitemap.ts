@@ -2,8 +2,9 @@ import { resolve } from 'path'
 import { writeFileSync } from 'fs'
 import { SitemapStream, streamToPromise } from 'sitemap'
 import type { SiteConfig } from "vitepress"
+import type { Theme } from 'vitepress-theme-ououe'
 
-export function genSitemap(siteConfig: SiteConfig) {
+export function genSitemap(siteConfig: SiteConfig<Theme>) {
   const stream = new SitemapStream({ hostname: 'https://ououe.com' })
   
   siteConfig.pages.forEach((url) => {

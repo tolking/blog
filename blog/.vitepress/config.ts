@@ -1,6 +1,7 @@
 import { defineConfigWithTheme } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
 import { genSitemap } from './sitemap'
+import { genFeed } from './rss'
 import type { Theme } from 'vitepress-theme-ououe'
 
 export default withPwa(defineConfigWithTheme<Theme>({
@@ -77,7 +78,10 @@ export default withPwa(defineConfigWithTheme<Theme>({
       provider: 'local',
     },
   },
-  buildEnd: genSitemap,
+  buildEnd(siteConfig) {
+    genSitemap(siteConfig)
+    genFeed(siteConfig)
+  },
   pwa: {
     outDir: '../dist',
     manifestFilename: 'manifest.json',

@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^20.4.10",
     "@vite-pwa/vitepress": "^0.2.0",
+    "feed": "^4.2.2",
     "sitemap": "^7.1.1",
     "vue": "^3.3.4",
     "workbox-window": "^7.0.0"
