@@ -10,16 +10,16 @@
     "preview": "vitepress preview blog"
   },
   "dependencies": {
-    "vitepress": "^1.0.0-rc.4",
-    "vitepress-theme-ououe": "^1.0.1"
+    "vitepress": "1.0.0-rc.34",
+    "vitepress-theme-ououe": "^1.0.2"
   },
   "license": "CC BY-NC-SA 4.0",
   "devDependencies": {
-    "@types/node": "^20.4.10",
-    "@vite-pwa/vitepress": "^0.2.0",
+    "@types/node": "^20.10.6",
+    "@vite-pwa/vitepress": "^0.2.3",
     "feed": "^4.2.2",
     "sitemap": "^7.1.1",
-    "vue": "^3.3.4",
+    "vue": "^3.4.3",
     "workbox-window": "^7.0.0"
   }
 }

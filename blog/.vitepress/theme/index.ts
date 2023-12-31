@@ -11,12 +11,12 @@ const theme: DefaultTheme = {
       'footer-after': () => h(PwaPopup)
     })
   },
-  enhanceApp({ app, router }) {
+  enhanceApp({ app }) {
     if (inBrowser) {
       // 重定向之前的永久链接
-      const permalinkRegExp = /\/posts\/\d+\/\d+\/\d+\/([^/]*)\//
+      const permalinkRegExp = /\/posts\/\d{4}\/\d{2}\/\d{2}\/([^/]*)\//
       const math = location.href.match(permalinkRegExp)
-      math && router.go(`/posts/${math[1]}`)
+      math && (location.href = `/posts/${math[1]}`)
     }
 
     app.component('FlexAlias', FlexAlias)
