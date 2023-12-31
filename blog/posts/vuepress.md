@@ -1,6 +1,5 @@
 ---
 title: vuepress 踩坑记录
-display: home
 description: 记录使用 vuepress 以来所遇到的坑及解决办法
 image: https://picsum.photos/536/354?random&date=2019-07-07
 date: 2019-07-07
