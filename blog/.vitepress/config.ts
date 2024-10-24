@@ -1,6 +1,5 @@
 import { defineConfigWithTheme } from 'vitepress'
 import { withPwa } from '@vite-pwa/vitepress'
-import { genSitemap } from './sitemap'
 import { genFeed } from './rss'
 import type { Theme } from 'vitepress-theme-ououe'
 
@@ -14,7 +13,7 @@ export default withPwa(defineConfigWithTheme<Theme>({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['link', { rel: 'apple-touch-icon', href: '/img/homescreen144.png' }],
     ['meta', { name: 'msapplication-TileImage', content: '/img/homescreen144.png' }],
@@ -79,8 +78,10 @@ export default withPwa(defineConfigWithTheme<Theme>({
     },
   },
   buildEnd(siteConfig) {
-    genSitemap(siteConfig)
     genFeed(siteConfig)
+  },
+  sitemap: {
+    hostname: 'https://ououe.com',
   },
   pwa: {
     outDir: '../dist',
