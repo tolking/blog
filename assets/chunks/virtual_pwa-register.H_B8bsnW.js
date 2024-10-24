@@ -1,7 +1,0 @@
-import{N as E}from"./framework.OjRHjQ2q.js";function f(w={}){const{immediate:g=!1,onNeedRefresh:s,onOfflineReady:t,onRegistered:o,onRegisteredSW:c,onRegisterError:n}=w;let e,d,a;const u=async(p=!0)=>{await d,await(a==null?void 0:a())};async function m(){if("serviceWorker"in navigator){const{Workbox:p}=await E(()=>import("./workbox-window.prod.es5.prqDwDSL.js"),__vite__mapDeps([]));e=new p("/service-worker.js",{scope:"/",type:"classic"}),a=async()=>{await(e==null?void 0:e.messageSkipWaiting())};{let i=!1;const l=()=>{i=!0,e==null||e.addEventListener("controlling",r=>{r.isUpdate&&window.location.reload()}),s==null||s()};e.addEventListener("installed",r=>{typeof r.isUpdate>"u"?typeof r.isExternal<"u"?r.isExternal?l():!i&&(t==null||t()):r.isExternal?window.location.reload():!i&&(t==null||t()):r.isUpdate||t==null||t()}),e.addEventListener("waiting",l),e.addEventListener("externalwaiting",l)}e.register({immediate:g}).then(i=>{c?c("/service-worker.js",i):o==null||o(i)}).catch(i=>{n==null||n(i)})}}return d=m(),u}export{f as registerSW};
-function __vite__mapDeps(indexes) {
-  if (!__vite__mapDeps.viteFileDeps) {
-    __vite__mapDeps.viteFileDeps = []
-  }
-  return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
-}
