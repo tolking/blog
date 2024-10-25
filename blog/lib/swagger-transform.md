@@ -16,7 +16,7 @@ swagger-transform 是一个用于将 swagger 文档转换为 TS 类型的工具
 
 ## 起因
 
-我在之前的两篇文章中 [vue3 组合函数中优雅的复用增删改查](../lib/vue-composables-crud.md) 和 [使用 createFetch 替代 Axios 在 Vue 中进行请求封装](../lib/createFetch.md) 提到封装 hooks 用于请求。在使用的过程中，我发现我花费大量时间用于书写 TS 类型，在使用的时候也需要去找对应类型。影响开发节奏。由于后端生成的接口文档是基于 swagger，所以我就想到了能否通过 swagger 文档自动生成 TS 类型。
+我在之前的两篇文章中 [vue3 组合函数中优雅的复用增删改查](../posts/vue-composables-crud) 和 [使用 createFetch 替代 Axios 在 Vue 中进行请求封装](../posts/createFetch) 提到封装 hooks 用于请求。在使用的过程中，我发现我花费大量时间用于书写 TS 类型，在使用的时候也需要去找对应类型。影响开发节奏。由于后端生成的接口文档是基于 swagger，所以我就想到了能否通过 swagger 文档自动生成 TS 类型。
 
 当然市面上已经有众多类似工具（如 [swagger-editor](https://editor.swagger.io/#/)），但这些工具生成的 TS 类型无法和我写的 hooks 结合使用，所以我就想到了自己实现一个。
 
