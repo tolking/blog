@@ -4,7 +4,7 @@
         <title>雨无声</title>
         <link>https://ououe.com</link>
         <description>润雨细无声，何已湿衣襟</description>
-        <lastBuildDate>Fri, 25 Oct 2024 01:31:49 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 13 Jul 2025 04:32:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zn-CN</language>
@@ -506,13 +506,13 @@
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> *</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * ```</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * const api1 = replaceId('/api', 1)</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * api // '/api/1'</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * api</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> // '/api/1'</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * const api2 = replaceId('/api/{id}', 2)</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * api2 // '/api/2'</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * api2</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> // '/api/2'</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * const api3 = replaceId('/api/{id}/child', 3)</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * api3 // '/api/3/child'</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * api3</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> // '/api/3/child'</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * const api4 = replaceId('/api/{id}/{cId}', 'test', 4)</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * api4 // '/api/test/4'</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * api4</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> // '/api/test/4'</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> * ```</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> */</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> replaceId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">url</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">...</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">arg</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
