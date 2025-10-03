@@ -10,15 +10,15 @@
     "preview": "vitepress preview blog"
   },
   "dependencies": {
-    "vitepress": "^1.4.1",
-    "vitepress-theme-ououe": "^1.0.3"
+    "vitepress": "^1.6.4",
+    "vitepress-theme-ououe": "^1.0.4"
   },
   "license": "CC BY-NC-SA 4.0",
   "devDependencies": {
-    "@types/node": "^22.7.7",
+    "@types/node": "^22.18.8",
     "@vite-pwa/vitepress": "^0.2.3",
     "feed": "^4.2.2",
-    "vue": "^3.5.12",
-    "workbox-window": "^7.1.0"
+    "vue": "^3.5.22",
+    "workbox-window": "^7.3.0"
   }
 }

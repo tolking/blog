@@ -8,7 +8,7 @@ export default withPwa(defineConfigWithTheme<Theme>({
   description: '润雨细无声，何已湿衣襟',
   cleanUrls: true,
   lastUpdated: true,
-  lang: 'zn-CN',
+  lang: 'zh-CN',
   outDir: '../dist',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
